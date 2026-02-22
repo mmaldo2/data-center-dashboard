@@ -36,7 +36,7 @@ const PROJECTS = [
       { ticker:"VRT", role:"Thermal & Power", detail:"Expected to supply reference architecture cooling" },
       { ticker:"SE", role:"Electrical Infrastructure", detail:"Galaxy UPS, power distribution for hyperscale" },
     ]},
-  { id:3, name:"Stargate — Ohio", state:"OH", lat:40.08, lng:-82.91, capacity:"600 MW", investment:"$30B", status:"Announced", year:2027, type:"AI Training", operator:"OpenAI/SoftBank", elecRate:7.9,
+  { id:3, name:"Stargate — Ohio", state:"OH", lat:40.45, lng:-83.1, capacity:"600 MW", investment:"$30B", status:"Announced", year:2027, type:"AI Training", operator:"OpenAI/SoftBank", elecRate:7.9,
     companies: [
       { ticker:"ORCL", role:"DC Developer", detail:"Part of multi-state Stargate expansion" },
       { ticker:"NVDA", role:"GPU Supplier", detail:"Blackwell and next-gen platform deployment" },
@@ -57,7 +57,7 @@ const PROJECTS = [
       { ticker:"SE", role:"Power Distribution", detail:"Schneider Galaxy UPS, busway, BMS software" },
       { ticker:"MOD", role:"Chilled Water Systems", detail:"Airedale chillers for high-density compute cooling" },
     ]},
-  { id:6, name:"Microsoft Mount Pleasant", state:"WI", lat:42.72, lng:-87.88, capacity:"500 MW", investment:"$3B", status:"Under Construction", year:2026, type:"Cloud/AI", operator:"Microsoft", elecRate:9.3,
+  { id:6, name:"Microsoft Mount Pleasant", state:"WI", lat:42.55, lng:-88.5, capacity:"500 MW", investment:"$3B", status:"Under Construction", year:2026, type:"Cloud/AI", operator:"Microsoft", elecRate:9.3,
     companies: [
       { ticker:"MSFT", role:"Developer & Operator", detail:"315 acres, zero-water evaporation, closed-loop cooling" },
       { ticker:"VRT", role:"Thermal Management", detail:"Liebert cooling systems, rack PDUs" },
@@ -71,7 +71,7 @@ const PROJECTS = [
       { ticker:"VRT", role:"Cooling Infrastructure", detail:"Sidekick-class liquid cooling for Azure Maia chips" },
       { ticker:"ETN", role:"Power Management", detail:"Critical power distribution and protection" },
     ]},
-  { id:8, name:"Prometheus", state:"OH", lat:40.08, lng:-82.81, capacity:"1 GW", investment:"$10B+", status:"Under Construction", year:2026, type:"AI Training", operator:"Meta", elecRate:7.9,
+  { id:8, name:"Prometheus", state:"OH", lat:39.72, lng:-82.55, capacity:"1 GW", investment:"$10B+", status:"Under Construction", year:2026, type:"AI Training", operator:"Meta", elecRate:7.9,
     companies: [
       { ticker:"META", role:"Developer & Operator", detail:"First gigawatt DC. 200MW on-site natural gas by Nov 2026" },
       { ticker:"NVDA", role:"GPU Supplier", detail:"Millions of AI chips in expanded NVIDIA deal" },
@@ -119,14 +119,14 @@ const PROJECTS = [
       { ticker:"SMCI", role:"Server Infrastructure", detail:"Rapid-deploy liquid-cooled server racks" },
       { ticker:"VRT", role:"Cooling Systems", detail:"CDUs and liquid cooling for dense GPU clusters" },
     ]},
-  { id:15, name:"Vantage Port Washington", state:"WI", lat:43.39, lng:-87.88, capacity:"1 GW", investment:"$15B", status:"Under Construction", year:2027, type:"Colocation", operator:"Vantage", elecRate:9.3,
+  { id:15, name:"Vantage Port Washington", state:"WI", lat:43.15, lng:-87.2, capacity:"1 GW", investment:"$15B", status:"Under Construction", year:2027, type:"Colocation", operator:"Vantage", elecRate:9.3,
     companies: [
       { ticker:"VRT", role:"Cooling & Power", detail:"Primary thermal and power infrastructure" },
       { ticker:"ETN", role:"Power Distribution", detail:"Switchgear, UPS, busbar systems" },
       { ticker:"MOD", role:"Chiller Systems", detail:"Climate Solutions segment products" },
       { ticker:"NVT", role:"Enclosures", detail:"Rack systems and protection solutions" },
     ]},
-  { id:16, name:"Meta Beaver Dam", state:"WI", lat:43.46, lng:-88.84, capacity:"300 MW", investment:"$2B", status:"Under Construction", year:2026, type:"AI Training", operator:"Meta", elecRate:9.3,
+  { id:16, name:"Meta Beaver Dam", state:"WI", lat:43.80, lng:-89.3, capacity:"300 MW", investment:"$2B", status:"Under Construction", year:2026, type:"AI Training", operator:"Meta", elecRate:9.3,
     companies: [
       { ticker:"META", role:"Developer & Operator", detail:"30th data center, supporting AI and digital infra" },
       { ticker:"VRT", role:"Cooling", detail:"Thermal management systems" },
@@ -142,60 +142,66 @@ const PROJECTS = [
     ]},
 ];
 
-// State map data
+// State map data — moderately detailed outlines
 const SP = {
-  AL:"M628,466 L627,518 L622,518 L612,527 L611,520 L616,514 L617,466Z",
-  AZ:"M205,410 L260,410 L270,460 L265,500 L220,505 L195,480 L195,440Z",
-  AR:"M545,450 L600,450 L600,500 L545,505 L540,480Z",
-  CA:"M120,290 L160,290 L175,340 L175,420 L155,460 L120,460 L100,400 L100,340Z",
-  CO:"M285,320 L370,320 L370,390 L285,390Z",
-  CT:"M810,220 L835,215 L840,235 L818,242Z",
-  DE:"M775,295 L785,290 L790,310 L778,315Z",
-  FL:"M640,530 L700,510 L720,530 L710,580 L680,600 L650,580 L635,555Z",
-  GA:"M650,450 L700,440 L710,500 L690,520 L650,525 L640,500Z",
-  ID:"M210,170 L250,160 L265,220 L255,280 L220,285 L200,240Z",
-  IL:"M580,280 L610,275 L618,340 L610,380 L585,390 L575,350Z",
-  IN:"M615,280 L645,280 L648,360 L618,365 L615,340Z",
-  IA:"M500,250 L570,245 L575,310 L505,315Z",
-  KS:"M390,360 L490,355 L490,410 L390,415Z",
-  KY:"M615,370 L700,360 L705,400 L620,405Z",
-  LA:"M545,510 L590,505 L600,540 L575,560 L545,545Z",
-  ME:"M830,110 L855,100 L860,170 L840,185 L825,160Z",
-  MD:"M735,300 L780,290 L790,320 L750,325 L730,315Z",
-  MA:"M815,200 L850,195 L855,210 L820,218Z",
-  MI:"M590,170 L640,160 L660,230 L640,270 L600,275 L595,240Z",
-  MN:"M470,130 L540,125 L545,230 L475,235Z",
-  MS:"M580,460 L610,455 L615,525 L590,530 L575,500Z",
-  MO:"M505,350 L575,345 L582,420 L540,440 L505,430Z",
-  MT:"M230,110 L350,105 L355,185 L235,190Z",
-  NE:"M370,280 L480,275 L485,340 L375,345Z",
-  NV:"M175,260 L220,255 L230,370 L185,420 L165,360Z",
-  NH:"M820,140 L840,135 L842,195 L822,200Z",
-  NJ:"M785,250 L800,245 L805,290 L785,300Z",
-  NM:"M265,410 L340,405 L345,500 L270,505Z",
-  NY:"M720,170 L810,155 L820,220 L780,245 L730,250 L715,215Z",
-  NC:"M660,390 L770,370 L780,400 L710,425 L660,430Z",
-  ND:"M375,120 L465,115 L470,190 L380,195Z",
-  OH:"M650,270 L710,265 L715,340 L660,350 L648,310Z",
-  OK:"M380,415 L490,410 L500,450 L490,470 L400,475 L385,445Z",
-  OR:"M120,160 L205,150 L210,230 L140,240 L115,210Z",
-  PA:"M715,240 L790,230 L795,280 L720,290Z",
-  RI:"M835,215 L850,212 L852,228 L838,230Z",
-  SC:"M680,430 L730,420 L740,460 L700,470 L675,455Z",
-  SD:"M375,195 L470,190 L475,270 L380,275Z",
-  TN:"M600,400 L710,390 L715,425 L605,435Z",
-  TX:"M340,440 L490,430 L510,530 L480,580 L420,600 L360,570 L330,510Z",
-  UT:"M230,270 L290,265 L295,380 L240,385Z",
-  VT:"M800,130 L820,125 L822,185 L802,190Z",
-  VA:"M680,330 L770,315 L780,365 L730,385 L670,390Z",
-  WA:"M130,90 L210,85 L215,160 L140,165 L120,130Z",
-  WV:"M695,310 L730,305 L740,360 L710,370 L690,345Z",
-  WI:"M530,140 L590,135 L600,240 L545,245 L525,210Z",
-  WY:"M270,200 L365,195 L370,280 L275,285Z"
+  AL:"M618,466 L628,466 L630,472 L630,485 L629,498 L628,510 L627,518 L624,518 L620,522 L614,527 L611,522 L612,516 L616,510 L617,498 L617,485 L617,474Z",
+  AZ:"M195,415 L205,410 L230,408 L260,410 L265,420 L270,440 L272,460 L268,480 L265,500 L245,505 L220,505 L205,498 L195,480 L193,460 L195,440Z",
+  AR:"M540,448 L555,446 L570,446 L585,447 L600,450 L602,460 L602,475 L600,490 L600,500 L582,503 L565,505 L548,505 L542,498 L540,480 L540,465Z",
+  CA:"M100,300 L108,290 L120,285 L140,288 L160,290 L168,308 L175,330 L178,355 L175,380 L174,400 L172,420 L165,440 L155,460 L140,462 L125,460 L112,452 L105,435 L100,415 L98,395 L98,370 L98,345 L100,320Z",
+  CO:"M285,320 L310,319 L335,319 L360,320 L370,320 L370,340 L370,360 L370,380 L370,390 L345,390 L320,390 L295,390 L285,390 L285,370 L285,350 L285,335Z",
+  CT:"M808,220 L818,217 L828,215 L835,215 L838,222 L840,230 L840,235 L832,238 L822,240 L818,242 L812,236 L810,228Z",
+  DE:"M775,293 L780,290 L785,290 L788,295 L790,305 L790,310 L786,315 L780,315 L778,310 L776,302Z",
+  FL:"M638,530 L650,525 L665,518 L680,512 L695,510 L710,515 L720,525 L722,535 L718,548 L712,562 L708,575 L700,585 L690,592 L680,598 L668,595 L658,585 L650,572 L643,558 L638,545Z",
+  GA:"M645,450 L658,445 L672,442 L688,440 L700,442 L708,455 L712,470 L710,488 L708,500 L700,512 L692,520 L680,522 L665,524 L652,520 L645,510 L642,495 L642,478 L643,462Z",
+  ID:"M200,175 L210,170 L225,164 L240,160 L250,162 L258,178 L265,200 L265,220 L262,242 L258,262 L255,278 L248,284 L235,285 L222,284 L210,278 L204,262 L200,240 L198,215Z",
+  IL:"M575,280 L585,278 L595,276 L608,275 L615,278 L618,295 L618,315 L618,335 L615,355 L610,372 L608,382 L600,388 L590,390 L582,385 L578,370 L576,350 L575,330 L575,310 L575,295Z",
+  IN:"M615,280 L625,279 L635,279 L645,280 L647,295 L648,315 L648,335 L648,352 L648,360 L640,363 L630,365 L620,365 L618,355 L616,340 L615,320 L615,300Z",
+  IA:"M498,250 L515,248 L535,246 L555,245 L570,245 L574,258 L575,275 L575,290 L575,305 L572,312 L555,314 L535,315 L515,315 L505,315 L502,305 L500,288 L498,270Z",
+  KS:"M390,358 L415,356 L440,355 L465,355 L490,355 L490,370 L490,385 L490,400 L490,410 L465,412 L440,413 L415,414 L390,415 L390,400 L390,385 L390,370Z",
+  KY:"M615,370 L635,367 L655,364 L675,362 L695,360 L700,362 L704,372 L705,385 L705,395 L705,400 L690,402 L670,404 L650,405 L630,405 L620,405 L617,395 L615,385Z",
+  LA:"M545,510 L558,508 L572,506 L585,505 L595,508 L600,518 L602,530 L600,540 L595,548 L588,555 L578,560 L568,558 L558,552 L550,545 L545,535 L544,522Z",
+  ME:"M825,115 L832,110 L840,104 L848,100 L855,102 L858,118 L860,138 L860,155 L858,168 L852,178 L845,185 L838,182 L832,172 L828,158 L826,140Z",
+  MD:"M730,300 L742,296 L755,292 L768,290 L780,290 L786,298 L790,310 L790,318 L786,322 L775,325 L762,326 L750,325 L740,322 L734,316 L730,308Z",
+  MA:"M812,200 L822,198 L832,196 L842,195 L850,196 L854,202 L855,208 L852,212 L845,215 L835,218 L825,218 L818,215 L814,208Z",
+  MI:"M590,172 L600,168 L612,164 L625,161 L638,160 L648,168 L655,185 L660,205 L660,225 L656,245 L650,260 L645,270 L635,274 L622,275 L610,274 L602,268 L598,255 L596,240 L594,220 L592,200Z",
+  MN:"M470,132 L482,130 L498,128 L515,126 L530,125 L540,126 L544,145 L545,170 L545,195 L545,215 L545,230 L532,232 L515,234 L498,235 L480,235 L475,232 L473,215 L472,195 L470,170 L470,150Z",
+  MS:"M575,460 L585,458 L595,456 L605,455 L612,458 L615,472 L615,490 L615,508 L615,520 L612,525 L602,528 L592,530 L582,528 L575,522 L575,505 L575,488 L575,472Z",
+  MO:"M505,350 L520,348 L540,346 L560,345 L575,345 L580,358 L582,375 L582,395 L582,410 L580,420 L570,428 L555,435 L540,440 L525,438 L512,432 L505,425 L505,410 L505,390 L505,370Z",
+  MT:"M230,110 L258,108 L288,106 L318,105 L348,105 L355,115 L355,135 L355,155 L355,175 L355,185 L340,187 L310,188 L280,189 L250,190 L235,190 L232,175 L230,155 L230,135Z",
+  NE:"M370,282 L395,280 L425,278 L455,276 L480,275 L484,288 L485,305 L485,322 L485,338 L484,342 L460,343 L435,344 L410,345 L385,345 L375,345 L373,332 L372,315 L370,298Z",
+  NV:"M165,268 L175,262 L190,258 L205,256 L220,255 L225,275 L228,300 L230,330 L230,355 L230,370 L222,388 L210,405 L198,418 L185,420 L175,410 L168,392 L165,370 L165,345 L165,318 L165,292Z",
+  NH:"M820,142 L826,139 L832,136 L838,135 L840,138 L842,155 L842,172 L842,188 L842,195 L838,198 L832,200 L826,198 L822,192 L822,175 L820,158Z",
+  NJ:"M785,252 L790,248 L796,246 L800,245 L804,252 L805,265 L805,278 L805,288 L802,294 L798,298 L792,300 L788,298 L785,290 L785,275 L785,262Z",
+  NM:"M265,410 L285,408 L305,406 L325,405 L340,405 L344,425 L345,450 L345,475 L345,495 L345,500 L325,502 L305,504 L285,505 L270,505 L268,485 L266,460 L265,435Z",
+  NY:"M715,175 L730,172 L748,168 L768,162 L790,158 L808,155 L815,162 L820,178 L820,198 L820,215 L816,222 L805,232 L792,240 L780,245 L765,248 L748,250 L735,250 L725,245 L718,232 L715,215 L715,198Z",
+  NC:"M660,390 L680,386 L700,382 L720,378 L740,374 L758,372 L770,372 L778,380 L780,392 L778,400 L770,408 L755,415 L738,420 L720,424 L700,426 L680,428 L665,430 L660,425 L660,412Z",
+  ND:"M375,120 L398,118 L420,116 L442,115 L465,115 L468,130 L470,150 L470,170 L470,185 L468,190 L445,192 L420,193 L398,194 L380,195 L378,180 L376,162 L375,142Z",
+  OH:"M648,272 L660,270 L675,267 L690,265 L705,265 L712,275 L715,292 L715,310 L715,328 L715,340 L708,346 L695,350 L680,352 L665,350 L655,346 L650,335 L648,318 L648,300Z",
+  OK:"M380,418 L400,416 L425,413 L450,412 L475,410 L490,412 L498,425 L500,440 L500,450 L496,460 L490,468 L478,472 L460,475 L440,476 L420,475 L405,474 L395,468 L388,458 L385,445 L382,432Z",
+  OR:"M115,165 L132,162 L152,158 L175,154 L195,151 L205,152 L210,168 L210,190 L210,210 L210,228 L205,232 L185,236 L162,238 L142,240 L130,238 L120,228 L115,212 L115,195Z",
+  PA:"M715,240 L730,238 L748,235 L765,232 L782,231 L790,232 L794,242 L795,258 L795,272 L795,280 L788,284 L772,287 L755,289 L738,290 L725,290 L720,286 L718,272 L716,258Z",
+  RI:"M835,215 L840,213 L845,212 L850,213 L852,218 L852,224 L852,228 L848,230 L842,231 L838,230 L836,225Z",
+  SC:"M675,432 L688,428 L702,424 L718,420 L730,422 L738,432 L740,445 L738,458 L732,465 L720,468 L708,470 L695,468 L685,462 L678,453 L675,442Z",
+  SD:"M375,195 L398,194 L420,192 L442,191 L465,190 L470,205 L472,225 L475,248 L475,265 L475,270 L455,272 L432,273 L410,274 L388,275 L380,275 L378,260 L376,240 L375,218Z",
+  TN:"M600,400 L620,398 L645,395 L670,393 L695,391 L710,390 L714,398 L715,410 L715,420 L714,425 L695,427 L670,430 L645,432 L620,434 L608,435 L604,428 L602,418 L600,408Z",
+  TX:"M335,442 L358,440 L385,436 L415,432 L445,430 L475,430 L490,432 L500,445 L508,465 L510,490 L510,515 L508,530 L500,548 L492,565 L480,578 L465,590 L448,598 L430,600 L412,595 L395,585 L378,572 L362,558 L350,542 L340,525 L335,508 L332,490 L332,470 L334,455Z",
+  UT:"M230,272 L245,269 L262,266 L278,265 L290,265 L292,285 L294,310 L295,338 L295,362 L295,378 L292,382 L275,384 L258,385 L242,385 L235,382 L232,365 L230,340 L230,315 L230,292Z",
+  VT:"M800,132 L806,129 L812,127 L818,125 L820,128 L822,148 L822,168 L822,182 L822,188 L818,190 L812,190 L806,188 L802,182 L802,165 L800,148Z",
+  VA:"M670,335 L690,332 L712,326 L735,320 L755,316 L770,315 L778,325 L780,340 L780,355 L778,365 L770,374 L755,380 L738,384 L720,386 L700,388 L682,390 L670,388 L668,375 L668,358 L670,345Z",
+  WA:"M120,95 L140,92 L160,89 L180,87 L200,85 L210,88 L214,105 L215,125 L215,145 L215,158 L210,162 L190,164 L168,165 L148,165 L135,162 L125,155 L120,140 L120,120Z",
+  WV:"M690,312 L698,310 L708,307 L720,305 L730,306 L735,315 L738,328 L740,342 L740,355 L738,362 L732,368 L724,370 L715,370 L708,365 L702,355 L698,342 L694,330 L690,320Z",
+  WI:"M525,142 L538,140 L552,137 L568,135 L582,135 L590,138 L596,155 L600,178 L600,205 L600,228 L600,240 L592,244 L578,245 L562,245 L548,245 L538,242 L530,232 L526,215 L525,195 L525,170Z",
+  WY:"M270,202 L292,200 L318,198 L345,196 L362,195 L368,205 L370,225 L370,248 L370,268 L370,280 L355,282 L330,283 L305,284 L282,285 L275,284 L272,268 L270,245 L270,222Z"
 };
-const SL = {AL:{x:621,y:490},AZ:{x:230,y:455},AR:{x:565,y:475},CA:{x:135,y:375},CO:{x:325,y:355},CT:{x:825,y:228},DE:{x:783,y:302},FL:{x:672,y:555},GA:{x:670,y:480},ID:{x:230,y:225},IL:{x:593,y:330},IN:{x:632,y:320},IA:{x:535,y:280},KS:{x:435,y:385},KY:{x:660,y:385},LA:{x:568,y:530},ME:{x:843,y:140},MD:{x:760,y:312},MA:{x:835,y:207},MI:{x:625,y:210},MN:{x:505,y:180},MS:{x:595,y:490},MO:{x:540,y:385},MT:{x:290,y:145},NE:{x:425,y:310},NV:{x:192,y:340},NH:{x:831,y:168},NJ:{x:795,y:270},NM:{x:300,y:455},NY:{x:760,y:200},NC:{x:720,y:405},ND:{x:420,y:155},OH:{x:680,y:305},OK:{x:440,y:445},OR:{x:160,y:195},PA:{x:750,y:260},RI:{x:845,y:220},SC:{x:705,y:445},SD:{x:420,y:230},TN:{x:650,y:415},TX:{x:415,y:510},UT:{x:260,y:325},VT:{x:812,y:158},VA:{x:725,y:355},WA:{x:165,y:120},WV:{x:715,y:340},WI:{x:555,y:190},WY:{x:315,y:240}};
+const SL = {AL:{x:621,y:495},AZ:{x:232,y:457},AR:{x:568,y:475},CA:{x:138,y:375},CO:{x:328,y:355},CT:{x:825,y:228},DE:{x:783,y:302},FL:{x:678,y:555},GA:{x:675,y:482},ID:{x:232,y:225},IL:{x:595,y:332},IN:{x:632,y:322},IA:{x:536,y:280},KS:{x:440,y:385},KY:{x:660,y:385},LA:{x:572,y:530},ME:{x:843,y:142},MD:{x:760,y:308},MA:{x:835,y:207},MI:{x:625,y:215},MN:{x:508,y:180},MS:{x:595,y:492},MO:{x:542,y:388},MT:{x:292,y:147},NE:{x:428,y:310},NV:{x:198,y:340},NH:{x:831,y:168},NJ:{x:795,y:272},NM:{x:305,y:455},NY:{x:765,y:202},NC:{x:720,y:400},ND:{x:422,y:155},OH:{x:682,y:308},OK:{x:440,y:445},OR:{x:163,y:197},PA:{x:755,y:260},RI:{x:845,y:220},SC:{x:708,y:448},SD:{x:425,y:233},TN:{x:656,y:415},TX:{x:420,y:515},UT:{x:262,y:325},VT:{x:812,y:158},VA:{x:725,y:355},WA:{x:168,y:125},WV:{x:715,y:340},WI:{x:562,y:190},WY:{x:320,y:242}};
 
 const ELEC = {AL:7.8,AZ:8.2,AR:7.1,CA:17.5,CO:8.9,CT:18.2,DE:10.1,FL:9.4,GA:7.3,ID:6.5,IL:8.6,IN:8.2,IA:7.4,KS:8.8,KY:6.8,LA:6.2,ME:14.1,MD:10.8,MA:19.8,MI:9.5,MN:9.1,MS:7.0,MO:7.9,MT:7.2,NE:8.0,NV:7.8,NH:16.5,NJ:12.4,NM:7.6,NY:14.8,NC:7.5,ND:7.1,OH:7.9,OK:6.4,OR:7.0,PA:8.5,RI:18.9,SC:6.9,SD:8.5,TN:7.6,TX:7.2,UT:7.1,VT:13.2,VA:7.8,WA:5.8,WV:7.2,WI:9.3,WY:6.9};
+
+// Data parsing & scaling utilities
+const parseMW = (s) => { const m = s.match(/([\d.]+)\s*(GW|MW)/i); if (!m) return 500; return parseFloat(m[1]) * (m[2].toUpperCase() === 'GW' ? 1000 : 1); };
+const parseInvestment = (s) => { const m = s.match(/\$([\d.]+)B/i); return m ? parseFloat(m[1]) : 10; };
+const capacityRadius = (mw) => 4 + (Math.sqrt(mw) - Math.sqrt(150)) / (Math.sqrt(5000) - Math.sqrt(150)) * 10;
+const investStroke = (b) => 0.8 + (Math.sqrt(b) - Math.sqrt(2)) / (Math.sqrt(100) - Math.sqrt(2)) * 3.2;
 
 // Anchor dots to known state label positions + geo offset within state
 const STATE_CENTERS = {TX:[31,-99],LA:[31,-92],NM:[34.5,-106],OH:[40.5,-82.5],WI:[44,-89.5],IN:[40,-86],GA:[33,-83.5],NC:[35.5,-80],PA:[41,-77.5],NY:[43,-75.5],TN:[35.5,-86]};
@@ -205,7 +211,7 @@ const geoSvg = (lat,lng,state) => {
   return { x: sl.x + (lng - sc[1]) * 9, y: sl.y - (lat - sc[0]) * 13 };
 };
 const elecCol = r => r<=6.5?"#0d9488":r<=7.5?"#2dd4bf":r<=8.5?"#86efac":r<=10?"#fde68a":r<=13?"#fb923c":r<=17?"#ef4444":"#991b1b";
-const statCol = s => s==="Operational"?"#10b981":s==="Under Construction"?"#f59e0b":s==="Announced"?"#6366f1":"#94a3b8";
+const statCol = s => s==="Operational"?"#10b981":s==="Under Construction"?"#f59e0b":s==="Announced"?"#6366f1":s==="Planned"?"#94a3b8":"#64748b";
 const F = "'JetBrains Mono','Fira Code',monospace";
 const D = "'Syne','Space Grotesk',sans-serif";
 
@@ -251,7 +257,7 @@ export default function FusedDashboard() {
           </div>
           <div style={{display:"flex",gap:4,flexWrap:"wrap"}}>
             <button style={S.btn(showElec)} onClick={()=>setShowElec(!showElec)}>⚡ Electricity</button>
-            {["all","Operational","Under Construction","Announced"].map(s=>(
+            {["all","Operational","Under Construction","Announced","Planned"].map(s=>(
               <button key={s} style={S.btn(fSt===s)} onClick={()=>setFSt(s)}>{s==="all"?"All":s}</button>
             ))}
             <button style={{...S.btn(companyView),background:companyView?"rgba(52,211,153,0.12)":"transparent",borderColor:companyView?"#34d399":"#1e293b",color:companyView?"#34d399":"#475569"}} onClick={()=>{setCompanyView(!companyView);setSel(null);setSelCompany(null)}}>
@@ -275,14 +281,17 @@ export default function FusedDashboard() {
             {/* PROJECT MARKERS */}
             {filtered.map(p=>{
               const pos=geoSvg(p.lat,p.lng,p.state); const c=statCol(p.status); const isSel=sel===p.id;
-              const r=isSel?10:6;
+              const mw=parseMW(p.capacity); const inv=parseInvestment(p.investment);
+              const baseR=capacityRadius(mw); const r=isSel?baseR+3:baseR;
+              const iRing=investStroke(inv); const labelY=pos.y-(r+10+6);
               return <g key={p.id} style={{cursor:"pointer"}} onClick={()=>{setSel(isSel?null:p.id);setSelCompany(null);setCompanyView(false)}}>
                 <circle cx={pos.x} cy={pos.y} r={r+10} fill={c} opacity={.08}/>
-                <circle cx={pos.x} cy={pos.y} r={r+5} fill={c} opacity={.15}/>
+                <circle cx={pos.x} cy={pos.y} r={r+6} fill="none" stroke="rgba(255,255,255,0.35)" strokeWidth={iRing}/>
+                <circle cx={pos.x} cy={pos.y} r={r+4} fill={c} opacity={.15}/>
                 <circle cx={pos.x} cy={pos.y} r={r} fill={c} stroke={isSel?"#fff":c} strokeWidth={isSel?2.5:1.5} opacity={.9}/>
                 {isSel && <>
-                  <rect x={pos.x-60} y={pos.y-28} width={120} height={18} rx={4} fill="#0a0e17ee" stroke={c} strokeWidth={0.5}/>
-                  <text x={pos.x} y={pos.y-17} textAnchor="middle" fill="#e2e8f0" fontSize="8" fontWeight="700" fontFamily={F}>{p.name.substring(0,22)}</text>
+                  <rect x={pos.x-60} y={labelY} width={120} height={18} rx={4} fill="#0a0e17ee" stroke={c} strokeWidth={0.5}/>
+                  <text x={pos.x} y={labelY+11} textAnchor="middle" fill="#e2e8f0" fontSize="8" fontWeight="700" fontFamily={F}>{p.name.substring(0,22)}</text>
                 </>}
               </g>;
             })}
@@ -299,10 +308,27 @@ export default function FusedDashboard() {
               )}
             </div>}
             <div style={{display:"flex",alignItems:"center",gap:8,background:"rgba(10,14,23,0.85)",padding:"4px 8px",borderRadius:6,border:"1px solid #1e293b"}}>
-              {["Operational","Under Construction","Announced"].map(s=>
+              {["Operational","Under Construction","Announced","Planned"].map(s=>
                 <span key={s} style={{display:"flex",alignItems:"center",gap:3}}>
                   <span style={{width:7,height:7,borderRadius:"50%",background:statCol(s)}}/>
                   <span style={{fontSize:8,color:"#64748b"}}>{s}</span>
+                </span>
+              )}
+            </div>
+            {/* Capacity & Investment legend */}
+            <div style={{display:"flex",alignItems:"center",gap:10,background:"rgba(10,14,23,0.85)",padding:"4px 10px",borderRadius:6,border:"1px solid #1e293b"}}>
+              <span style={{fontSize:9,color:"#475569"}}>Size:</span>
+              {[["150 MW",capacityRadius(150)],["1 GW",capacityRadius(1000)],["5 GW",capacityRadius(5000)]].map(([label,r])=>
+                <span key={label} style={{display:"flex",alignItems:"center",gap:3}}>
+                  <svg width={r*2+2} height={r*2+2}><circle cx={r+1} cy={r+1} r={r} fill="#6366f1" opacity={0.7}/></svg>
+                  <span style={{fontSize:8,color:"#64748b"}}>{label}</span>
+                </span>
+              )}
+              <span style={{fontSize:9,color:"#475569",marginLeft:4}}>Ring:</span>
+              {[["$2B",0.8],["$100B",4]].map(([label,sw])=>
+                <span key={label} style={{display:"flex",alignItems:"center",gap:3}}>
+                  <svg width={22} height={22}><circle cx={11} cy={11} r={8} fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth={sw}/><circle cx={11} cy={11} r={5} fill="#6366f1" opacity={0.7}/></svg>
+                  <span style={{fontSize:8,color:"#64748b"}}>{label}</span>
                 </span>
               )}
             </div>
