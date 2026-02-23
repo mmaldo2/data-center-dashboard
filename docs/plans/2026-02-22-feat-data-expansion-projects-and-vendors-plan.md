@@ -1,7 +1,7 @@
 ---
 title: "feat: Expand dashboard data with curated projects and vendors"
 type: feat
-status: active
+status: completed
 date: 2026-02-22
 brainstorm: docs/brainstorms/2026-02-22-data-expansion-brainstorm.md
 source_data: "C:\\Users\\Marcus Maldonado\\Downloads\\dc_buildout_analysis.xlsx"
@@ -82,7 +82,7 @@ if (typeof window !== 'undefined' && import.meta.env?.DEV) {
 }
 ```
 
-- [ ] Verify: `npm run dev` renders identically. Check map markers, sidebar, company view, status filters, company detail expansion, and cross-navigation from company view to map.
+- [x] Verify: `npm run dev` renders identically. Check map markers, sidebar, company view, status filters, company detail expansion, and cross-navigation from company view to map.
 
 **Success criteria:** Pixel-identical rendering. No console errors. All 17 projects clickable. All 11 companies expandable. SE ticker fully replaced with SBGSY.
 
@@ -129,7 +129,7 @@ if (typeof window !== 'undefined' && import.meta.env?.DEV) {
 - [x] Add entries to `COMPANIES` in `dc-data.js`
 - [x] Use `"N/A"` for `lc_growth` where liquid cooling is not a relevant metric (hyperscalers, networking, fiber, energy providers)
 - [x] Use `"N/A"` for `backlog` where not publicly disclosed; use specific values where available (e.g., RPO, deferred revenue)
-- [ ] Verify: Companies View renders all new entries sorted by involvement count. Expand each to verify financial data renders correctly
+- [x] Verify: Companies View renders all new entries sorted by involvement count. Expand each to verify financial data renders correctly
 
 **Success criteria:** All new companies render with correct colors, financial data, and summaries. No `undefined` values in UI. Colors are visually distinguishable.
 
@@ -262,29 +262,29 @@ For each new project:
 
 ### Functional Requirements
 
-- [ ] Dashboard renders ~35-40 project markers on the map
-- [ ] All ~31 companies appear in Companies View with correct financial data
-- [ ] Clicking any project marker shows its detail with linked companies
-- [ ] Expanding any company card shows complete financial data (no `undefined` values)
-- [ ] Status filters correctly filter the expanded project set
-- [ ] Cross-navigation from Company View to Map works for all projects
-- [ ] Energy providers (CEG, VST, GEV, NEE, BE) appear as linked companies in relevant projects
-- [ ] Schneider Electric renders as SBGSY throughout
+- [x] Dashboard renders ~35-40 project markers on the map
+- [x] All ~31 companies appear in Companies View with correct financial data
+- [x] Clicking any project marker shows its detail with linked companies
+- [x] Expanding any company card shows complete financial data (no `undefined` values)
+- [x] Status filters correctly filter the expanded project set
+- [x] Cross-navigation from Company View to Map works for all projects
+- [x] Energy providers (CEG, VST, GEV, NEE, BE) appear as linked companies in relevant projects
+- [x] Schneider Electric renders as SBGSY throughout
 
 ### Data Integrity
 
-- [ ] Zero console errors from ticker validation check
-- [ ] Every ticker in every project's `companies` array resolves in `COMPANIES`
-- [ ] No duplicate project IDs
-- [ ] All project coordinates produce valid SVG positions (within 0-960 x, 0-600 y)
-- [ ] All capacity strings parseable by `parseMW()` regex
+- [x] Zero console errors from ticker validation check
+- [x] Every ticker in every project's `companies` array resolves in `COMPANIES`
+- [x] No duplicate project IDs
+- [x] All project coordinates produce valid SVG positions (within 0-960 x, 0-600 y)
+- [x] All capacity strings parseable by `parseMW()` regex
 
 ### Visual Quality
 
-- [ ] No overlapping markers that prevent clicking
-- [ ] All 31 company colors visually distinguishable at badge alpha levels
-- [ ] Capacity labels don't collide with adjacent markers in clusters
-- [ ] Map remains readable with all status filters set to "All"
+- [x] No overlapping markers that prevent clicking
+- [x] All 31 company colors visually distinguishable at badge alpha levels
+- [x] Capacity labels don't collide with adjacent markers in clusters
+- [x] Map remains readable with all status filters set to "All"
 
 ## Dependencies & Risks
 
