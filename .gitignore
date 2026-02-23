@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.claude/
+us-states-raw.json
+us-states-simplified.json
+us-states-final.json
+*.env
