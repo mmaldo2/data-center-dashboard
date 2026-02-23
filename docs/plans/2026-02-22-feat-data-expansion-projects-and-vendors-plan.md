@@ -248,15 +248,15 @@ For each new project:
 
 #### Phase 4: Update CLAUDE.md
 
-- [ ] Update project count (17 → ~40)
-- [ ] Update company count (11 → ~31)
-- [ ] Add `dc-data.js` to architecture section
-- [ ] Update "Data center dashboard.jsx" description — data is now imported, not inline
-- [ ] Rename "Inline Data Structures" section to "Data Structures" and reference `dc-data.js`
-- [ ] Update line count estimate for dashboard file
-- [ ] Add note about ticker validation check in development mode
-- [ ] Document the status mapping rules
-- [ ] Update cluster states list (add VA, GA, IN, MS, etc.)
+- [x] Update project count (17 → 37)
+- [x] Update company count (11 → 36)
+- [x] Add `dc-data.js` to architecture section
+- [x] Update "Data center dashboard.jsx" description — data is now imported, not inline
+- [x] Rename "Inline Data Structures" section to "Data Structures" and reference `dc-data.js`
+- [x] Update line count estimate for dashboard file
+- [x] Add note about ticker validation check in development mode
+- [x] Document the status mapping rules
+- [x] Update cluster states list (add VA, GA, IN, MS, etc.)
 
 ## Acceptance Criteria
 

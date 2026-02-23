@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Interactive React dashboard mapping major US AI data center projects and the public companies involved. Single-component architecture with all data, styling, and logic inline.
+Interactive React dashboard mapping 37 US AI data center projects and 36 publicly traded companies involved. Tracks hyperscalers (AMZN, META, MSFT, ORCL, GOOGL), GPU cloud operators (CRWV), and infrastructure vendors across power, cooling, construction, energy, and networking categories.
 
 ## Development Commands
 
@@ -18,19 +18,22 @@ No test framework, linter, or formatter is configured.
 
 ## Architecture
 
-**Single-component app.** The entire dashboard lives in one file:
+**Single-component app** with zero external dependencies beyond React (no mapping library, no styling library, no state management).
 
-- **`Data center dashboard.jsx`** — Default export `FusedDashboard`. Contains all data constants, utility functions, state management, and JSX rendering. Uses only `useState` and `useMemo` from React (no external dependencies).
+- **`dc-data.js`** — Named exports `COMPANIES` (36 entries keyed by ticker) and `PROJECTS` (37 entries). All financial metrics, project metadata, and company-project linkages. Includes a development-time referential integrity check that logs console errors for any ticker in a project's `companies` array that doesn't exist in `COMPANIES`.
+- **`Data center dashboard.jsx`** — Default export `FusedDashboard`. Imports data from `dc-data.js`. Contains utility functions, state management, and all JSX rendering (~315 lines). Uses only `useState` and `useMemo` from React.
 - **`states-geo-data.js`** — Exports `STATES_GEO`, an array of 48 GeoJSON-like objects (one per contiguous US state) with `abbr`, `name`, `type` (`"Polygon"` or `"MultiPolygon"`), and `coords` fields. Generated from Census 20m data simplified via Mapshaper.
 - **`src/main.jsx`** — Entry point. Imports `FusedDashboard` from the root and mounts it to `#root`.
 - **`index.html`** — Minimal shell with global reset and dark background (`#060a13`).
 
-### Inline Data Structures
+### Data Structures (dc-data.js)
 
-All data is hardcoded at the top of the dashboard file:
+- **`COMPANIES`** — Object keyed by ticker symbol (VRT, NVDA, ORCL, GOOGL, CRWV, etc.). Each entry has: `ticker`, `name`, `price`, `mcap`, `pe_fwd`, `fy26e_rev`, `fy26e_eps`, `fy26e_growth`, `op_margin`, `dc_pct`, `lc_growth`, `backlog`, `color` (hex), `role`, `summary`. Use `"N/A"` for irrelevant metrics, `"N/M"` for not-meaningful (e.g., negative earnings PE).
+- **`PROJECTS`** — Array of 37 projects. Each has `id`, `name`, `state`, `lat`, `lng`, `capacity`, `investment`, `status`, `year`, `type`, `operator`, `elecRate` (cents/kWh), and a `companies` array linking to `COMPANIES` entries with project-specific `ticker`, `role`, and `detail`.
 
-- **`COMPANIES`** — Object keyed by ticker symbol (VRT, NVDA, ORCL, etc.). Financial metrics and DC-specific data.
-- **`PROJECTS`** — Array of 17 projects. Each has geo coordinates (`lat`, `lng`), capacity/investment, status, `elecRate` (cents/kWh), and a `companies` array linking to `COMPANIES` entries with project-specific roles.
+**Status values:** `"Operational"`, `"Under Construction"`, `"Announced"`, `"Planned"`. When adding from external sources, map statuses: `Permitting`/`In development`/`Broke ground`/`Restart in progress` → Under Construction; `Partially operational`/`Operational + expanding` → Operational; `Paused/Redesign` → Planned.
+
+**Company ordering in project `companies` arrays:** (1) Operator/developer, (2) GPU/chip supplier, (3) Cooling/power infrastructure, (4) Construction, (5) Energy provider, (6) Networking/connectivity.
 
 ### Map Rendering
 
@@ -40,11 +43,15 @@ The map is pure inline SVG (no mapping library). State outlines are rendered fro
 - **`ringToPath(ring)`** / **`geoToPath(st)`** — Convert GeoJSON coordinate rings to SVG path `d` strings. Handles both Polygon and MultiPolygon types.
 - **`STATE_PATHS`** — Pre-computed array of `{abbr, name, d}` objects. Paths are projected once at module load, not on each render.
 - **Marker radius** scales by capacity via `capacityRadius()` (sqrt scale, 150 MW → 5px, 5 GW → 16px).
-- Overlapping projects (Ohio, Wisconsin clusters) have manually adjusted coordinates for visual separation.
+- Overlapping projects in dense clusters (OH, WI, PA, TX, IN, GA, VA) have manually adjusted coordinates for visual separation (~25px minimum between marker centers).
 
 ### Styling
 
-All styles are inline JS objects. Two Google Fonts loaded via `<link>` tags rendered by the component: **Syne** (headings) and **JetBrains Mono** (body/data). Dark theme throughout.
+All styles are inline JS objects. Two Google Fonts loaded via `<link>` tags rendered by the component: **Syne** (headings) and **JetBrains Mono** (body/data). Dark theme throughout. No CSS files or styling libraries — everything is inline.
+
+- **`F`** — Font family shorthand for JetBrains Mono (body/data text). Used throughout JSX.
+- **`D`** — Font family shorthand for Syne (headings). Used in `h1`/`h2` elements.
+- **`S`** — Style helper object defined inside `FusedDashboard()`. Contains `card`, `badge(color)`, and `btn(active)` factories used across sidebar/company cards.
 
 ## UI Modes
 
@@ -61,10 +68,11 @@ All styles are inline JS objects. Two Google Fonts loaded via `<link>` tags rend
 
 ## Working with This Codebase
 
-- The dashboard file is ~460 lines with data, utilities, and rendering all inline. When modifying, locate the relevant section by searching for data constant names or function names.
+- Data lives in `dc-data.js`; rendering lives in `Data center dashboard.jsx` (~315 lines). Edit data separately from rendering logic.
 - Capacity and investment are stored as display strings (`"1.2 GW"`, `"$100B+"`). Use `parseMW()` to extract numeric MW values.
-- When adding new projects, just provide real `lat`/`lng` — the Albers projection handles placement automatically. Check that dense clusters (Ohio, Wisconsin) have enough coordinate separation.
+- When adding new projects, provide real `lat`/`lng` — the Albers projection handles placement. Check dense clusters (OH, WI, PA, TX, IN, GA, VA) for coordinate separation (~25px min between markers). At scale 1070: 1° lat ≈ 65-75px, 1° lng ≈ 50-60px.
 - The `statCol()` function maps status strings to colors — add explicit cases for any new statuses.
+- The ticker validation check in `dc-data.js` runs in dev mode and logs errors for broken company references. Always check the browser console after adding/modifying projects.
 - The CSV file (`Copy of Data_Centers_Database - FracTracker Data Centers.csv`) is an external FracTracker dataset (~1,358 rows) not currently consumed by the dashboard.
 
 ## Documentation
