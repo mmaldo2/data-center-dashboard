@@ -49,9 +49,11 @@ export const PROJECTS = [
     companies: [
       { ticker:"ORCL", role:"DC Developer & Cloud Provider", detail:"Building campus, purchasing 400K GB200 chips, $300B+ 5yr deal" },
       { ticker:"NVDA", role:"GPU Supplier", detail:"GB200 NVL72 platform, 700W/chip requiring liquid cooling" },
+      { ticker:"AMD", role:"GPU Supplier (Instinct)", detail:"AMD–OpenAI 6 GW strategic partnership (Oct 2025). Instinct MI450 deployment beginning H2 2026 alongside NVIDIA GB200" },
       { ticker:"VRT", role:"Power & Cooling Infrastructure", detail:"NVIDIA co-dev partner, 360AI platform, CDUs and liquid cooling" },
       { ticker:"SMCI", role:"AI Server Systems", detail:"Blackwell-ready DLC server racks, 98% heat capture" },
       { ticker:"ETN", role:"Power Distribution", detail:"UPS, switchgear, busbar. Boyd acquisition adds liquid cooling" },
+      { ticker:"JCI", role:"Thermal Management & Building Controls", detail:"Silent-Aire custom air handlers and YORK chillers for multi-building campus. OpenBlue BMS platform" },
     ]},
   { id:2, name:"Stargate — New Mexico", state:"NM", lat:35.08, lng:-106.65, capacity:"800 MW", investment:"$40B", status:"Announced", year:2027, type:"AI Training", operator:"OpenAI/Oracle", elecRate:7.6,
     companies: [
@@ -94,6 +96,7 @@ export const PROJECTS = [
     companies: [
       { ticker:"MSFT", role:"Developer & Operator", detail:"First AI superfactory, hundreds of thousands of GPUs" },
       { ticker:"NVDA", role:"GPU Supplier", detail:"Advanced GPU deployment for AI workloads" },
+      { ticker:"AMD", role:"GPU & CPU Supplier", detail:"Instinct MI300X powers Azure OpenAI Service inference. EPYC Turin host CPUs in ND MI300X V5 VM instances" },
       { ticker:"VRT", role:"Cooling Infrastructure", detail:"Sidekick-class liquid cooling for Azure Maia chips" },
       { ticker:"ETN", role:"Power Management", detail:"Critical power distribution and protection" },
     ]},
@@ -101,8 +104,10 @@ export const PROJECTS = [
     companies: [
       { ticker:"META", role:"Developer & Operator", detail:"First gigawatt DC. 200MW on-site natural gas by Nov 2026" },
       { ticker:"NVDA", role:"GPU Supplier", detail:"Millions of AI chips in expanded NVIDIA deal" },
+      { ticker:"AMD", role:"Server CPU Supplier (EPYC)", detail:"EPYC processors for custom OCP single-socket servers. Helios AI rack built on Meta's 2025 OCP design spec" },
       { ticker:"VRT", role:"Cooling & Power", detail:"Hyperscale thermal management, prefab modules" },
       { ticker:"MOD", role:"Precision Cooling", detail:"Chillers and CDUs for high-density AI racks" },
+      { ticker:"COHR", role:"Optical Transceivers (800G/1.6T)", detail:"Meta is a confirmed hyperscale customer. 500K+ GPUs across buildings require massive intra-cluster optical connectivity" },
       { ticker:"VST", role:"Nuclear Power PPA", detail:"20-year, 1.2 GW PPA from Comanche Peak nuclear to serve Meta DC load" },
     ]},
   { id:9, name:"Hyperion", state:"LA", lat:30.48, lng:-91.19, capacity:"5 GW", investment:"$50B+", status:"Planned", year:2028, type:"AI Mega Campus", operator:"Meta", elecRate:6.2,
@@ -113,6 +118,7 @@ export const PROJECTS = [
       { ticker:"ETN", role:"Power + Liquid Cooling", detail:"Boyd liquid cooling + Eaton power from chip to grid" },
       { ticker:"SBGSY", role:"Building Management", detail:"EcoStruxure BMS, power monitoring" },
       { ticker:"MOD", role:"Large-Scale Chillers", detail:"Modular chiller systems for phased build-out" },
+      { ticker:"JCI", role:"Thermal Management & Building Controls", detail:"Silent-Aire custom air handlers and YORK chillers for 10-building, 1,200-acre campus. Integrated BMS for phased 5 GW build" },
     ]},
   { id:10, name:"Amazon Richmond County", state:"NC", lat:34.97, lng:-79.89, capacity:"500 MW", investment:"$10B", status:"Under Construction", year:2027, type:"Cloud/AI", operator:"Amazon/AWS", elecRate:7.5,
     companies: [
@@ -145,6 +151,7 @@ export const PROJECTS = [
       { ticker:"NVDA", role:"GPU Supplier", detail:"100,000 H100 GPUs, built in 122 days" },
       { ticker:"SMCI", role:"Server Infrastructure", detail:"Rapid-deploy liquid-cooled server racks" },
       { ticker:"VRT", role:"Cooling Systems", detail:"CDUs and liquid cooling for dense GPU clusters" },
+      { ticker:"TSLA", role:"Battery Storage (Megapack)", detail:"168 Megapacks providing 150 MW grid-tied battery backup. $430M in Megapack sales to xAI in 2025" },
     ]},
   { id:15, name:"Vantage Port Washington", state:"WI", lat:43.15, lng:-87.2, capacity:"1 GW", investment:"$15B", status:"Under Construction", year:2027, type:"Colocation", operator:"Vantage", elecRate:9.3,
     companies: [
@@ -166,6 +173,7 @@ export const PROJECTS = [
       { ticker:"SBGSY", role:"Electrical Infrastructure", detail:"Medium/high voltage distribution" },
       { ticker:"MOD", role:"Industrial Cooling", detail:"Large-scale chiller systems for phased build" },
       { ticker:"NVT", role:"Protection Solutions", detail:"Enclosures and thermal management" },
+      { ticker:"JCI", role:"Thermal Management & Building Controls", detail:"Silent-Aire CDUs and YORK chillers for multi-tenant 4.5 GW campus. Integrated BMS across 3,200 acres" },
     ]},
   // ── New projects (Feb 2026 expansion) ──────────────────────────────
   { id:18, name:"Union City Campus", state:"GA", lat:33.35, lng:-84.80, capacity:"324 MW", investment:"$1.8B", status:"Under Construction", year:2029, type:"Cloud/AI", operator:"Microsoft/EdgeConneX", elecRate:7.3,
@@ -234,6 +242,7 @@ export const PROJECTS = [
   { id:25, name:"Council Bluffs Expansion", state:"IA", lat:41.22, lng:-95.86, capacity:"1 GW", investment:"$7B", status:"Operational", year:2026, type:"Cloud/AI", operator:"Google", elecRate:7.0,
     companies: [
       { ticker:"GOOGL", role:"Developer & Operator", detail:"$7B expansion. Operating since 2009, $13.8B total invested in IA" },
+      { ticker:"AVGO", role:"Custom AI Chip Co-Developer (TPU)", detail:"Co-designs every Google TPU generation with proprietary SerDes IP. Trillium/Ironwood silicon deployed at scale" },
       { ticker:"VRT", role:"Cooling & Power Infrastructure", detail:"Thermal management for expanding GW-scale campus with AI-dedicated capacity" },
       { ticker:"ETN", role:"Power Management", detail:"UPS and power distribution for phased expansion" },
       { ticker:"FIX", role:"HVAC & Mechanical Contractor", detail:"Mechanical systems and cooling for multi-building expansion" },
@@ -243,10 +252,12 @@ export const PROJECTS = [
   { id:26, name:"Haskell County (Intersect)", state:"TX", lat:33.16, lng:-99.73, capacity:"600 MW", investment:"$10B", status:"Under Construction", year:2027, type:"Cloud/AI", operator:"Google", elecRate:7.2,
     companies: [
       { ticker:"GOOGL", role:"Developer & Operator", detail:"Part of $40B TX investment through 2027. Co-located with Intersect solar+BESS plant" },
+      { ticker:"AVGO", role:"Custom AI Chip Co-Developer (TPU)", detail:"Broadcom co-develops Google Ironwood (TPU v7) reaching GA early 2026. Greenfield campus is among first large-scale Ironwood deployments" },
       { ticker:"VRT", role:"Cooling Infrastructure", detail:"Advanced air-cooling thermal systems for West Texas climate" },
       { ticker:"ETN", role:"Power Distribution", detail:"Switchgear connecting solar/BESS and grid power to DC loads" },
       { ticker:"PWR", role:"Electrical & Grid Infrastructure", detail:"Transmission lines and substation construction for remote TX site" },
       { ticker:"NEE", role:"Renewable Energy PPAs", detail:"Clean energy supply via long-term PPAs, part of Google's 6.2 GW TX renewable commitments" },
+      { ticker:"TSLA", role:"Battery Storage (Megapack)", detail:"Google–Intersect 15.3 GWh Megapack supply contract through 2030. On-site BESS for renewable firming and DC backup" },
       { ticker:"CAT", role:"Backup Power Generators", detail:"Diesel and gas gensets for backup power at solar-paired campus" },
     ]},
   { id:27, name:"Meta Lebanon", state:"IN", lat:40.45, lng:-86.0, capacity:"1 GW", investment:"$10B", status:"Under Construction", year:2028, type:"AI Training", operator:"Meta", elecRate:8.2,
@@ -300,6 +311,7 @@ export const PROJECTS = [
       { ticker:"VRT", role:"Cooling Infrastructure", detail:"Liquid cooling CDUs for GPU-dense 392K sqft facility" },
       { ticker:"ETN", role:"Power Distribution", detail:"Critical power systems for 250 MW converted pharmaceutical campus" },
       { ticker:"ANET", role:"DC Networking", detail:"800G Ethernet fabric for GPU cloud interconnect" },
+      { ticker:"COHR", role:"Optical Transceivers (800G)", detail:"800G pluggable transceivers behind Arista switches. One transceiver per switch port for GPU-dense fabric" },
     ]},
   { id:33, name:"CoreWeave Denton TX", state:"TX", lat:33.21, lng:-97.13, capacity:"260 MW", investment:"$1.2B", status:"Operational", year:2026, type:"GPU Cloud", operator:"CoreWeave/Core Scientific", elecRate:7.2,
     companies: [
@@ -309,6 +321,7 @@ export const PROJECTS = [
       { ticker:"ETN", role:"Power Management", detail:"Power distribution and protection for phased MW expansion" },
       { ticker:"ABB", role:"Power Distribution", detail:"Medium-voltage switchgear for site power conversion" },
       { ticker:"ANET", role:"DC Networking", detail:"High-speed Ethernet switching for GPU cluster fabric" },
+      { ticker:"COHR", role:"Optical Transceivers (800G)", detail:"800G pluggable modules for 16,000+ GPU facility. DC&Comms revenue $1.2B/quarter (+34% YoY)" },
     ]},
   { id:34, name:"Polaris Forge 1", state:"ND", lat:46.00, lng:-98.52, capacity:"400 MW", investment:"$7B", status:"Operational", year:2025, type:"GPU Cloud", operator:"Applied Digital", elecRate:8.1,
     companies: [
@@ -339,6 +352,7 @@ export const PROJECTS = [
   { id:37, name:"Google Virginia Expansion", state:"VA", lat:39.04, lng:-77.49, capacity:"600 MW", investment:"$9B", status:"Under Construction", year:2026, type:"Cloud/AI", operator:"Google", elecRate:7.8,
     companies: [
       { ticker:"GOOGL", role:"Developer & Operator", detail:"$9B expansion across Loudoun, Prince William, and new Chesterfield County campus" },
+      { ticker:"AVGO", role:"Custom AI Chip Co-Developer (TPU)", detail:"Co-designs Google TPU silicon with proprietary SerDes IP. Northern Virginia hosts Google's densest cloud footprint" },
       { ticker:"NVDA", role:"GPU Supplier", detail:"GPU clusters for Google Cloud AI infrastructure" },
       { ticker:"VRT", role:"Cooling Infrastructure", detail:"Thermal management for multi-campus Northern Virginia expansion" },
       { ticker:"ANET", role:"DC Networking", detail:"400G/800G Ethernet switches for Google Cloud AI cluster interconnect" },
