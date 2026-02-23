@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import { STATES_GEO } from "./states-geo-data";
 
 // ═══════════════════════════════════════════════════════════════════════
 //  PUBLIC COMPANIES (financial data from Q4 2025 / Q3 FY2026 earnings)
@@ -142,85 +143,51 @@ const PROJECTS = [
     ]},
 ];
 
-// State map data — moderately detailed outlines
-const SP = {
-  AL:"M618,466 L628,466 L630,472 L630,485 L629,498 L628,510 L627,518 L624,518 L620,522 L614,527 L611,522 L612,516 L616,510 L617,498 L617,485 L617,474Z",
-  AZ:"M195,415 L205,410 L230,408 L260,410 L265,420 L270,440 L272,460 L268,480 L265,500 L245,505 L220,505 L205,498 L195,480 L193,460 L195,440Z",
-  AR:"M540,448 L555,446 L570,446 L585,447 L600,450 L602,460 L602,475 L600,490 L600,500 L582,503 L565,505 L548,505 L542,498 L540,480 L540,465Z",
-  CA:"M100,300 L108,290 L120,285 L140,288 L160,290 L168,308 L175,330 L178,355 L175,380 L174,400 L172,420 L165,440 L155,460 L140,462 L125,460 L112,452 L105,435 L100,415 L98,395 L98,370 L98,345 L100,320Z",
-  CO:"M285,320 L310,319 L335,319 L360,320 L370,320 L370,340 L370,360 L370,380 L370,390 L345,390 L320,390 L295,390 L285,390 L285,370 L285,350 L285,335Z",
-  CT:"M808,220 L818,217 L828,215 L835,215 L838,222 L840,230 L840,235 L832,238 L822,240 L818,242 L812,236 L810,228Z",
-  DE:"M775,293 L780,290 L785,290 L788,295 L790,305 L790,310 L786,315 L780,315 L778,310 L776,302Z",
-  FL:"M638,530 L650,525 L665,518 L680,512 L695,510 L710,515 L720,525 L722,535 L718,548 L712,562 L708,575 L700,585 L690,592 L680,598 L668,595 L658,585 L650,572 L643,558 L638,545Z",
-  GA:"M645,450 L658,445 L672,442 L688,440 L700,442 L708,455 L712,470 L710,488 L708,500 L700,512 L692,520 L680,522 L665,524 L652,520 L645,510 L642,495 L642,478 L643,462Z",
-  ID:"M200,175 L210,170 L225,164 L240,160 L250,162 L258,178 L265,200 L265,220 L262,242 L258,262 L255,278 L248,284 L235,285 L222,284 L210,278 L204,262 L200,240 L198,215Z",
-  IL:"M575,280 L585,278 L595,276 L608,275 L615,278 L618,295 L618,315 L618,335 L615,355 L610,372 L608,382 L600,388 L590,390 L582,385 L578,370 L576,350 L575,330 L575,310 L575,295Z",
-  IN:"M615,280 L625,279 L635,279 L645,280 L647,295 L648,315 L648,335 L648,352 L648,360 L640,363 L630,365 L620,365 L618,355 L616,340 L615,320 L615,300Z",
-  IA:"M498,250 L515,248 L535,246 L555,245 L570,245 L574,258 L575,275 L575,290 L575,305 L572,312 L555,314 L535,315 L515,315 L505,315 L502,305 L500,288 L498,270Z",
-  KS:"M390,358 L415,356 L440,355 L465,355 L490,355 L490,370 L490,385 L490,400 L490,410 L465,412 L440,413 L415,414 L390,415 L390,400 L390,385 L390,370Z",
-  KY:"M615,370 L635,367 L655,364 L675,362 L695,360 L700,362 L704,372 L705,385 L705,395 L705,400 L690,402 L670,404 L650,405 L630,405 L620,405 L617,395 L615,385Z",
-  LA:"M545,510 L558,508 L572,506 L585,505 L595,508 L600,518 L602,530 L600,540 L595,548 L588,555 L578,560 L568,558 L558,552 L550,545 L545,535 L544,522Z",
-  ME:"M825,115 L832,110 L840,104 L848,100 L855,102 L858,118 L860,138 L860,155 L858,168 L852,178 L845,185 L838,182 L832,172 L828,158 L826,140Z",
-  MD:"M730,300 L742,296 L755,292 L768,290 L780,290 L786,298 L790,310 L790,318 L786,322 L775,325 L762,326 L750,325 L740,322 L734,316 L730,308Z",
-  MA:"M812,200 L822,198 L832,196 L842,195 L850,196 L854,202 L855,208 L852,212 L845,215 L835,218 L825,218 L818,215 L814,208Z",
-  MI:"M590,172 L600,168 L612,164 L625,161 L638,160 L648,168 L655,185 L660,205 L660,225 L656,245 L650,260 L645,270 L635,274 L622,275 L610,274 L602,268 L598,255 L596,240 L594,220 L592,200Z",
-  MN:"M470,132 L482,130 L498,128 L515,126 L530,125 L540,126 L544,145 L545,170 L545,195 L545,215 L545,230 L532,232 L515,234 L498,235 L480,235 L475,232 L473,215 L472,195 L470,170 L470,150Z",
-  MS:"M575,460 L585,458 L595,456 L605,455 L612,458 L615,472 L615,490 L615,508 L615,520 L612,525 L602,528 L592,530 L582,528 L575,522 L575,505 L575,488 L575,472Z",
-  MO:"M505,350 L520,348 L540,346 L560,345 L575,345 L580,358 L582,375 L582,395 L582,410 L580,420 L570,428 L555,435 L540,440 L525,438 L512,432 L505,425 L505,410 L505,390 L505,370Z",
-  MT:"M230,110 L258,108 L288,106 L318,105 L348,105 L355,115 L355,135 L355,155 L355,175 L355,185 L340,187 L310,188 L280,189 L250,190 L235,190 L232,175 L230,155 L230,135Z",
-  NE:"M370,282 L395,280 L425,278 L455,276 L480,275 L484,288 L485,305 L485,322 L485,338 L484,342 L460,343 L435,344 L410,345 L385,345 L375,345 L373,332 L372,315 L370,298Z",
-  NV:"M165,268 L175,262 L190,258 L205,256 L220,255 L225,275 L228,300 L230,330 L230,355 L230,370 L222,388 L210,405 L198,418 L185,420 L175,410 L168,392 L165,370 L165,345 L165,318 L165,292Z",
-  NH:"M820,142 L826,139 L832,136 L838,135 L840,138 L842,155 L842,172 L842,188 L842,195 L838,198 L832,200 L826,198 L822,192 L822,175 L820,158Z",
-  NJ:"M785,252 L790,248 L796,246 L800,245 L804,252 L805,265 L805,278 L805,288 L802,294 L798,298 L792,300 L788,298 L785,290 L785,275 L785,262Z",
-  NM:"M265,410 L285,408 L305,406 L325,405 L340,405 L344,425 L345,450 L345,475 L345,495 L345,500 L325,502 L305,504 L285,505 L270,505 L268,485 L266,460 L265,435Z",
-  NY:"M715,175 L730,172 L748,168 L768,162 L790,158 L808,155 L815,162 L820,178 L820,198 L820,215 L816,222 L805,232 L792,240 L780,245 L765,248 L748,250 L735,250 L725,245 L718,232 L715,215 L715,198Z",
-  NC:"M660,390 L680,386 L700,382 L720,378 L740,374 L758,372 L770,372 L778,380 L780,392 L778,400 L770,408 L755,415 L738,420 L720,424 L700,426 L680,428 L665,430 L660,425 L660,412Z",
-  ND:"M375,120 L398,118 L420,116 L442,115 L465,115 L468,130 L470,150 L470,170 L470,185 L468,190 L445,192 L420,193 L398,194 L380,195 L378,180 L376,162 L375,142Z",
-  OH:"M648,272 L660,270 L675,267 L690,265 L705,265 L712,275 L715,292 L715,310 L715,328 L715,340 L708,346 L695,350 L680,352 L665,350 L655,346 L650,335 L648,318 L648,300Z",
-  OK:"M380,418 L400,416 L425,413 L450,412 L475,410 L490,412 L498,425 L500,440 L500,450 L496,460 L490,468 L478,472 L460,475 L440,476 L420,475 L405,474 L395,468 L388,458 L385,445 L382,432Z",
-  OR:"M115,165 L132,162 L152,158 L175,154 L195,151 L205,152 L210,168 L210,190 L210,210 L210,228 L205,232 L185,236 L162,238 L142,240 L130,238 L120,228 L115,212 L115,195Z",
-  PA:"M715,240 L730,238 L748,235 L765,232 L782,231 L790,232 L794,242 L795,258 L795,272 L795,280 L788,284 L772,287 L755,289 L738,290 L725,290 L720,286 L718,272 L716,258Z",
-  RI:"M835,215 L840,213 L845,212 L850,213 L852,218 L852,224 L852,228 L848,230 L842,231 L838,230 L836,225Z",
-  SC:"M675,432 L688,428 L702,424 L718,420 L730,422 L738,432 L740,445 L738,458 L732,465 L720,468 L708,470 L695,468 L685,462 L678,453 L675,442Z",
-  SD:"M375,195 L398,194 L420,192 L442,191 L465,190 L470,205 L472,225 L475,248 L475,265 L475,270 L455,272 L432,273 L410,274 L388,275 L380,275 L378,260 L376,240 L375,218Z",
-  TN:"M600,400 L620,398 L645,395 L670,393 L695,391 L710,390 L714,398 L715,410 L715,420 L714,425 L695,427 L670,430 L645,432 L620,434 L608,435 L604,428 L602,418 L600,408Z",
-  TX:"M335,442 L358,440 L385,436 L415,432 L445,430 L475,430 L490,432 L500,445 L508,465 L510,490 L510,515 L508,530 L500,548 L492,565 L480,578 L465,590 L448,598 L430,600 L412,595 L395,585 L378,572 L362,558 L350,542 L340,525 L335,508 L332,490 L332,470 L334,455Z",
-  UT:"M230,272 L245,269 L262,266 L278,265 L290,265 L292,285 L294,310 L295,338 L295,362 L295,378 L292,382 L275,384 L258,385 L242,385 L235,382 L232,365 L230,340 L230,315 L230,292Z",
-  VT:"M800,132 L806,129 L812,127 L818,125 L820,128 L822,148 L822,168 L822,182 L822,188 L818,190 L812,190 L806,188 L802,182 L802,165 L800,148Z",
-  VA:"M670,335 L690,332 L712,326 L735,320 L755,316 L770,315 L778,325 L780,340 L780,355 L778,365 L770,374 L755,380 L738,384 L720,386 L700,388 L682,390 L670,388 L668,375 L668,358 L670,345Z",
-  WA:"M120,95 L140,92 L160,89 L180,87 L200,85 L210,88 L214,105 L215,125 L215,145 L215,158 L210,162 L190,164 L168,165 L148,165 L135,162 L125,155 L120,140 L120,120Z",
-  WV:"M690,312 L698,310 L708,307 L720,305 L730,306 L735,315 L738,328 L740,342 L740,355 L738,362 L732,368 L724,370 L715,370 L708,365 L702,355 L698,342 L694,330 L690,320Z",
-  WI:"M525,142 L538,140 L552,137 L568,135 L582,135 L590,138 L596,155 L600,178 L600,205 L600,228 L600,240 L592,244 L578,245 L562,245 L548,245 L538,242 L530,232 L526,215 L525,195 L525,170Z",
-  WY:"M270,202 L292,200 L318,198 L345,196 L362,195 L368,205 L370,225 L370,248 L370,268 L370,280 L355,282 L330,283 L305,284 L282,285 L275,284 L272,268 L270,245 L270,222Z"
-};
-const SL = {AL:{x:621,y:495},AZ:{x:232,y:457},AR:{x:568,y:475},CA:{x:138,y:375},CO:{x:328,y:355},CT:{x:825,y:228},DE:{x:783,y:302},FL:{x:678,y:555},GA:{x:675,y:482},ID:{x:232,y:225},IL:{x:595,y:332},IN:{x:632,y:322},IA:{x:536,y:280},KS:{x:440,y:385},KY:{x:660,y:385},LA:{x:572,y:530},ME:{x:843,y:142},MD:{x:760,y:308},MA:{x:835,y:207},MI:{x:625,y:215},MN:{x:508,y:180},MS:{x:595,y:492},MO:{x:542,y:388},MT:{x:292,y:147},NE:{x:428,y:310},NV:{x:198,y:340},NH:{x:831,y:168},NJ:{x:795,y:272},NM:{x:305,y:455},NY:{x:765,y:202},NC:{x:720,y:400},ND:{x:422,y:155},OH:{x:682,y:308},OK:{x:440,y:445},OR:{x:163,y:197},PA:{x:755,y:260},RI:{x:845,y:220},SC:{x:708,y:448},SD:{x:425,y:233},TN:{x:656,y:415},TX:{x:420,y:515},UT:{x:262,y:325},VT:{x:812,y:158},VA:{x:725,y:355},WA:{x:168,y:125},WV:{x:715,y:340},WI:{x:562,y:190},WY:{x:320,y:242}};
+// ═══════════════════════════════════════════════════════════════════════
+//  ALBERS USA EQUAL-AREA CONIC PROJECTION
+// ═══════════════════════════════════════════════════════════════════════
+const albersUsa = (() => {
+  const RAD = Math.PI / 180;
+  const phi1 = 29.5 * RAD, phi2 = 45.5 * RAD;
+  const phi0 = 38.5 * RAD, lam0 = -96 * RAD;
+  const n = (Math.sin(phi1) + Math.sin(phi2)) / 2;
+  const C = Math.cos(phi1) ** 2 + 2 * n * Math.sin(phi1);
+  const r0 = Math.sqrt(C - 2 * n * Math.sin(phi0)) / n;
+  const S = 1070, TX = 480, TY = 260;
+  return (lng, lat) => {
+    const phi = lat * RAD, theta = n * (lng * RAD - lam0);
+    const r = Math.sqrt(C - 2 * n * Math.sin(phi)) / n;
+    return { x: S * r * Math.sin(theta) + TX, y: TY - S * (r0 - r * Math.cos(theta)) };
+  };
+})();
 
-const ELEC = {AL:7.8,AZ:8.2,AR:7.1,CA:17.5,CO:8.9,CT:18.2,DE:10.1,FL:9.4,GA:7.3,ID:6.5,IL:8.6,IN:8.2,IA:7.4,KS:8.8,KY:6.8,LA:6.2,ME:14.1,MD:10.8,MA:19.8,MI:9.5,MN:9.1,MS:7.0,MO:7.9,MT:7.2,NE:8.0,NV:7.8,NH:16.5,NJ:12.4,NM:7.6,NY:14.8,NC:7.5,ND:7.1,OH:7.9,OK:6.4,OR:7.0,PA:8.5,RI:18.9,SC:6.9,SD:8.5,TN:7.6,TX:7.2,UT:7.1,VT:13.2,VA:7.8,WA:5.8,WV:7.2,WI:9.3,WY:6.9};
+const ringToPath = (ring) =>
+  ring.map(([lng, lat], i) => {
+    const { x, y } = albersUsa(lng, lat);
+    return `${i ? 'L' : 'M'}${x.toFixed(1)},${y.toFixed(1)}`;
+  }).join('') + 'Z';
+
+const geoToPath = (st) => {
+  if (st.type === 'Polygon') return st.coords.map(ringToPath).join('');
+  if (st.type === 'MultiPolygon') return st.coords.flat().map(ringToPath).join('');
+  return '';
+};
+
+// Pre-compute projected SVG paths once — these never change
+const STATE_PATHS = STATES_GEO.map(st => ({ abbr: st.abbr, name: st.name, d: geoToPath(st) }));
 
 // Data parsing & scaling utilities
 const parseMW = (s) => { const m = s.match(/([\d.]+)\s*(GW|MW)/i); if (!m) return 500; return parseFloat(m[1]) * (m[2].toUpperCase() === 'GW' ? 1000 : 1); };
-const parseInvestment = (s) => { const m = s.match(/\$([\d.]+)B/i); return m ? parseFloat(m[1]) : 10; };
-const capacityRadius = (mw) => 4 + (Math.sqrt(mw) - Math.sqrt(150)) / (Math.sqrt(5000) - Math.sqrt(150)) * 10;
-const investStroke = (b) => 0.8 + (Math.sqrt(b) - Math.sqrt(2)) / (Math.sqrt(100) - Math.sqrt(2)) * 3.2;
-
-// Anchor dots to known state label positions + geo offset within state
-const STATE_CENTERS = {TX:[31,-99],LA:[31,-92],NM:[34.5,-106],OH:[40.5,-82.5],WI:[44,-89.5],IN:[40,-86],GA:[33,-83.5],NC:[35.5,-80],PA:[41,-77.5],NY:[43,-75.5],TN:[35.5,-86]};
-const geoSvg = (lat,lng,state) => {
-  const sl = SL[state]; if(!sl) return {x:400,y:300};
-  const sc = STATE_CENTERS[state]; if(!sc) return sl;
-  return { x: sl.x + (lng - sc[1]) * 9, y: sl.y - (lat - sc[0]) * 13 };
-};
-const elecCol = r => r<=6.5?"#0d9488":r<=7.5?"#2dd4bf":r<=8.5?"#86efac":r<=10?"#fde68a":r<=13?"#fb923c":r<=17?"#ef4444":"#991b1b";
+const capacityRadius = (mw) => 5 + (Math.sqrt(mw) - Math.sqrt(150)) / (Math.sqrt(5000) - Math.sqrt(150)) * 11;
 const statCol = s => s==="Operational"?"#10b981":s==="Under Construction"?"#f59e0b":s==="Announced"?"#6366f1":s==="Planned"?"#94a3b8":"#64748b";
 const F = "'JetBrains Mono','Fira Code',monospace";
 const D = "'Syne','Space Grotesk',sans-serif";
 
 // ═══════════════════════════════════════════════════════════════════════
 export default function FusedDashboard() {
-  const [sel, setSel] = useState(null); // selected project
-  const [hov, setHov] = useState(null); // hovered state
+  const [sel, setSel] = useState(null);
+  const [hov, setHov] = useState(null);
   const [fSt, setFSt] = useState("all");
-  const [showElec, setShowElec] = useState(true);
   const [selCompany, setSelCompany] = useState(null);
   const [companyView, setCompanyView] = useState(false);
 
@@ -252,16 +219,15 @@ export default function FusedDashboard() {
       <div style={{padding:"16px 20px",borderBottom:"1px solid #1e293b",background:"linear-gradient(135deg,#080c18,#0d1330,#080c18)"}}>
         <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",flexWrap:"wrap",gap:10}}>
           <div>
-            <h1 style={{fontFamily:D,fontSize:22,fontWeight:800,margin:0,background:"linear-gradient(135deg,#e2e8f0,#818cf8,#c084fc)",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent"}}>⚡ AI Data Center Investment Map</h1>
-            <p style={{color:"#475569",fontSize:10,margin:"3px 0 0",letterSpacing:1.5,textTransform:"uppercase"}}>Click a project marker → View linked public companies & financials</p>
+            <h1 style={{fontFamily:D,fontSize:22,fontWeight:800,margin:0,background:"linear-gradient(135deg,#e2e8f0,#818cf8,#c084fc)",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent"}}>AI Data Center Investment Map</h1>
+            <p style={{color:"#475569",fontSize:10,margin:"3px 0 0",letterSpacing:1.5,textTransform:"uppercase"}}>Click a project marker to view linked public companies & financials</p>
           </div>
           <div style={{display:"flex",gap:4,flexWrap:"wrap"}}>
-            <button style={S.btn(showElec)} onClick={()=>setShowElec(!showElec)}>⚡ Electricity</button>
             {["all","Operational","Under Construction","Announced","Planned"].map(s=>(
               <button key={s} style={S.btn(fSt===s)} onClick={()=>setFSt(s)}>{s==="all"?"All":s}</button>
             ))}
             <button style={{...S.btn(companyView),background:companyView?"rgba(52,211,153,0.12)":"transparent",borderColor:companyView?"#34d399":"#1e293b",color:companyView?"#34d399":"#475569"}} onClick={()=>{setCompanyView(!companyView);setSel(null);setSelCompany(null)}}>
-              {companyView ? "📊 Companies View" : "📊 Companies"}
+              {companyView ? "Companies View" : "Companies"}
             </button>
           </div>
         </div>
@@ -270,67 +236,54 @@ export default function FusedDashboard() {
       <div style={{display:"grid",gridTemplateColumns:companyView?"1fr":"1fr 380px",gap:0,height:"calc(100vh - 62px)"}}>
         {/* ═══ MAP ═══ */}
         <div style={{padding:12,overflow:"hidden",position:"relative"}}>
-          <svg viewBox="50 60 850 570" style={{width:"100%",height:"100%",maxHeight:"calc(100vh - 86px)"}} onClick={(e)=>{if(e.target.tagName==='svg'||e.target.tagName==='path'){setSel(null);setSelCompany(null)}}}>
-            {Object.entries(SP).map(([st,d])=>{
-              const rate=ELEC[st]; const fill=showElec?elecCol(rate):"#1e293b";
-              return <path key={st} d={d} fill={fill} fillOpacity={showElec?(hov===st?.6:.4):(hov===st?.5:.25)} stroke={hov===st?"#64748b":"#1a2335"} strokeWidth={hov===st?1.5:0.8} style={{cursor:"pointer",transition:"all .12s"}} onMouseEnter={()=>setHov(st)} onMouseLeave={()=>setHov(null)}/>;
-            })}
-            {Object.entries(SL).map(([st,p])=>(
-              <text key={st} x={p.x} y={p.y} textAnchor="middle" dominantBaseline="central" fill={hov===st?"#cbd5e1":"#334155"} fontSize="8" fontWeight="600" fontFamily={F} style={{pointerEvents:"none"}}>{st}</text>
+          <svg viewBox="0 0 960 600" style={{width:"100%",height:"100%",maxHeight:"calc(100vh - 86px)"}} onClick={(e)=>{if(e.target.tagName==='svg'||e.target.tagName==='path'){setSel(null);setSelCompany(null)}}}>
+            {/* STATE OUTLINES — GeoJSON projected through Albers USA */}
+            {STATE_PATHS.map(st => (
+              <path key={st.abbr} d={st.d} fill={hov===st.abbr?"#1e293b":"#131b2e"} stroke={hov===st.abbr?"#475569":"#1e293b"} strokeWidth={hov===st.abbr?1.2:0.5} style={{cursor:"pointer",transition:"fill .15s, stroke .15s, stroke-width .15s"}} aria-label={st.name} onMouseEnter={()=>setHov(st.abbr)} onMouseLeave={()=>setHov(null)}/>
             ))}
-            {/* PROJECT MARKERS */}
+            {/* PROJECT MARKERS — Graduated symbols with capacity labels */}
             {filtered.map(p=>{
-              const pos=geoSvg(p.lat,p.lng,p.state); const c=statCol(p.status); const isSel=sel===p.id;
-              const mw=parseMW(p.capacity); const inv=parseInvestment(p.investment);
-              const baseR=capacityRadius(mw); const r=isSel?baseR+3:baseR;
-              const iRing=investStroke(inv); const labelY=pos.y-(r+10+6);
-              return <g key={p.id} style={{cursor:"pointer"}} onClick={()=>{setSel(isSel?null:p.id);setSelCompany(null);setCompanyView(false)}}>
-                <circle cx={pos.x} cy={pos.y} r={r+10} fill={c} opacity={.08}/>
-                <circle cx={pos.x} cy={pos.y} r={r+6} fill="none" stroke="rgba(255,255,255,0.35)" strokeWidth={iRing}/>
-                <circle cx={pos.x} cy={pos.y} r={r+4} fill={c} opacity={.15}/>
-                <circle cx={pos.x} cy={pos.y} r={r} fill={c} stroke={isSel?"#fff":c} strokeWidth={isSel?2.5:1.5} opacity={.9}/>
-                {isSel && <>
-                  <rect x={pos.x-60} y={labelY} width={120} height={18} rx={4} fill="#0a0e17ee" stroke={c} strokeWidth={0.5}/>
-                  <text x={pos.x} y={labelY+11} textAnchor="middle" fill="#e2e8f0" fontSize="8" fontWeight="700" fontFamily={F}>{p.name.substring(0,22)}</text>
-                </>}
-              </g>;
+              const {x,y} = albersUsa(p.lng, p.lat);
+              const c = statCol(p.status);
+              const isSel = sel===p.id;
+              const mw = parseMW(p.capacity);
+              const baseR = capacityRadius(mw);
+              const r = isSel ? baseR + 4 : baseR;
+              return (
+                <g key={p.id} style={{cursor:"pointer"}} onClick={()=>{setSel(isSel?null:p.id);setSelCompany(null);setCompanyView(false)}}>
+                  <circle cx={x} cy={y} r={Math.max(r+6,12)} fill="transparent"/>
+                  {isSel && <circle cx={x} cy={y} r={r+8} fill={c} opacity={0.15}/>}
+                  <circle cx={x} cy={y} r={r} fill={c} opacity={0.85} stroke={isSel?"#fff":"rgba(0,0,0,0.3)"} strokeWidth={isSel?2:1}/>
+                  <text x={x+r+4} y={y+1} fill="#e2e8f0" fontSize="8" fontWeight="600" fontFamily={F} style={{pointerEvents:"none"}}>{p.capacity}</text>
+                  {isSel && (
+                    <text x={x} y={y-r-6} textAnchor="middle" fill="#e2e8f0" fontSize="9" fontWeight="700" fontFamily={F} style={{pointerEvents:"none"}}>
+                      {p.name.length > 25 ? p.name.substring(0,25)+'...' : p.name}
+                    </text>
+                  )}
+                </g>
+              );
             })}
           </svg>
-          {/* LEGEND */}
-          <div style={{position:"absolute",bottom:16,left:16,display:"flex",gap:16,flexWrap:"wrap"}}>
-            {showElec && <div style={{display:"flex",alignItems:"center",gap:5,background:"rgba(10,14,23,0.85)",padding:"4px 8px",borderRadius:6,border:"1px solid #1e293b"}}>
-              <span style={{fontSize:9,color:"#475569"}}>¢/kWh:</span>
-              {[["≤6.5","#0d9488"],["7.5","#2dd4bf"],["8.5","#86efac"],["10","#fde68a"],["13","#fb923c"],["17+","#ef4444"]].map(([l,c])=>
-                <span key={l} style={{display:"flex",alignItems:"center",gap:2}}>
-                  <span style={{width:8,height:8,borderRadius:2,background:c}}/>
-                  <span style={{fontSize:8,color:"#64748b"}}>{l}</span>
-                </span>
-              )}
-            </div>}
-            <div style={{display:"flex",alignItems:"center",gap:8,background:"rgba(10,14,23,0.85)",padding:"4px 8px",borderRadius:6,border:"1px solid #1e293b"}}>
-              {["Operational","Under Construction","Announced","Planned"].map(s=>
-                <span key={s} style={{display:"flex",alignItems:"center",gap:3}}>
-                  <span style={{width:7,height:7,borderRadius:"50%",background:statCol(s)}}/>
-                  <span style={{fontSize:8,color:"#64748b"}}>{s}</span>
-                </span>
-              )}
-            </div>
-            {/* Capacity & Investment legend */}
-            <div style={{display:"flex",alignItems:"center",gap:10,background:"rgba(10,14,23,0.85)",padding:"4px 10px",borderRadius:6,border:"1px solid #1e293b"}}>
-              <span style={{fontSize:9,color:"#475569"}}>Size:</span>
-              {[["150 MW",capacityRadius(150)],["1 GW",capacityRadius(1000)],["5 GW",capacityRadius(5000)]].map(([label,r])=>
-                <span key={label} style={{display:"flex",alignItems:"center",gap:3}}>
-                  <svg width={r*2+2} height={r*2+2}><circle cx={r+1} cy={r+1} r={r} fill="#6366f1" opacity={0.7}/></svg>
-                  <span style={{fontSize:8,color:"#64748b"}}>{label}</span>
-                </span>
-              )}
-              <span style={{fontSize:9,color:"#475569",marginLeft:4}}>Ring:</span>
-              {[["$2B",0.8],["$100B",4]].map(([label,sw])=>
-                <span key={label} style={{display:"flex",alignItems:"center",gap:3}}>
-                  <svg width={22} height={22}><circle cx={11} cy={11} r={8} fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth={sw}/><circle cx={11} cy={11} r={5} fill="#6366f1" opacity={0.7}/></svg>
-                  <span style={{fontSize:8,color:"#64748b"}}>{label}</span>
-                </span>
-              )}
+          {/* LEGEND — Vertical panel, top-right */}
+          <div style={{position:"absolute",top:16,right:16,background:"rgba(10,14,23,0.92)",border:"1px solid #1e293b",borderRadius:8,padding:"12px 14px",display:"flex",flexDirection:"column",gap:6,backdropFilter:"blur(8px)"}}>
+            <div style={{fontSize:9,color:"#64748b",textTransform:"uppercase",letterSpacing:1,fontWeight:700}}>Status</div>
+            {["Operational","Under Construction","Announced","Planned"].map(s=>(
+              <div key={s} style={{display:"flex",alignItems:"center",gap:6}}>
+                <span style={{width:8,height:8,borderRadius:"50%",background:statCol(s),flexShrink:0}}/>
+                <span style={{fontSize:10,color:"#94a3b8"}}>{s}</span>
+              </div>
+            ))}
+            <div style={{borderTop:"1px solid #1e293b",paddingTop:8,marginTop:2}}>
+              <div style={{fontSize:9,color:"#64748b",textTransform:"uppercase",letterSpacing:1,fontWeight:700,marginBottom:6}}>Capacity</div>
+              {[["150 MW",150],["1 GW",1000],["5 GW",5000]].map(([label,mw])=>{
+                const r = capacityRadius(mw);
+                return (
+                  <div key={label} style={{display:"flex",alignItems:"center",gap:6,marginBottom:4}}>
+                    <svg width={r*2+2} height={r*2+2} style={{flexShrink:0}}><circle cx={r+1} cy={r+1} r={r} fill="#6366f1" opacity={0.85}/></svg>
+                    <span style={{fontSize:10,color:"#94a3b8"}}>{label}</span>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -355,7 +308,7 @@ export default function FusedDashboard() {
                 </div>
                 <div style={{padding:"6px 8px",borderRadius:6,background:project.elecRate<=7.5?"rgba(16,185,129,0.08)":project.elecRate<=9?"rgba(251,191,36,0.08)":"rgba(239,68,68,0.08)",border:`1px solid ${project.elecRate<=7.5?"#10b98122":project.elecRate<=9?"#fbbf2422":"#ef444422"}`}}>
                   <span style={{fontSize:10,color:project.elecRate<=7.5?"#10b981":project.elecRate<=9?"#fbbf24":"#ef4444",fontWeight:600}}>
-                    {project.elecRate<=7.5?"✓ Low-cost energy state":"⚠ "+(project.elecRate<=9?"Moderate":"High")+" energy cost"}
+                    {project.elecRate<=7.5?"Low-cost energy state":(project.elecRate<=9?"Moderate":"High")+" energy cost"}
                   </span>
                 </div>
               </div>
@@ -393,11 +346,11 @@ export default function FusedDashboard() {
                       <div style={{marginTop:8,animation:"fadeIn .2s ease"}}>
                         <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:6,marginBottom:8}}>
                           {[["Mkt Cap",`$${co.mcap}B`],["FY26E Rev",`$${co.fy26e_rev}B`],["Growth",`+${co.fy26e_growth}%`],["FY26E EPS",`$${co.fy26e_eps}`],["OPM",`${co.op_margin}%`],["DC %Rev",`${co.dc_pct}%`],["LC Growth",co.lc_growth],["Backlog",co.backlog],["Fwd P/E",`${co.pe_fwd}x`]].map(([k,v])=>(
-                            <div key={k} style={{padding:"3px 5px",background:"rgba(15,23,42,0.6)",borderRadius:4}}>
-                              <div style={{fontSize:8,color:"#475569"}}>{k}</div>
-                              <div style={{fontSize:11,fontWeight:600,color:"#e2e8f0"}}>{v}</div>
-                            </div>
-                          ))}
+                              <div key={k} style={{padding:"3px 5px",background:"rgba(15,23,42,0.6)",borderRadius:4}}>
+                                <div style={{fontSize:8,color:"#475569"}}>{k}</div>
+                                <div style={{fontSize:11,fontWeight:600,color:"#e2e8f0"}}>{v}</div>
+                              </div>
+                            ))}
                         </div>
                         <div style={{fontSize:10,color:"#94a3b8",lineHeight:1.5}}>{co.summary}</div>
                         <div style={{marginTop:6,fontSize:9,color:"#475569"}}>
