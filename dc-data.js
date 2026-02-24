@@ -39,6 +39,26 @@ export const COMPANIES = {
   CRWV: { tier:"direct", ticker:"CRWV", name:"CoreWeave", price:88.00, mcap:46.5, pe_fwd:"N/M", fy26e_rev:12.0, fy26e_eps:-0.50, fy26e_growth:135, op_margin:-5.0, dc_pct:100, lc_growth:"N/A", backlog:"$56B contracted", color:"#7b2ff7", role:"GPU Cloud / DC Operator", summary:"Purpose-built GPU cloud with $56B contracted backlog and $50B RPO — fastest to $50B RPO in cloud history. Revenue tripling from ~$5.1B (2025) to ~$12B (2026E). 61% adjusted EBITDA margins but still GAAP-unprofitable due to massive capex." },
   VST: { tier:"direct", ticker:"VST", name:"Vistra", price:163.00, mcap:58.0, pe_fwd:16.1, fy26e_rev:18.5, fy26e_eps:8.82, fy26e_growth:8, op_margin:21.0, dc_pct:20, lc_growth:"N/A", backlog:"20yr Comanche Peak PPA", color:"#f7931e", role:"Nuclear & Gas Power Generation", summary:"Second-largest US nuclear fleet with 6 reactors / 6.4 GW. Signed 20-year, 1.2 GW PPA from Comanche Peak nuclear to serve DC load. 2026 adj. EBITDA guided $6.8-7.6B. Aggressive $3B+ buyback program underway." },
   TLN: { tier:"direct", ticker:"TLN", name:"Talen Energy", price:380.00, mcap:17.4, pe_fwd:20.8, fy26e_rev:3.5, fy26e_eps:20.51, fy26e_growth:50, op_margin:15.0, dc_pct:55, lc_growth:"N/A", backlog:"1.92 GW Amazon PPA", color:"#e63946", role:"Nuclear Power (Susquehanna)", summary:"Operates 90% of the 2.5 GW Susquehanna nuclear plant in PA — ground zero for DC power. Signed front-of-meter 1.92 GW PPA with Amazon through 2042 (~2x original deal). ~55% revenue now DC-linked." },
+  // ── New companies (Feb 2026 expansion — direct tier) ─────────────────
+  APLD: { tier:"direct", ticker:"APLD", name:"Applied Digital", price:30.00, mcap:8.4, pe_fwd:"N/M", fy26e_rev:1.2, fy26e_eps:-0.40, fy26e_growth:200, op_margin:-15.0, dc_pct:100, lc_growth:"N/A", backlog:"$11B contracted", color:"#26c6da", role:"GPU Cloud & DC Developer", summary:"Purpose-built AI DC operator. Polaris Forge 1 (400 MW) operational, Forge 2 (1 GW) and Delta Forge 1 (430 MW) in development. $2.35B Macquarie/Blue Owl financing. 100% DC pure-play pivoting from crypto mining." },
+  EQIX: { tier:"direct", ticker:"EQIX", name:"Equinix", price:958.00, mcap:83.3, pe_fwd:"N/M", fy26e_rev:9.2, fy26e_eps:12.50, fy26e_growth:10, op_margin:18.0, dc_pct:100, lc_growth:"N/A", backlog:"$5.9B pipeline", color:"#e040fb", role:"DC REIT / Global Colocation", summary:"World's largest DC REIT with 270+ facilities across 73 metros. xScale JV with GIC/CPP for hyperscale expansion. AFFO/share ~$37. Oklo SMR and Bloom fuel cell power partnerships for behind-the-meter DC generation." },
+  DLR: { tier:"direct", ticker:"DLR", name:"Digital Realty", price:177.00, mcap:59.6, pe_fwd:"N/M", fy26e_rev:6.2, fy26e_eps:7.20, fy26e_growth:8, op_margin:16.0, dc_pct:100, lc_growth:"N/A", backlog:"$7B Blackstone JV", color:"#ab47bc", role:"DC REIT / Hyperscale Developer", summary:"Second-largest DC REIT with 300+ facilities globally. Digital Dulles campus (7.5M sqft, Northern VA) and $7B Blackstone JV for hyperscale development. Core FFO/share ~$7.20. Record leasing driven by AI demand." },
+  APH: { tier:"direct", ticker:"APH", name:"Amphenol", price:149.00, mcap:180.0, pe_fwd:33.5, fy26e_rev:22.0, fy26e_eps:4.45, fy26e_growth:20, op_margin:22.0, dc_pct:33, lc_growth:"+40%", backlog:"Strong", color:"#ff7043", role:"DC Connectors & Cable Assemblies", summary:"IT Datacom is 33% of revenue — high-speed I/O connectors, fiber-optic assemblies, and liquid cooling connectors for AI servers. Acquiring CommScope CCS division ($10.5B) adding structured cabling. $178B market cap, 20%+ organic growth." },
+  LITE: { tier:"direct", ticker:"LITE", name:"Lumentum", price:594.00, mcap:45.4, pe_fwd:51.2, fy26e_rev:2.8, fy26e_eps:8.40, fy26e_growth:45, op_margin:22.0, dc_pct:65, lc_growth:"+287%", backlog:"Record", color:"#ffab40", role:"Laser Chips & Optical Transceivers", summary:"Cloud & Networking 65% of revenue. EML laser chips powering 800G/1.6T transceivers for DC interconnect. Stock +287% in 2025. Key supplier to transceiver OEMs serving hyperscale AI networking buildout." },
+  PRY: { tier:"direct", ticker:"PRY", name:"Prysmian", price:20.00, mcap:27.6, pe_fwd:18.8, fy26e_rev:18.5, fy26e_eps:1.06, fy26e_growth:12, op_margin:10.5, dc_pct:20, lc_growth:"N/A", backlog:"€12B+", color:"#8d6e63", role:"Power & Fiber Cable Manufacturing", summary:"World's largest cable manufacturer. Acquired Encore Wire adding US copper wire capacity. Supplies power cables, fiber-optic cables, and specialty connectivity for DC construction and grid interconnection." },
+  HUBB: { tier:"direct", ticker:"HUBB", name:"Hubbell", price:487.00, mcap:27.9, pe_fwd:24.3, fy26e_rev:6.1, fy26e_eps:20.00, fy26e_growth:10, op_margin:24.0, dc_pct:15, lc_growth:"N/A", backlog:"Growing", color:"#4db6ac", role:"Electrical Distribution & DC Power", summary:"Double-digit DC organic growth. DMC Power acquisition ($825M) adds custom busbar and power distribution for hyperscale DCs. Electrical Solutions segment provides switchgear, transformers, and connectors for DC construction." },
+  POWL: { tier:"direct", ticker:"POWL", name:"Powell Industries", price:594.00, mcap:5.5, pe_fwd:23.9, fy26e_rev:1.3, fy26e_eps:24.80, fy26e_growth:25, op_margin:20.0, dc_pct:25, lc_growth:"N/A", backlog:"$1.6B record", color:"#aed581", role:"Switchgear & Power Control Systems", summary:"Switchgear pure-play with ~25% DC revenue. Record $1.6B backlog driven by data center and utility switchgear demand. Custom medium-voltage switchgear and power control rooms for hyperscale DC substations." },
+  LGRDY: { tier:"direct", ticker:"LGRDY", name:"Legrand", price:30.00, mcap:35.0, pe_fwd:25.0, fy26e_rev:9.5, fy26e_eps:1.20, fy26e_growth:8, op_margin:18.0, dc_pct:26, lc_growth:"N/A", backlog:"Growing", color:"#ba68c8", role:"DC Power Distribution & Rack Infrastructure", summary:"~26% of group revenue from DC segment via Server Technology (intelligent PDUs), Raritan (KVM/DCIM), and Starline (busway). Portfolio covers rack PDUs to building-level power distribution. ADR-listed." },
+  OKLO: { tier:"direct", ticker:"OKLO", name:"Oklo", price:68.00, mcap:10.4, pe_fwd:"N/M", fy26e_rev:"N/A", fy26e_eps:"N/A", fy26e_growth:"N/A", op_margin:"N/A", dc_pct:100, lc_growth:"N/A", backlog:"1.7 GW pipeline", color:"#ffd54f", role:"Microreactor Developer (Nuclear)", summary:"Pre-revenue advanced fission company with 1.7 GW customer pipeline. 1.2 GW Meta deal, 500 MW Equinix deal, 750 MW RPower deal. Aurora powerhouse design targeting NRC approval. Sam Altman-backed." },
+  SMR: { tier:"direct", ticker:"SMR", name:"NuScale Power", price:12.50, mcap:3.8, pe_fwd:"N/M", fy26e_rev:"N/A", fy26e_eps:"N/A", fy26e_growth:"N/A", op_margin:"N/A", dc_pct:100, lc_growth:"N/A", backlog:"6 GW framework", color:"#81d4fa", role:"Small Modular Reactor Designer", summary:"Only NRC-certified SMR design (VOYGR). 6 GW TVA framework agreement for SMR deployment at existing nuclear sites. Standard Power partnership for DC-dedicated SMR sites in OH and PA. Pre-revenue, targeting first deployment ~2030." },
+  CLS: { tier:"direct", ticker:"CLS", name:"Celestica", price:293.00, mcap:33.8, pe_fwd:39.4, fy26e_rev:14.0, fy26e_eps:7.43, fy26e_growth:30, op_margin:9.0, dc_pct:72, lc_growth:"+60%", backlog:"Strong", color:"#4fc3f7", role:"DC Network Switches & Server Hardware", summary:"72-75% DC revenue. 41% market share in 200G+ Ethernet switches (white-box for hyperscalers). Rack-level CDUs for liquid cooling. Revenue growing 30%+ driven by AI networking and compute hardware demand." },
+  STRL: { tier:"direct", ticker:"STRL", name:"Sterling Infrastructure", price:436.00, mcap:9.5, pe_fwd:33.6, fy26e_rev:2.3, fy26e_eps:13.00, fy26e_growth:18, op_margin:14.0, dc_pct:30, lc_growth:"+125%", backlog:"Growing", color:"#dce775", role:"DC Site Development & Civil Construction", summary:"E-Infrastructure Solutions segment focused on DC site development. Q3 2025 DC revenues +125% YoY. Site prep, foundations, and civil construction for hyperscale campuses across TX, VA, and Southeast." },
+  FLEX: { tier:"direct", ticker:"FLEX", name:"Flex Ltd", price:64.00, mcap:23.6, pe_fwd:17.7, fy26e_rev:27.0, fy26e_eps:3.60, fy26e_growth:12, op_margin:6.5, dc_pct:25, lc_growth:"N/A", backlog:"Growing", color:"#90a4ae", role:"Modular DC Components & Rack CDUs", summary:"~25% DC revenue via Reliability Solutions segment. Manufactures modular DC components, rack-level CDUs, and power assemblies. Anord Mardix subsidiary provides critical power distribution for hyperscale DCs." },
+  // ── New companies (Feb 2026 expansion — upstream tier) ───────────────
+  FCX: { tier:"upstream", ticker:"FCX", name:"Freeport-McMoRan", price:65.00, mcap:93.4, pe_fwd:22.4, fy26e_rev:26.0, fy26e_eps:2.90, fy26e_growth:15, op_margin:30.0, dc_pct:"N/A", lc_growth:"N/A", backlog:"N/A", color:"#ef6c00", role:"Copper Producer (DC Supply Chain)", summary:"World's largest publicly traded copper producer. Each MW of DC capacity requires 27-33 tonnes of copper for power distribution, busbars, cabling, and cooling systems. Pure commodity exposure to DC buildout cycle." },
+  NUE: { tier:"upstream", ticker:"NUE", name:"Nucor", price:179.00, mcap:40.9, pe_fwd:13.7, fy26e_rev:34.0, fy26e_eps:13.10, fy26e_growth:5, op_margin:12.0, dc_pct:"N/A", lc_growth:"N/A", backlog:"N/A", color:"#66bb6a", role:"Steel Producer (DC Construction)", summary:"#1 US steel producer and recycler. Structural steel, rebar, and steel decking consumed in massive quantities for DC construction. Hyperscale campuses require thousands of tons of structural steel per building." },
+  STLD: { tier:"upstream", ticker:"STLD", name:"Steel Dynamics", price:206.00, mcap:29.4, pe_fwd:14.5, fy26e_rev:18.0, fy26e_eps:14.20, fy26e_growth:3, op_margin:13.0, dc_pct:"N/A", lc_growth:"N/A", backlog:"N/A", color:"#78909c", role:"Steel & Flat Roll Products", summary:"Third-largest US EAF steelmaker. Flat roll products used in DC structural framing, cladding, and equipment enclosures. Sinton TX flat roll mill positioned near growing TX DC corridor." },
+  CC: { tier:"upstream", ticker:"CC", name:"Chemours", price:17.00, mcap:1.9, pe_fwd:9.4, fy26e_rev:5.8, fy26e_eps:1.80, fy26e_growth:10, op_margin:10.0, dc_pct:"N/A", lc_growth:"N/A", backlog:"N/A", color:"#ce93d8", role:"Refrigerants & Immersion Cooling Fluids", summary:"Opteon low-GWP refrigerants used in DC HVAC and precision cooling. Developing engineered immersion cooling fluids for direct-to-chip applications. TT segment provides thermal management solutions for electronics." },
 };
 
 // ═══════════════════════════════════════════════════════════════════════
@@ -54,6 +74,8 @@ export const PROJECTS = [
       { ticker:"SMCI", role:"AI Server Systems", detail:"Blackwell-ready DLC server racks, 98% heat capture" },
       { ticker:"ETN", role:"Power Distribution", detail:"UPS, switchgear, busbar. Boyd acquisition adds liquid cooling" },
       { ticker:"JCI", role:"Thermal Management & Building Controls", detail:"Silent-Aire custom air handlers and YORK chillers for multi-building campus. OpenBlue BMS platform" },
+      { ticker:"STRL", role:"Site Development", detail:"E-Infrastructure Solutions for site preparation, foundations, and civil construction at 1,200+ acre Abilene campus" },
+      { ticker:"APH", role:"High-Speed Connectors", detail:"I/O connectors, fiber-optic assemblies, and liquid cooling connectors for 400K+ GPU AI training cluster" },
     ]},
   { id:2, name:"Stargate — New Mexico", state:"NM", lat:35.08, lng:-106.65, capacity:"800 MW", investment:"$40B", status:"Announced", year:2027, type:"AI Training", operator:"OpenAI/Oracle", elecRate:7.6,
     companies: [
@@ -82,6 +104,8 @@ export const PROJECTS = [
       { ticker:"VRT", role:"Cooling & Power", detail:"Multi-megawatt cooling for hyperscale GPU clusters" },
       { ticker:"SBGSY", role:"Power Distribution", detail:"Schneider Galaxy UPS, busway, BMS software" },
       { ticker:"MOD", role:"Chilled Water Systems", detail:"Airedale chillers for high-density compute cooling" },
+      { ticker:"LGRDY", role:"Rack PDUs & Busway", detail:"Server Technology intelligent PDUs and Starline busway for rack-level power distribution" },
+      { ticker:"FLEX", role:"Modular DC Components", detail:"Anord Mardix critical power distribution and modular DC assemblies for phased 2.2 GW build" },
     ]},
   { id:6, name:"Mount Pleasant / Fairwater", state:"WI", lat:42.55, lng:-88.5, capacity:"900 MW", investment:"$7.3B", status:"Under Construction", year:2026, type:"AI Supercomputer", operator:"Microsoft", elecRate:9.3,
     companies: [
@@ -109,6 +133,7 @@ export const PROJECTS = [
       { ticker:"MOD", role:"Precision Cooling", detail:"Chillers and CDUs for high-density AI racks" },
       { ticker:"COHR", role:"Optical Transceivers (800G/1.6T)", detail:"Meta is a confirmed hyperscale customer. 500K+ GPUs across buildings require massive intra-cluster optical connectivity" },
       { ticker:"VST", role:"Nuclear Power PPA", detail:"20-year, 1.2 GW PPA from Comanche Peak nuclear to serve Meta DC load" },
+      { ticker:"OKLO", role:"Nuclear Microreactor Partnership", detail:"Part of 1.2 GW Meta-Oklo deal for advanced fission power at Meta DC campuses" },
     ]},
   { id:9, name:"Hyperion", state:"LA", lat:30.48, lng:-91.19, capacity:"5 GW", investment:"$50B+", status:"Planned", year:2028, type:"AI Mega Campus", operator:"Meta", elecRate:6.2,
     companies: [
@@ -119,6 +144,7 @@ export const PROJECTS = [
       { ticker:"SBGSY", role:"Building Management", detail:"EcoStruxure BMS, power monitoring" },
       { ticker:"MOD", role:"Large-Scale Chillers", detail:"Modular chiller systems for phased build-out" },
       { ticker:"JCI", role:"Thermal Management & Building Controls", detail:"Silent-Aire custom air handlers and YORK chillers for 10-building, 1,200-acre campus. Integrated BMS for phased 5 GW build" },
+      { ticker:"OKLO", role:"Nuclear Microreactor Partnership", detail:"Part of 1.2 GW Meta-Oklo deal. Aurora microreactors for behind-the-meter power at 5 GW mega campus" },
     ]},
   { id:10, name:"Amazon Richmond County", state:"NC", lat:34.97, lng:-79.89, capacity:"500 MW", investment:"$10B", status:"Under Construction", year:2027, type:"Cloud/AI", operator:"Amazon/AWS", elecRate:7.5,
     companies: [
@@ -174,6 +200,8 @@ export const PROJECTS = [
       { ticker:"MOD", role:"Industrial Cooling", detail:"Large-scale chiller systems for phased build" },
       { ticker:"NVT", role:"Protection Solutions", detail:"Enclosures and thermal management" },
       { ticker:"JCI", role:"Thermal Management & Building Controls", detail:"Silent-Aire CDUs and YORK chillers for multi-tenant 4.5 GW campus. Integrated BMS across 3,200 acres" },
+      { ticker:"PRY", role:"Power & Fiber Cables", detail:"Power cables and fiber-optic infrastructure for 3,200-acre multi-GW campus phased build" },
+      { ticker:"LGRDY", role:"Rack PDUs & Busway", detail:"Server Technology intelligent PDUs and Starline busway for rack-level power distribution across phased 4.5 GW build" },
     ]},
   // ── New projects (Feb 2026 expansion) ──────────────────────────────
   { id:18, name:"Union City Campus", state:"GA", lat:33.35, lng:-84.80, capacity:"324 MW", investment:"$1.8B", status:"Under Construction", year:2029, type:"Cloud/AI", operator:"Microsoft/EdgeConneX", elecRate:7.3,
@@ -202,6 +230,7 @@ export const PROJECTS = [
       { ticker:"SBGSY", role:"Power & Building Management", detail:"Medium-voltage distribution, EcoStruxure building management software" },
       { ticker:"CAT", role:"Backup Power Generators", detail:"Diesel genset backup power for mission-critical 770 MW campus" },
       { ticker:"ANET", role:"DC Networking", detail:"400G/800G Ethernet switches for AWS AI cluster interconnect" },
+      { ticker:"STRL", role:"Site Development", detail:"E-Infrastructure Solutions for civil construction and site prep at 1,143-acre VA campus" },
     ]},
   { id:21, name:"Madison County Campus", state:"MS", lat:32.55, lng:-90.13, capacity:"500 MW", investment:"$16B", status:"Under Construction", year:2027, type:"Cloud/AI", operator:"Amazon/AWS", elecRate:7.1,
     companies: [
@@ -303,6 +332,7 @@ export const PROJECTS = [
       { ticker:"ABB", role:"Power Distribution", detail:"Switchgear and power quality systems for phased GW-scale energization" },
       { ticker:"PWR", role:"Grid Infrastructure", detail:"Transmission and substation upgrades to support 1.5 GW scaling" },
       { ticker:"CAT", role:"Backup Power Generation", detail:"Diesel and gas gensets for multi-GW campus backup power" },
+      { ticker:"SMR", role:"Small Modular Reactor (Future)", detail:"NuScale-Standard Power partnership for DC-dedicated SMR sites in OH. Only NRC-certified SMR design" },
     ]},
   { id:32, name:"CoreWeave NEST", state:"NJ", lat:40.68, lng:-74.29, capacity:"250 MW", investment:"$1.8B", status:"Under Construction", year:2027, type:"GPU Cloud", operator:"CoreWeave", elecRate:11.5,
     companies: [
@@ -312,6 +342,8 @@ export const PROJECTS = [
       { ticker:"ETN", role:"Power Distribution", detail:"Critical power systems for 250 MW converted pharmaceutical campus" },
       { ticker:"ANET", role:"DC Networking", detail:"800G Ethernet fabric for GPU cloud interconnect" },
       { ticker:"COHR", role:"Optical Transceivers (800G)", detail:"800G pluggable transceivers behind Arista switches. One transceiver per switch port for GPU-dense fabric" },
+      { ticker:"LITE", role:"Laser Chips (800G/1.6T)", detail:"EML laser chips powering 800G transceivers used in CoreWeave GPU cluster interconnect" },
+      { ticker:"CLS", role:"Network Switches & Rack CDUs", detail:"White-box 200G+ Ethernet switches (41% market share) and rack-level CDUs for GPU-dense facility" },
     ]},
   { id:33, name:"CoreWeave Denton TX", state:"TX", lat:33.21, lng:-97.13, capacity:"260 MW", investment:"$1.2B", status:"Operational", year:2026, type:"GPU Cloud", operator:"CoreWeave/Core Scientific", elecRate:7.2,
     companies: [
@@ -322,9 +354,12 @@ export const PROJECTS = [
       { ticker:"ABB", role:"Power Distribution", detail:"Medium-voltage switchgear for site power conversion" },
       { ticker:"ANET", role:"DC Networking", detail:"High-speed Ethernet switching for GPU cluster fabric" },
       { ticker:"COHR", role:"Optical Transceivers (800G)", detail:"800G pluggable modules for 16,000+ GPU facility. DC&Comms revenue $1.2B/quarter (+34% YoY)" },
+      { ticker:"LITE", role:"Laser Chips (800G)", detail:"EML laser chips powering 800G transceivers for CoreWeave/Core Scientific GPU cloud" },
+      { ticker:"CLS", role:"Network Switches", detail:"White-box Ethernet switches for 16,000+ GPU cluster fabric. 41% market share in 200G+ switches" },
     ]},
   { id:34, name:"Polaris Forge 1", state:"ND", lat:46.00, lng:-98.52, capacity:"400 MW", investment:"$7B", status:"Operational", year:2025, type:"GPU Cloud", operator:"Applied Digital", elecRate:8.1,
     companies: [
+      { ticker:"APLD", role:"Developer & Operator", detail:"Purpose-built AI factory. Three buildings, 400 MW. Proprietary waterless closed-loop cooling system" },
       { ticker:"CRWV", role:"Anchor Tenant", detail:"400 MW fully contracted under ~15-year leases. $11B total anticipated revenue" },
       { ticker:"NVDA", role:"GPU Supplier", detail:"High-density GPU clusters for CoreWeave cloud compute" },
       { ticker:"VRT", role:"Cooling Infrastructure", detail:"Liquid cooling CDUs leveraging North Dakota's cool climate for near-zero water consumption" },
@@ -340,6 +375,7 @@ export const PROJECTS = [
       { ticker:"FIX", role:"HVAC & Mechanical Contractor", detail:"Mechanical cooling systems for 2M+ sqft campus over 8-year build-out" },
       { ticker:"CAT", role:"Backup Power Generation", detail:"Diesel gensets for mission-critical backup across eight-building campus" },
       { ticker:"CMI", role:"Natural Gas Generators", detail:"Prime and backup power generation for Mississippi Power 500 MW supply" },
+      { ticker:"FLEX", role:"Modular DC Components", detail:"Anord Mardix critical power distribution and rack CDUs for eight-building 500 MW campus" },
     ]},
   { id:36, name:"Bosque County Campus", state:"TX", lat:31.95, lng:-97.32, capacity:"288 MW", investment:"$4B", status:"Under Construction", year:2026, type:"Hyperscale Colocation", operator:"CyrusOne (KKR/GIP)", elecRate:7.2,
     companies: [
@@ -358,6 +394,39 @@ export const PROJECTS = [
       { ticker:"ANET", role:"DC Networking", detail:"400G/800G Ethernet switches for Google Cloud AI cluster interconnect" },
       { ticker:"MRVL", role:"Custom AI Chips & Interconnect", detail:"Custom silicon and data center interconnect for Google's TPU ecosystem" },
       { ticker:"LUMN", role:"Fiber Connectivity", detail:"Private Connectivity Fabric linking Virginia DC campuses to Google's network" },
+    ]},
+  // ── New projects (Feb 2026 expansion — operator-anchored) ────────────
+  { id:38, name:"Polaris Forge 2", state:"ND", lat:46.88, lng:-96.89, capacity:"1 GW", investment:"$3B+", status:"Under Construction", year:2027, type:"GPU Cloud", operator:"Applied Digital", elecRate:7.0,
+    companies: [
+      { ticker:"APLD", role:"Developer & Operator", detail:"Groundbreaking Sep 2025. 200 MW initial IT load, expandable to 1 GW. $5B 15-year hyperscaler lease" },
+      { ticker:"VRT", role:"Cooling Infrastructure", detail:"Proprietary waterless closed-loop cooling system for North Dakota campus" },
+      { ticker:"ABB", role:"Power Distribution & UPS", detail:"HiPerGuard medium-voltage UPS infrastructure for phased GW-scale build" },
+      { ticker:"CAT", role:"Backup Power Generation", detail:"Standby diesel generators for mission-critical hyperscale campus" },
+      { ticker:"OWL", role:"Infrastructure Financing", detail:"Macquarie/Blue Owl financing structure for Applied Digital AI factory portfolio" },
+    ]},
+  { id:39, name:"Delta Forge 1", state:"TX", lat:31.0, lng:-96.5, capacity:"430 MW", investment:"$2B+", status:"Under Construction", year:2027, type:"GPU Cloud", operator:"Applied Digital", elecRate:7.2,
+    companies: [
+      { ticker:"APLD", role:"Developer & Operator", detail:"Broke ground Jan 2026. 300 MW critical IT load across two 150 MW buildings on 500+ acres. Undisclosed hyperscaler tenant" },
+      { ticker:"VRT", role:"Cooling Infrastructure", detail:"Thermal management for two-building AI factory campus" },
+      { ticker:"ETN", role:"Power Distribution", detail:"UPS and switchgear for phased 430 MW capacity" },
+      { ticker:"STRL", role:"Site Development", detail:"Civil construction and site preparation for 500+ acre greenfield campus" },
+    ]},
+  { id:40, name:"Equinix xScale Hampton", state:"GA", lat:33.0, lng:-83.8, capacity:"240 MW", investment:"$2.5B", status:"Under Construction", year:2027, type:"Hyperscale Colocation", operator:"Equinix", elecRate:6.9,
+    companies: [
+      { ticker:"EQIX", role:"Developer & Operator", detail:"First US xScale campus. 262 acres, 4 buildings x 60 MW. Part of $15B GIC/CPP JV" },
+      { ticker:"VRT", role:"Cooling Infrastructure", detail:"Thermal management for four-building 240 MW hyperscale campus" },
+      { ticker:"ETN", role:"Power Distribution", detail:"Switchgear and UPS for phased 60 MW building energization" },
+      { ticker:"BE", role:"On-Site Fuel Cell Power", detail:"Bloom Energy fuel cell deployments for behind-the-meter DC generation at Equinix facilities" },
+      { ticker:"OKLO", role:"Nuclear Power Partnership", detail:"500 MW nuclear PPA partnership with Equinix for carbon-free behind-the-meter power" },
+    ]},
+  { id:41, name:"Digital Realty Digital Dulles", state:"VA", lat:38.65, lng:-77.10, capacity:"1 GW", investment:"$7B+ JV", status:"Under Construction", year:2028, type:"Hyperscale Colocation", operator:"Digital Realty", elecRate:9.0,
+    companies: [
+      { ticker:"DLR", role:"Developer & Operator", detail:"424-acre campus, up to 14 buildings (96-144 MW each). $236M land acquisition. First building delivered 2023, 15-year buildout" },
+      { ticker:"VRT", role:"Cooling Infrastructure", detail:"Thermal management for Northern Virginia mega-campus phased build" },
+      { ticker:"SBGSY", role:"Electrical Infrastructure", detail:"Power distribution and building management for multi-building campus" },
+      { ticker:"HUBB", role:"Electrical Distribution", detail:"Switchgear, transformers, and busbar distribution for phased GW-scale build" },
+      { ticker:"POWL", role:"Switchgear & Power Control", detail:"Custom medium-voltage switchgear for on-site substations serving 1 GW campus" },
+      { ticker:"PRY", role:"Power & Fiber Cables", detail:"Power cables and fiber-optic infrastructure for 14-building mega-campus" },
     ]},
 ];
 

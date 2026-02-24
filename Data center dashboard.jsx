@@ -250,10 +250,11 @@ export default function FusedDashboard() {
         {/* ═══ COMPANY AGGREGATE VIEW ═══ */}
         {companyView && (
           <div style={{borderLeft:"1px solid #1e293b",overflowY:"auto",padding:12,display:"flex",flexDirection:"column",gap:8}}>
+            {/* ── Direct-tier companies ── */}
             <div style={{fontSize:10,color:"#64748b",textTransform:"uppercase",letterSpacing:1,fontWeight:700}}>
-              Company Exposure Across All Projects
+              Direct Project Involvement ({Object.values(COMPANIES).filter(c=>c.tier==="direct").length})
             </div>
-            {Object.entries(COMPANIES).sort((a,b)=>(companyProjects[b[0]]||[]).length-(companyProjects[a[0]]||[]).length).map(([ticker,co])=>{
+            {Object.entries(COMPANIES).filter(([,co])=>co.tier==="direct").sort((a,b)=>(companyProjects[b[0]]||[]).length-(companyProjects[a[0]]||[]).length).map(([ticker,co])=>{
               const projs = companyProjects[ticker]||[];
               if(projs.length===0) return null;
               const isSel = selCompany===ticker;
@@ -272,7 +273,6 @@ export default function FusedDashboard() {
                       <span style={{fontSize:9,color:"#475569"}}>projects</span>
                     </div>
                   </div>
-                  {/* Mini bar showing project count */}
                   <div style={{marginTop:6,height:6,background:"#111827",borderRadius:3,overflow:"hidden"}}>
                     <div style={{height:"100%",width:`${(projs.length/PROJECTS.length)*100}%`,background:`linear-gradient(90deg,${co.color}88,${co.color})`,borderRadius:3}}/>
                   </div>
@@ -291,18 +291,57 @@ export default function FusedDashboard() {
                       </div>
                       <div style={{fontSize:10,color:"#94a3b8",marginBottom:6}}>{co.summary}</div>
                       <div style={{fontSize:9,color:"#64748b",fontWeight:700,marginBottom:4}}>PROJECT INVOLVEMENT:</div>
-                      {projs.map(p=>{
-                        const link = p.companies.find(c=>c.ticker===ticker);
-                        return (
-                          <div key={p.id} style={{display:"flex",justifyContent:"space-between",alignItems:"center",padding:"4px 6px",background:"rgba(15,23,42,0.4)",borderRadius:4,marginBottom:3,cursor:"pointer"}} onClick={e=>{e.stopPropagation();setSel(p.id);setCompanyView(false);setSelCompany(ticker)}}>
-                            <div>
-                              <span style={{fontSize:10,fontWeight:600,color:"#e2e8f0"}}>{p.name}</span>
-                              <span style={{fontSize:9,color:"#475569",marginLeft:6}}>{p.state} · {p.capacity}</span>
-                            </div>
-                            <span style={S.badge(statCol(p.status))}>{p.status.split(" ")[0]}</span>
+                      {projs.map(p=>(
+                        <div key={p.id} style={{display:"flex",justifyContent:"space-between",alignItems:"center",padding:"4px 6px",background:"rgba(15,23,42,0.4)",borderRadius:4,marginBottom:3,cursor:"pointer"}} onClick={e=>{e.stopPropagation();setSel(p.id);setCompanyView(false);setSelCompany(ticker)}}>
+                          <div>
+                            <span style={{fontSize:10,fontWeight:600,color:"#e2e8f0"}}>{p.name}</span>
+                            <span style={{fontSize:9,color:"#475569",marginLeft:6}}>{p.state} · {p.capacity}</span>
                           </div>
-                        );
-                      })}
+                          <span style={S.badge(statCol(p.status))}>{p.status.split(" ")[0]}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+
+            {/* ── Supply Chain Exposure divider ── */}
+            <div style={{borderTop:"1px solid #1e293b",margin:"4px 0",paddingTop:10}}>
+              <div style={{fontSize:10,color:"#475569",textTransform:"uppercase",letterSpacing:1,fontWeight:700}}>
+                Supply Chain Exposure ({Object.values(COMPANIES).filter(c=>c.tier==="upstream").length})
+              </div>
+            </div>
+
+            {/* ── Upstream-tier companies ── */}
+            {Object.entries(COMPANIES).filter(([,co])=>co.tier==="upstream").sort((a,b)=>(typeof b[1].mcap==="number"?b[1].mcap:0)-(typeof a[1].mcap==="number"?a[1].mcap:0)).map(([ticker,co])=>{
+              const isSel = selCompany===ticker;
+              return (
+                <div key={ticker} style={{...S.card,borderColor:isSel?`${co.color}44`:"#1e293b",cursor:"pointer",opacity:0.85}} onClick={()=>setSelCompany(isSel?null:ticker)}>
+                  <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                    <div style={{display:"flex",alignItems:"center",gap:8}}>
+                      <div style={{width:4,height:28,borderRadius:2,background:co.color,opacity:0.7}}/>
+                      <div>
+                        <span style={{fontWeight:700,color:co.color,fontSize:13}}>{ticker}</span>
+                        <span style={{color:"#475569",fontSize:10,marginLeft:6}}>{co.name}</span>
+                      </div>
+                    </div>
+                    <span style={{fontSize:9,color:"#475569",fontStyle:"italic"}}>{co.role}</span>
+                  </div>
+                  <div style={{display:"flex",gap:6,marginTop:6,fontSize:10,color:"#64748b"}}>
+                    <span>${co.price} · {typeof co.pe_fwd==="number"?co.pe_fwd+"x fwd":"N/M"} · {typeof co.mcap==="number"?`$${co.mcap}B mcap`:co.mcap}</span>
+                  </div>
+                  {isSel && (
+                    <div style={{marginTop:8}}>
+                      <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:5,marginBottom:8}}>
+                        {[["FY26E Rev",typeof co.fy26e_rev==="number"?`$${co.fy26e_rev}B`:co.fy26e_rev],["Growth",typeof co.fy26e_growth==="number"?`${co.fy26e_growth>=0?"+":""}${co.fy26e_growth}%`:co.fy26e_growth],["OPM",typeof co.op_margin==="number"?`${co.op_margin}%`:co.op_margin],["Fwd P/E",typeof co.pe_fwd==="number"?`${co.pe_fwd}x`:"N/M"],["Mkt Cap",typeof co.mcap==="number"?`$${co.mcap}B`:co.mcap],["Backlog",co.backlog]].map(([k,v])=>(
+                          <div key={k} style={{padding:"3px 5px",background:"rgba(15,23,42,0.6)",borderRadius:4}}>
+                            <div style={{fontSize:8,color:"#475569"}}>{k}</div>
+                            <div style={{fontSize:11,fontWeight:600,color:"#e2e8f0"}}>{v}</div>
+                          </div>
+                        ))}
+                      </div>
+                      <div style={{fontSize:10,color:"#94a3b8"}}>{co.summary}</div>
                     </div>
                   )}
                 </div>
