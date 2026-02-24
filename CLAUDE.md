@@ -18,13 +18,16 @@ No test framework, linter, or formatter is configured.
 
 ## Architecture
 
-**Single-component app** with zero external dependencies beyond React (no mapping library, no styling library, no state management).
+**Single-component app** built on React 19 + Vite 7 with zero external dependencies beyond React (no mapping library, no styling library, no state management).
 
-- **`dc-data.js`** — Named exports `COMPANIES` (36 entries keyed by ticker) and `PROJECTS` (37 entries). All financial metrics, project metadata, and company-project linkages. Includes a development-time referential integrity check that logs console errors for any ticker in a project's `companies` array that doesn't exist in `COMPANIES`.
-- **`Data center dashboard.jsx`** — Default export `FusedDashboard`. Imports data from `dc-data.js`. Contains utility functions, state management, and all JSX rendering (~315 lines). Uses only `useState` and `useMemo` from React.
+**Important:** Main source files live at the **project root**, not in `src/`. Only the entry point is in `src/`.
+
+- **`dc-data.js`** (~375 lines) — Named exports `COMPANIES` (36 entries keyed by ticker) and `PROJECTS` (37 entries). All financial metrics, project metadata, and company-project linkages. Includes a development-time referential integrity check that logs console errors for any ticker in a project's `companies` array that doesn't exist in `COMPANIES`.
+- **`Data center dashboard.jsx`** (~315 lines) — Default export `FusedDashboard`. Imports data from `dc-data.js`. Contains utility functions, state management, and all JSX rendering. Uses only `useState` and `useMemo` from React.
 - **`states-geo-data.js`** — Exports `STATES_GEO`, an array of 48 GeoJSON-like objects (one per contiguous US state) with `abbr`, `name`, `type` (`"Polygon"` or `"MultiPolygon"`), and `coords` fields. Generated from Census 20m data simplified via Mapshaper.
 - **`src/main.jsx`** — Entry point. Imports `FusedDashboard` from the root and mounts it to `#root`.
 - **`index.html`** — Minimal shell with global reset and dark background (`#060a13`).
+- **`us-states-*.json`** — Intermediate GeoJSON files (`raw`, `simplified`, `final`) used to generate `states-geo-data.js`. Not consumed at runtime.
 
 ### Data Structures (dc-data.js)
 
@@ -63,8 +66,9 @@ All styles are inline JS objects. Two Google Fonts loaded via `<link>` tags rend
 - `sel` — Selected project ID
 - `hov` — Hovered state abbreviation
 - `fSt` — Status filter ("all", "Operational", "Under Construction", "Announced", "Planned")
-- `companyView` — Toggle between map and companies view
+- `companyView` — Toggle between map and companies view (switches grid from `1fr 380px` to `1fr`)
 - `selCompany` — Selected company ticker in companies view
+- `companyProjects` — `useMemo`-derived map of `{ticker: [project, ...]}` counting how many projects each company appears in. Used in both sidebar and companies view.
 
 ## Working with This Codebase
 
