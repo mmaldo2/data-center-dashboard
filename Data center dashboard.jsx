@@ -204,7 +204,7 @@ export default function FusedDashboard() {
                     {isSel && (
                       <div style={{marginTop:8,animation:"fadeIn .2s ease"}}>
                         <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:6,marginBottom:8}}>
-                          {[["Mkt Cap",`$${co.mcap}B`],["FY26E Rev",`$${co.fy26e_rev}B`],["Growth",`${co.fy26e_growth>=0?"+":""}${co.fy26e_growth}%`],["FY26E EPS",`$${co.fy26e_eps}`],["OPM",`${co.op_margin}%`],["DC %Rev",`${co.dc_pct}%`],["LC Growth",co.lc_growth],["Backlog",co.backlog],["Fwd P/E",typeof co.pe_fwd==="number"?`${co.pe_fwd}x`:"N/M"]].map(([k,v])=>(
+                          {[["Mkt Cap",typeof co.mcap==="number"?`$${co.mcap}B`:co.mcap],["FY26E Rev",typeof co.fy26e_rev==="number"?`$${co.fy26e_rev}B`:co.fy26e_rev],["Growth",typeof co.fy26e_growth==="number"?`${co.fy26e_growth>=0?"+":""}${co.fy26e_growth}%`:co.fy26e_growth],["FY26E EPS",typeof co.fy26e_eps==="number"?`$${co.fy26e_eps}`:co.fy26e_eps],["OPM",typeof co.op_margin==="number"?`${co.op_margin}%`:co.op_margin],["DC %Rev",typeof co.dc_pct==="number"?`${co.dc_pct}%`:co.dc_pct],["LC Growth",co.lc_growth],["Backlog",co.backlog],["Fwd P/E",typeof co.pe_fwd==="number"?`${co.pe_fwd}x`:"N/M"]].map(([k,v])=>(
                               <div key={k} style={{padding:"3px 5px",background:"rgba(15,23,42,0.6)",borderRadius:4}}>
                                 <div style={{fontSize:8,color:"#475569"}}>{k}</div>
                                 <div style={{fontSize:11,fontWeight:600,color:"#e2e8f0"}}>{v}</div>
@@ -277,12 +277,12 @@ export default function FusedDashboard() {
                     <div style={{height:"100%",width:`${(projs.length/PROJECTS.length)*100}%`,background:`linear-gradient(90deg,${co.color}88,${co.color})`,borderRadius:3}}/>
                   </div>
                   <div style={{display:"flex",gap:6,marginTop:6,fontSize:10,color:"#94a3b8"}}>
-                    <span>${co.price} · {typeof co.pe_fwd==="number"?co.pe_fwd+"x fwd":"N/M"} · ${co.mcap}B mcap</span>
+                    <span>${co.price} · {typeof co.pe_fwd==="number"?co.pe_fwd+"x fwd":"N/M"} · {typeof co.mcap==="number"?`$${co.mcap}B mcap`:co.mcap}</span>
                   </div>
                   {isSel && (
                     <div style={{marginTop:8}}>
                       <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:5,marginBottom:8}}>
-                        {[["FY26E Rev",`$${co.fy26e_rev}B`],["Growth",`${co.fy26e_growth>=0?"+":""}${co.fy26e_growth}%`],["OPM",`${co.op_margin}%`],["DC %Rev",`${co.dc_pct}%`],["LC Growth",co.lc_growth],["Backlog",co.backlog]].map(([k,v])=>(
+                        {[["FY26E Rev",typeof co.fy26e_rev==="number"?`$${co.fy26e_rev}B`:co.fy26e_rev],["Growth",typeof co.fy26e_growth==="number"?`${co.fy26e_growth>=0?"+":""}${co.fy26e_growth}%`:co.fy26e_growth],["OPM",typeof co.op_margin==="number"?`${co.op_margin}%`:co.op_margin],["DC %Rev",typeof co.dc_pct==="number"?`${co.dc_pct}%`:co.dc_pct],["LC Growth",co.lc_growth],["Backlog",co.backlog]].map(([k,v])=>(
                           <div key={k} style={{padding:"3px 5px",background:"rgba(15,23,42,0.6)",borderRadius:4}}>
                             <div style={{fontSize:8,color:"#475569"}}>{k}</div>
                             <div style={{fontSize:11,fontWeight:600,color:"#e2e8f0"}}>{v}</div>
