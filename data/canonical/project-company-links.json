@@ -1,0 +1,3334 @@
+[
+  {
+    "id": "link-project-1-company-orcl",
+    "project_id": "project-1",
+    "company_id": "company-orcl",
+    "company_ticker": "ORCL",
+    "relationship_type": "project_company_relationship",
+    "display_role": "DC Developer & Cloud Provider",
+    "detail": "Building campus, purchasing 400K GB200 chips, $300B+ 5yr deal",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-1-company-orcl"
+    ]
+  },
+  {
+    "id": "link-project-1-company-nvda",
+    "project_id": "project-1",
+    "company_id": "company-nvda",
+    "company_ticker": "NVDA",
+    "relationship_type": "project_company_relationship",
+    "display_role": "GPU Supplier",
+    "detail": "GB200 NVL72 platform, 700W/chip requiring liquid cooling",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-1-company-nvda"
+    ]
+  },
+  {
+    "id": "link-project-1-company-amd",
+    "project_id": "project-1",
+    "company_id": "company-amd",
+    "company_ticker": "AMD",
+    "relationship_type": "project_company_relationship",
+    "display_role": "GPU Supplier (Instinct)",
+    "detail": "AMD–OpenAI 6 GW strategic partnership (Oct 2025). Instinct MI450 deployment beginning H2 2026 alongside NVIDIA GB200",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-1-company-amd"
+    ]
+  },
+  {
+    "id": "link-project-1-company-vrt",
+    "project_id": "project-1",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power & Cooling Infrastructure",
+    "detail": "NVIDIA co-dev partner, 360AI platform, CDUs and liquid cooling",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-1-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-1-company-smci",
+    "project_id": "project-1",
+    "company_id": "company-smci",
+    "company_ticker": "SMCI",
+    "relationship_type": "project_company_relationship",
+    "display_role": "AI Server Systems",
+    "detail": "Blackwell-ready DLC server racks, 98% heat capture",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-1-company-smci"
+    ]
+  },
+  {
+    "id": "link-project-1-company-etn",
+    "project_id": "project-1",
+    "company_id": "company-etn",
+    "company_ticker": "ETN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Distribution",
+    "detail": "UPS, switchgear, busbar. Boyd acquisition adds liquid cooling",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-1-company-etn"
+    ]
+  },
+  {
+    "id": "link-project-1-company-jci",
+    "project_id": "project-1",
+    "company_id": "company-jci",
+    "company_ticker": "JCI",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Thermal Management & Building Controls",
+    "detail": "Silent-Aire custom air handlers and YORK chillers for multi-building campus. OpenBlue BMS platform",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-1-company-jci"
+    ]
+  },
+  {
+    "id": "link-project-1-company-strl",
+    "project_id": "project-1",
+    "company_id": "company-strl",
+    "company_ticker": "STRL",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Site Development",
+    "detail": "E-Infrastructure Solutions for site preparation, foundations, and civil construction at 1,200+ acre Abilene campus",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-1-company-strl"
+    ]
+  },
+  {
+    "id": "link-project-1-company-aph",
+    "project_id": "project-1",
+    "company_id": "company-aph",
+    "company_ticker": "APH",
+    "relationship_type": "project_company_relationship",
+    "display_role": "High-Speed Connectors",
+    "detail": "I/O connectors, fiber-optic assemblies, and liquid cooling connectors for 400K+ GPU AI training cluster",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-1-company-aph"
+    ]
+  },
+  {
+    "id": "link-project-2-company-orcl",
+    "project_id": "project-2",
+    "company_id": "company-orcl",
+    "company_ticker": "ORCL",
+    "relationship_type": "project_company_relationship",
+    "display_role": "DC Developer",
+    "detail": "Oracle-built campus as part of 4.5 GW expansion",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-2-company-orcl"
+    ]
+  },
+  {
+    "id": "link-project-2-company-nvda",
+    "project_id": "project-2",
+    "company_id": "company-nvda",
+    "company_ticker": "NVDA",
+    "relationship_type": "project_company_relationship",
+    "display_role": "GPU Supplier",
+    "detail": "Next-gen GPU deployment for training workloads",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-2-company-nvda"
+    ]
+  },
+  {
+    "id": "link-project-2-company-vrt",
+    "project_id": "project-2",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Thermal & Power",
+    "detail": "Expected to supply reference architecture cooling",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-2-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-2-company-sbgsy",
+    "project_id": "project-2",
+    "company_id": "company-sbgsy",
+    "company_ticker": "SBGSY",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Electrical Infrastructure",
+    "detail": "Galaxy UPS, power distribution for hyperscale",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-2-company-sbgsy"
+    ]
+  },
+  {
+    "id": "link-project-3-company-orcl",
+    "project_id": "project-3",
+    "company_id": "company-orcl",
+    "company_ticker": "ORCL",
+    "relationship_type": "project_company_relationship",
+    "display_role": "DC Developer",
+    "detail": "Part of multi-state Stargate expansion",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-3-company-orcl"
+    ]
+  },
+  {
+    "id": "link-project-3-company-nvda",
+    "project_id": "project-3",
+    "company_id": "company-nvda",
+    "company_ticker": "NVDA",
+    "relationship_type": "project_company_relationship",
+    "display_role": "GPU Supplier",
+    "detail": "Blackwell and next-gen platform deployment",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-3-company-nvda"
+    ]
+  },
+  {
+    "id": "link-project-3-company-vrt",
+    "project_id": "project-3",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling Infrastructure",
+    "detail": "Liquid cooling CDUs, SmartRun prefab solutions",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-3-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-3-company-etn",
+    "project_id": "project-3",
+    "company_id": "company-etn",
+    "company_ticker": "ETN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Infrastructure",
+    "detail": "Electrical Americas segment, power management",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-3-company-etn"
+    ]
+  },
+  {
+    "id": "link-project-4-company-orcl",
+    "project_id": "project-4",
+    "company_id": "company-orcl",
+    "company_ticker": "ORCL",
+    "relationship_type": "project_company_relationship",
+    "display_role": "DC Developer & Operator",
+    "detail": "Partnership with Vantage, 'Lighthouse' project",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-4-company-orcl"
+    ]
+  },
+  {
+    "id": "link-project-4-company-vrt",
+    "project_id": "project-4",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power & Cooling",
+    "detail": "MegaMod HDX up to 10MW, rack densities 50-100kW+",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-4-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-4-company-mod",
+    "project_id": "project-4",
+    "company_id": "company-mod",
+    "company_ticker": "MOD",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Chillers & HVAC",
+    "detail": "New Franklin, WI facility producing AHUs and modular DC units",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-4-company-mod"
+    ]
+  },
+  {
+    "id": "link-project-4-company-nvt",
+    "project_id": "project-4",
+    "company_id": "company-nvt",
+    "company_ticker": "NVT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Enclosures & Thermal",
+    "detail": "Rack enclosures, cable management, cooling solutions",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-4-company-nvt"
+    ]
+  },
+  {
+    "id": "link-project-5-company-amzn",
+    "project_id": "project-5",
+    "company_id": "company-amzn",
+    "company_ticker": "AMZN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Developer & Operator",
+    "detail": "1,200 acres, 7 of 30 DCs built. Trainium 2 custom chips",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-5-company-amzn"
+    ]
+  },
+  {
+    "id": "link-project-5-company-vrt",
+    "project_id": "project-5",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling & Power",
+    "detail": "Multi-megawatt cooling for hyperscale GPU clusters",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-5-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-5-company-sbgsy",
+    "project_id": "project-5",
+    "company_id": "company-sbgsy",
+    "company_ticker": "SBGSY",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Distribution",
+    "detail": "Schneider Galaxy UPS, busway, BMS software",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-5-company-sbgsy"
+    ]
+  },
+  {
+    "id": "link-project-5-company-mod",
+    "project_id": "project-5",
+    "company_id": "company-mod",
+    "company_ticker": "MOD",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Chilled Water Systems",
+    "detail": "Airedale chillers for high-density compute cooling",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-5-company-mod"
+    ]
+  },
+  {
+    "id": "link-project-5-company-lgrdy",
+    "project_id": "project-5",
+    "company_id": "company-lgrdy",
+    "company_ticker": "LGRDY",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Rack PDUs & Busway",
+    "detail": "Server Technology intelligent PDUs and Starline busway for rack-level power distribution",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-5-company-lgrdy"
+    ]
+  },
+  {
+    "id": "link-project-5-company-flex",
+    "project_id": "project-5",
+    "company_id": "company-flex",
+    "company_ticker": "FLEX",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Modular DC Components",
+    "detail": "Anord Mardix critical power distribution and modular DC assemblies for phased 2.2 GW build",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-5-company-flex"
+    ]
+  },
+  {
+    "id": "link-project-6-company-msft",
+    "project_id": "project-6",
+    "company_id": "company-msft",
+    "company_ticker": "MSFT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Developer & Operator",
+    "detail": "315-acre campus, 1.2M sqft. 90% closed-loop liquid cooling. $7.3B total investment",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-6-company-msft"
+    ]
+  },
+  {
+    "id": "link-project-6-company-nvda",
+    "project_id": "project-6",
+    "company_id": "company-nvda",
+    "company_ticker": "NVDA",
+    "relationship_type": "project_company_relationship",
+    "display_role": "GPU Supplier",
+    "detail": "Massive GPU deployment for AI supercomputer cluster powering Azure AI",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-6-company-nvda"
+    ]
+  },
+  {
+    "id": "link-project-6-company-vrt",
+    "project_id": "project-6",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling & Power Infrastructure",
+    "detail": "Liebert thermal systems, CDUs, rack PDUs for liquid-cooled AI racks",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-6-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-6-company-etn",
+    "project_id": "project-6",
+    "company_id": "company-etn",
+    "company_ticker": "ETN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Distribution",
+    "detail": "UPS, medium-voltage switchgear, 120 miles underground cable distribution",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-6-company-etn"
+    ]
+  },
+  {
+    "id": "link-project-6-company-fix",
+    "project_id": "project-6",
+    "company_id": "company-fix",
+    "company_ticker": "FIX",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Mechanical Contractor",
+    "detail": "HVAC and mechanical systems for second-largest water-cooled chiller plant on earth",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-6-company-fix"
+    ]
+  },
+  {
+    "id": "link-project-6-company-pwr",
+    "project_id": "project-6",
+    "company_id": "company-pwr",
+    "company_ticker": "PWR",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Electrical Construction",
+    "detail": "Substation and grid interconnection for 900 MW peak demand from We Energies",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-6-company-pwr"
+    ]
+  },
+  {
+    "id": "link-project-7-company-msft",
+    "project_id": "project-7",
+    "company_id": "company-msft",
+    "company_ticker": "MSFT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Developer & Operator",
+    "detail": "First AI superfactory, hundreds of thousands of GPUs",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-7-company-msft"
+    ]
+  },
+  {
+    "id": "link-project-7-company-nvda",
+    "project_id": "project-7",
+    "company_id": "company-nvda",
+    "company_ticker": "NVDA",
+    "relationship_type": "project_company_relationship",
+    "display_role": "GPU Supplier",
+    "detail": "Advanced GPU deployment for AI workloads",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-7-company-nvda"
+    ]
+  },
+  {
+    "id": "link-project-7-company-amd",
+    "project_id": "project-7",
+    "company_id": "company-amd",
+    "company_ticker": "AMD",
+    "relationship_type": "project_company_relationship",
+    "display_role": "GPU & CPU Supplier",
+    "detail": "Instinct MI300X powers Azure OpenAI Service inference. EPYC Turin host CPUs in ND MI300X V5 VM instances",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-7-company-amd"
+    ]
+  },
+  {
+    "id": "link-project-7-company-vrt",
+    "project_id": "project-7",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling Infrastructure",
+    "detail": "Sidekick-class liquid cooling for Azure Maia chips",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-7-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-7-company-etn",
+    "project_id": "project-7",
+    "company_id": "company-etn",
+    "company_ticker": "ETN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Management",
+    "detail": "Critical power distribution and protection",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-7-company-etn"
+    ]
+  },
+  {
+    "id": "link-project-8-company-meta",
+    "project_id": "project-8",
+    "company_id": "company-meta",
+    "company_ticker": "META",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Developer & Operator",
+    "detail": "First gigawatt DC. 200MW on-site natural gas by Nov 2026",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-8-company-meta"
+    ]
+  },
+  {
+    "id": "link-project-8-company-nvda",
+    "project_id": "project-8",
+    "company_id": "company-nvda",
+    "company_ticker": "NVDA",
+    "relationship_type": "project_company_relationship",
+    "display_role": "GPU Supplier",
+    "detail": "Millions of AI chips in expanded NVIDIA deal",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-8-company-nvda"
+    ]
+  },
+  {
+    "id": "link-project-8-company-amd",
+    "project_id": "project-8",
+    "company_id": "company-amd",
+    "company_ticker": "AMD",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Server CPU Supplier (EPYC)",
+    "detail": "EPYC processors for custom OCP single-socket servers. Helios AI rack built on Meta's 2025 OCP design spec",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-8-company-amd"
+    ]
+  },
+  {
+    "id": "link-project-8-company-vrt",
+    "project_id": "project-8",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling & Power",
+    "detail": "Hyperscale thermal management, prefab modules",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-8-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-8-company-mod",
+    "project_id": "project-8",
+    "company_id": "company-mod",
+    "company_ticker": "MOD",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Precision Cooling",
+    "detail": "Chillers and CDUs for high-density AI racks",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-8-company-mod"
+    ]
+  },
+  {
+    "id": "link-project-8-company-cohr",
+    "project_id": "project-8",
+    "company_id": "company-cohr",
+    "company_ticker": "COHR",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Optical Transceivers (800G/1.6T)",
+    "detail": "Meta is a confirmed hyperscale customer. 500K+ GPUs across buildings require massive intra-cluster optical connectivity",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-8-company-cohr"
+    ]
+  },
+  {
+    "id": "link-project-8-company-vst",
+    "project_id": "project-8",
+    "company_id": "company-vst",
+    "company_ticker": "VST",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Nuclear Power PPA",
+    "detail": "20-year, 1.2 GW PPA from Comanche Peak nuclear to serve Meta DC load",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-8-company-vst"
+    ]
+  },
+  {
+    "id": "link-project-8-company-oklo",
+    "project_id": "project-8",
+    "company_id": "company-oklo",
+    "company_ticker": "OKLO",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Nuclear Microreactor Partnership",
+    "detail": "Part of 1.2 GW Meta-Oklo deal for advanced fission power at Meta DC campuses",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-8-company-oklo"
+    ]
+  },
+  {
+    "id": "link-project-9-company-meta",
+    "project_id": "project-9",
+    "company_id": "company-meta",
+    "company_ticker": "META",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Developer & Operator",
+    "detail": "Manhattan-sized. 10 DCs, 1,200 acres. 3 gas plants ($3B)",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-9-company-meta"
+    ]
+  },
+  {
+    "id": "link-project-9-company-nvda",
+    "project_id": "project-9",
+    "company_id": "company-nvda",
+    "company_ticker": "NVDA",
+    "relationship_type": "project_company_relationship",
+    "display_role": "GPU Supplier",
+    "detail": "Multi-million GPU deployment over build-out",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-9-company-nvda"
+    ]
+  },
+  {
+    "id": "link-project-9-company-vrt",
+    "project_id": "project-9",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling Infrastructure",
+    "detail": "Largest potential single-site cooling deployment",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-9-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-9-company-etn",
+    "project_id": "project-9",
+    "company_id": "company-etn",
+    "company_ticker": "ETN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power + Liquid Cooling",
+    "detail": "Boyd liquid cooling + Eaton power from chip to grid",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-9-company-etn"
+    ]
+  },
+  {
+    "id": "link-project-9-company-sbgsy",
+    "project_id": "project-9",
+    "company_id": "company-sbgsy",
+    "company_ticker": "SBGSY",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Building Management",
+    "detail": "EcoStruxure BMS, power monitoring",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-9-company-sbgsy"
+    ]
+  },
+  {
+    "id": "link-project-9-company-mod",
+    "project_id": "project-9",
+    "company_id": "company-mod",
+    "company_ticker": "MOD",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Large-Scale Chillers",
+    "detail": "Modular chiller systems for phased build-out",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-9-company-mod"
+    ]
+  },
+  {
+    "id": "link-project-9-company-jci",
+    "project_id": "project-9",
+    "company_id": "company-jci",
+    "company_ticker": "JCI",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Thermal Management & Building Controls",
+    "detail": "Silent-Aire custom air handlers and YORK chillers for 10-building, 1,200-acre campus. Integrated BMS for phased 5 GW build",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-9-company-jci"
+    ]
+  },
+  {
+    "id": "link-project-9-company-oklo",
+    "project_id": "project-9",
+    "company_id": "company-oklo",
+    "company_ticker": "OKLO",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Nuclear Microreactor Partnership",
+    "detail": "Part of 1.2 GW Meta-Oklo deal. Aurora microreactors for behind-the-meter power at 5 GW mega campus",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-9-company-oklo"
+    ]
+  },
+  {
+    "id": "link-project-10-company-amzn",
+    "project_id": "project-10",
+    "company_id": "company-amzn",
+    "company_ticker": "AMZN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Developer & Operator",
+    "detail": "20 buildings at full build-out, near Duke Energy 2.24GW plant",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-10-company-amzn"
+    ]
+  },
+  {
+    "id": "link-project-10-company-vrt",
+    "project_id": "project-10",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling & Power",
+    "detail": "Thermal management for 200K+ sqft buildings",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-10-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-10-company-sbgsy",
+    "project_id": "project-10",
+    "company_id": "company-sbgsy",
+    "company_ticker": "SBGSY",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Distribution",
+    "detail": "Medium-voltage switchgear and UPS systems",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-10-company-sbgsy"
+    ]
+  },
+  {
+    "id": "link-project-11-company-msft",
+    "project_id": "project-11",
+    "company_id": "company-msft",
+    "company_ticker": "MSFT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Developer & Operator",
+    "detail": "Adjacent to Susquehanna nuclear plant, direct power connection",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-11-company-msft"
+    ]
+  },
+  {
+    "id": "link-project-11-company-vrt",
+    "project_id": "project-11",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling Infrastructure",
+    "detail": "Pre-engineered AI cooling solutions",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-11-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-11-company-etn",
+    "project_id": "project-11",
+    "company_id": "company-etn",
+    "company_ticker": "ETN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Distribution",
+    "detail": "Fibrebond modular power enclosures",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-11-company-etn"
+    ]
+  },
+  {
+    "id": "link-project-11-company-nvt",
+    "project_id": "project-11",
+    "company_id": "company-nvt",
+    "company_ticker": "NVT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Enclosures & Protection",
+    "detail": "IT rack systems and cable management",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-11-company-nvt"
+    ]
+  },
+  {
+    "id": "link-project-12-company-vrt",
+    "project_id": "project-12",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling & Power",
+    "detail": "Expected primary cooling infrastructure vendor",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-12-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-12-company-smci",
+    "project_id": "project-12",
+    "company_id": "company-smci",
+    "company_ticker": "SMCI",
+    "relationship_type": "project_company_relationship",
+    "display_role": "AI Server Systems",
+    "detail": "Liquid-cooled server racks for training clusters",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-12-company-smci"
+    ]
+  },
+  {
+    "id": "link-project-12-company-nvda",
+    "project_id": "project-12",
+    "company_id": "company-nvda",
+    "company_ticker": "NVDA",
+    "relationship_type": "project_company_relationship",
+    "display_role": "GPU Supplier",
+    "detail": "Next-gen GPU deployment",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-12-company-nvda"
+    ]
+  },
+  {
+    "id": "link-project-12-company-etn",
+    "project_id": "project-12",
+    "company_id": "company-etn",
+    "company_ticker": "ETN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Management",
+    "detail": "Electrical distribution and protection",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-12-company-etn"
+    ]
+  },
+  {
+    "id": "link-project-13-company-vrt",
+    "project_id": "project-13",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling Infrastructure",
+    "detail": "Thermal management for training facility",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-13-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-13-company-smci",
+    "project_id": "project-13",
+    "company_id": "company-smci",
+    "company_ticker": "SMCI",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Server Infrastructure",
+    "detail": "DLC server systems",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-13-company-smci"
+    ]
+  },
+  {
+    "id": "link-project-13-company-nvda",
+    "project_id": "project-13",
+    "company_id": "company-nvda",
+    "company_ticker": "NVDA",
+    "relationship_type": "project_company_relationship",
+    "display_role": "GPU Supplier",
+    "detail": "AI accelerator deployment",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-13-company-nvda"
+    ]
+  },
+  {
+    "id": "link-project-14-company-nvda",
+    "project_id": "project-14",
+    "company_id": "company-nvda",
+    "company_ticker": "NVDA",
+    "relationship_type": "project_company_relationship",
+    "display_role": "GPU Supplier",
+    "detail": "100,000 H100 GPUs, built in 122 days",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-14-company-nvda"
+    ]
+  },
+  {
+    "id": "link-project-14-company-smci",
+    "project_id": "project-14",
+    "company_id": "company-smci",
+    "company_ticker": "SMCI",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Server Infrastructure",
+    "detail": "Rapid-deploy liquid-cooled server racks",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-14-company-smci"
+    ]
+  },
+  {
+    "id": "link-project-14-company-vrt",
+    "project_id": "project-14",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling Systems",
+    "detail": "CDUs and liquid cooling for dense GPU clusters",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-14-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-14-company-tsla",
+    "project_id": "project-14",
+    "company_id": "company-tsla",
+    "company_ticker": "TSLA",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Battery Storage (Megapack)",
+    "detail": "168 Megapacks providing 150 MW grid-tied battery backup. $430M in Megapack sales to xAI in 2025",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-14-company-tsla"
+    ]
+  },
+  {
+    "id": "link-project-15-company-vrt",
+    "project_id": "project-15",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling & Power",
+    "detail": "Primary thermal and power infrastructure",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-15-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-15-company-etn",
+    "project_id": "project-15",
+    "company_id": "company-etn",
+    "company_ticker": "ETN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Distribution",
+    "detail": "Switchgear, UPS, busbar systems",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-15-company-etn"
+    ]
+  },
+  {
+    "id": "link-project-15-company-mod",
+    "project_id": "project-15",
+    "company_id": "company-mod",
+    "company_ticker": "MOD",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Chiller Systems",
+    "detail": "Climate Solutions segment products",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-15-company-mod"
+    ]
+  },
+  {
+    "id": "link-project-15-company-nvt",
+    "project_id": "project-15",
+    "company_id": "company-nvt",
+    "company_ticker": "NVT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Enclosures",
+    "detail": "Rack systems and protection solutions",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-15-company-nvt"
+    ]
+  },
+  {
+    "id": "link-project-16-company-meta",
+    "project_id": "project-16",
+    "company_id": "company-meta",
+    "company_ticker": "META",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Developer & Operator",
+    "detail": "30th data center, supporting AI and digital infra",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-16-company-meta"
+    ]
+  },
+  {
+    "id": "link-project-16-company-vrt",
+    "project_id": "project-16",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling",
+    "detail": "Thermal management systems",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-16-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-16-company-mod",
+    "project_id": "project-16",
+    "company_id": "company-mod",
+    "company_ticker": "MOD",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Chillers",
+    "detail": "Nearby Franklin WI facility supplying cooling units",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-16-company-mod"
+    ]
+  },
+  {
+    "id": "link-project-17-company-vrt",
+    "project_id": "project-17",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling Infrastructure",
+    "detail": "Massive cooling deployment for 3,200-acre campus",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-17-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-17-company-etn",
+    "project_id": "project-17",
+    "company_id": "company-etn",
+    "company_ticker": "ETN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power + Cooling",
+    "detail": "Boyd liquid cooling + power distribution",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-17-company-etn"
+    ]
+  },
+  {
+    "id": "link-project-17-company-sbgsy",
+    "project_id": "project-17",
+    "company_id": "company-sbgsy",
+    "company_ticker": "SBGSY",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Electrical Infrastructure",
+    "detail": "Medium/high voltage distribution",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-17-company-sbgsy"
+    ]
+  },
+  {
+    "id": "link-project-17-company-mod",
+    "project_id": "project-17",
+    "company_id": "company-mod",
+    "company_ticker": "MOD",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Industrial Cooling",
+    "detail": "Large-scale chiller systems for phased build",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-17-company-mod"
+    ]
+  },
+  {
+    "id": "link-project-17-company-nvt",
+    "project_id": "project-17",
+    "company_id": "company-nvt",
+    "company_ticker": "NVT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Protection Solutions",
+    "detail": "Enclosures and thermal management",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-17-company-nvt"
+    ]
+  },
+  {
+    "id": "link-project-17-company-jci",
+    "project_id": "project-17",
+    "company_id": "company-jci",
+    "company_ticker": "JCI",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Thermal Management & Building Controls",
+    "detail": "Silent-Aire CDUs and YORK chillers for multi-tenant 4.5 GW campus. Integrated BMS across 3,200 acres",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-17-company-jci"
+    ]
+  },
+  {
+    "id": "link-project-17-company-pry",
+    "project_id": "project-17",
+    "company_id": "company-pry",
+    "company_ticker": "PRY",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power & Fiber Cables",
+    "detail": "Power cables and fiber-optic infrastructure for 3,200-acre multi-GW campus phased build",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-17-company-pry"
+    ]
+  },
+  {
+    "id": "link-project-17-company-lgrdy",
+    "project_id": "project-17",
+    "company_id": "company-lgrdy",
+    "company_ticker": "LGRDY",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Rack PDUs & Busway",
+    "detail": "Server Technology intelligent PDUs and Starline busway for rack-level power distribution across phased 4.5 GW build",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-17-company-lgrdy"
+    ]
+  },
+  {
+    "id": "link-project-18-company-msft",
+    "project_id": "project-18",
+    "company_id": "company-msft",
+    "company_ticker": "MSFT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Anchor Tenant",
+    "detail": "Leasing 2.1M sqft hyperscale campus built to Microsoft specifications",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-18-company-msft"
+    ]
+  },
+  {
+    "id": "link-project-18-company-vrt",
+    "project_id": "project-18",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling Infrastructure",
+    "detail": "Thermal management systems for 3-phase, 612K sqft/building buildout",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-18-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-18-company-etn",
+    "project_id": "project-18",
+    "company_id": "company-etn",
+    "company_ticker": "ETN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Management",
+    "detail": "UPS and power distribution for 324 MW phased capacity",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-18-company-etn"
+    ]
+  },
+  {
+    "id": "link-project-18-company-sbgsy",
+    "project_id": "project-18",
+    "company_id": "company-sbgsy",
+    "company_ticker": "SBGSY",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Electrical Infrastructure",
+    "detail": "Galaxy UPS, medium-voltage distribution, EcoStruxure BMS",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-18-company-sbgsy"
+    ]
+  },
+  {
+    "id": "link-project-18-company-eme",
+    "project_id": "project-18",
+    "company_id": "company-eme",
+    "company_ticker": "EME",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Electrical & Mechanical Construction",
+    "detail": "DC electrical and mechanical systems installation across 136-acre site",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-18-company-eme"
+    ]
+  },
+  {
+    "id": "link-project-18-company-abb",
+    "project_id": "project-18",
+    "company_id": "company-abb",
+    "company_ticker": "ABB",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Distribution & UPS",
+    "detail": "MV/LV switchgear and transformer systems for phased delivery",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-18-company-abb"
+    ]
+  },
+  {
+    "id": "link-project-19-company-msft",
+    "project_id": "project-19",
+    "company_id": "company-msft",
+    "company_ticker": "MSFT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Offtaker",
+    "detail": "20-year PPA to match Azure DC power consumption across PJM Interconnection",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-19-company-msft"
+    ]
+  },
+  {
+    "id": "link-project-19-company-ceg",
+    "project_id": "project-19",
+    "company_id": "company-ceg",
+    "company_ticker": "CEG",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Nuclear Plant Operator",
+    "detail": "Investing $1.6B to restart Unit 1 as Crane Clean Energy Center. $1B DOE loan secured",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-19-company-ceg"
+    ]
+  },
+  {
+    "id": "link-project-19-company-gev",
+    "project_id": "project-19",
+    "company_id": "company-gev",
+    "company_ticker": "GEV",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Turbine & Grid Equipment",
+    "detail": "Steam turbine refurbishment and grid interconnection equipment for 835 MW restart",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-19-company-gev"
+    ]
+  },
+  {
+    "id": "link-project-19-company-pwr",
+    "project_id": "project-19",
+    "company_id": "company-pwr",
+    "company_ticker": "PWR",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Grid Infrastructure",
+    "detail": "Transmission line upgrades and substation work for nuclear-to-grid reconnection",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-19-company-pwr"
+    ]
+  },
+  {
+    "id": "link-project-19-company-glw",
+    "project_id": "project-19",
+    "company_id": "company-glw",
+    "company_ticker": "GLW",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Fiber Connectivity",
+    "detail": "Fiber-optic network linking TMI power output to Microsoft DC facilities in PA",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-19-company-glw"
+    ]
+  },
+  {
+    "id": "link-project-19-company-lumn",
+    "project_id": "project-19",
+    "company_id": "company-lumn",
+    "company_ticker": "LUMN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Private Connectivity Fabric",
+    "detail": "Dark fiber and network infrastructure connecting Microsoft DCs powered by TMI",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-19-company-lumn"
+    ]
+  },
+  {
+    "id": "link-project-20-company-amzn",
+    "project_id": "project-20",
+    "company_id": "company-amzn",
+    "company_ticker": "AMZN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Developer & Operator",
+    "detail": "1,143-acre campus, 11 two-story DC buildings. Part of $35B VA commitment by 2040",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-20-company-amzn"
+    ]
+  },
+  {
+    "id": "link-project-20-company-vrt",
+    "project_id": "project-20",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling & Power Infrastructure",
+    "detail": "Thermal management for 770 MW phased high-density compute campus",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-20-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-20-company-etn",
+    "project_id": "project-20",
+    "company_id": "company-etn",
+    "company_ticker": "ETN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Distribution",
+    "detail": "Three on-site substations, switchgear, UPS for 11-building campus",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-20-company-etn"
+    ]
+  },
+  {
+    "id": "link-project-20-company-sbgsy",
+    "project_id": "project-20",
+    "company_id": "company-sbgsy",
+    "company_ticker": "SBGSY",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power & Building Management",
+    "detail": "Medium-voltage distribution, EcoStruxure building management software",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-20-company-sbgsy"
+    ]
+  },
+  {
+    "id": "link-project-20-company-cat",
+    "project_id": "project-20",
+    "company_id": "company-cat",
+    "company_ticker": "CAT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Backup Power Generators",
+    "detail": "Diesel genset backup power for mission-critical 770 MW campus",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-20-company-cat"
+    ]
+  },
+  {
+    "id": "link-project-20-company-anet",
+    "project_id": "project-20",
+    "company_id": "company-anet",
+    "company_ticker": "ANET",
+    "relationship_type": "project_company_relationship",
+    "display_role": "DC Networking",
+    "detail": "400G/800G Ethernet switches for AWS AI cluster interconnect",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-20-company-anet"
+    ]
+  },
+  {
+    "id": "link-project-20-company-strl",
+    "project_id": "project-20",
+    "company_id": "company-strl",
+    "company_ticker": "STRL",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Site Development",
+    "detail": "E-Infrastructure Solutions for civil construction and site prep at 1,143-acre VA campus",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-20-company-strl"
+    ]
+  },
+  {
+    "id": "link-project-21-company-amzn",
+    "project_id": "project-21",
+    "company_id": "company-amzn",
+    "company_ticker": "AMZN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Developer & Operator",
+    "detail": "Two complexes across 1,700 acres. Largest private investment in MS history. 1,000+ jobs",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-21-company-amzn"
+    ]
+  },
+  {
+    "id": "link-project-21-company-vrt",
+    "project_id": "project-21",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling Infrastructure",
+    "detail": "CDUs and thermal management for hyperscale campus in hot/humid climate",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-21-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-21-company-etn",
+    "project_id": "project-21",
+    "company_id": "company-etn",
+    "company_ticker": "ETN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Management",
+    "detail": "UPS and power distribution systems for phased multi-GW buildout",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-21-company-etn"
+    ]
+  },
+  {
+    "id": "link-project-21-company-mod",
+    "project_id": "project-21",
+    "company_id": "company-mod",
+    "company_ticker": "MOD",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Chiller Systems",
+    "detail": "Airedale chillers from nearby MS manufacturing facility",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-21-company-mod"
+    ]
+  },
+  {
+    "id": "link-project-21-company-pwr",
+    "project_id": "project-21",
+    "company_id": "company-pwr",
+    "company_ticker": "PWR",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Electrical Construction",
+    "detail": "Substation construction and transmission infrastructure for remote mega-site",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-21-company-pwr"
+    ]
+  },
+  {
+    "id": "link-project-21-company-cmi",
+    "project_id": "project-21",
+    "company_id": "company-cmi",
+    "company_ticker": "CMI",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Backup Power Generators",
+    "detail": "Natural gas and diesel gensets for prime and backup power across two sites",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-21-company-cmi"
+    ]
+  },
+  {
+    "id": "link-project-22-company-amzn",
+    "project_id": "project-22",
+    "company_id": "company-amzn",
+    "company_ticker": "AMZN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Developer & Operator",
+    "detail": "1,600-acre rezoned campus near Susquehanna nuclear. Largest private investment in PA history",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-22-company-amzn"
+    ]
+  },
+  {
+    "id": "link-project-22-company-vrt",
+    "project_id": "project-22",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling & Power Infrastructure",
+    "detail": "Thermal management for nuclear-adjacent 15-building hyperscale campus",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-22-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-22-company-etn",
+    "project_id": "project-22",
+    "company_id": "company-etn",
+    "company_ticker": "ETN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Distribution",
+    "detail": "Switchgear and UPS connecting nuclear-sourced power to DC loads",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-22-company-etn"
+    ]
+  },
+  {
+    "id": "link-project-22-company-abb",
+    "project_id": "project-22",
+    "company_id": "company-abb",
+    "company_ticker": "ABB",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Distribution & Transformers",
+    "detail": "MV/LV switchgear and transformers for nuclear-to-DC power path",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-22-company-abb"
+    ]
+  },
+  {
+    "id": "link-project-22-company-tln",
+    "project_id": "project-22",
+    "company_id": "company-tln",
+    "company_ticker": "TLN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Nuclear Power Supplier",
+    "detail": "1,920 MW PPA through 2042 from Susquehanna plant. Original 960 MW campus acquired for $650M",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-22-company-tln"
+    ]
+  },
+  {
+    "id": "link-project-22-company-anet",
+    "project_id": "project-22",
+    "company_id": "company-anet",
+    "company_ticker": "ANET",
+    "relationship_type": "project_company_relationship",
+    "display_role": "DC Networking",
+    "detail": "High-speed Ethernet fabric for AWS AI and cloud workloads",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-22-company-anet"
+    ]
+  },
+  {
+    "id": "link-project-23-company-amzn",
+    "project_id": "project-23",
+    "company_id": "company-amzn",
+    "company_ticker": "AMZN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Developer & Operator",
+    "detail": "Part of $39.2B eastern OR investment since 2011. ~20 DCs across Umatilla/Morrow counties",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-23-company-amzn"
+    ]
+  },
+  {
+    "id": "link-project-23-company-vrt",
+    "project_id": "project-23",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling Infrastructure",
+    "detail": "Thermal management for Columbia River-adjacent campus leveraging cool climate",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-23-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-23-company-sbgsy",
+    "project_id": "project-23",
+    "company_id": "company-sbgsy",
+    "company_ticker": "SBGSY",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Distribution",
+    "detail": "Medium-voltage switchgear and UPS systems for expanding campus",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-23-company-sbgsy"
+    ]
+  },
+  {
+    "id": "link-project-23-company-cat",
+    "project_id": "project-23",
+    "company_id": "company-cat",
+    "company_ticker": "CAT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Backup Generators",
+    "detail": "104 diesel-fired 2.5 MW generators providing backup power across campus",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-23-company-cat"
+    ]
+  },
+  {
+    "id": "link-project-23-company-be",
+    "project_id": "project-23",
+    "company_id": "company-be",
+    "company_ticker": "BE",
+    "relationship_type": "project_company_relationship",
+    "display_role": "On-Site Fuel Cell Power",
+    "detail": "AWS deploying Bloom Energy solid-oxide fuel cells as primary power at OR data centers",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-23-company-be"
+    ]
+  },
+  {
+    "id": "link-project-23-company-anet",
+    "project_id": "project-23",
+    "company_id": "company-anet",
+    "company_ticker": "ANET",
+    "relationship_type": "project_company_relationship",
+    "display_role": "DC Networking",
+    "detail": "High-bandwidth Ethernet switches for AWS US-West-2 region backbone",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-23-company-anet"
+    ]
+  },
+  {
+    "id": "link-project-24-company-googl",
+    "project_id": "project-24",
+    "company_id": "company-googl",
+    "company_ticker": "GOOGL",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Developer & Operator",
+    "detail": "400-acre campus, six 300K sqft buildings. Part of $9B OK investment. OG&E power supply",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-24-company-googl"
+    ]
+  },
+  {
+    "id": "link-project-24-company-vrt",
+    "project_id": "project-24",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling Infrastructure",
+    "detail": "Thermal management systems for air-cooled AI data center campus",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-24-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-24-company-etn",
+    "project_id": "project-24",
+    "company_id": "company-etn",
+    "company_ticker": "ETN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Distribution",
+    "detail": "Switchgear and UPS for phased 500 MW capacity across six buildings",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-24-company-etn"
+    ]
+  },
+  {
+    "id": "link-project-24-company-fix",
+    "project_id": "project-24",
+    "company_id": "company-fix",
+    "company_ticker": "FIX",
+    "relationship_type": "project_company_relationship",
+    "display_role": "HVAC & Mechanical Contractor",
+    "detail": "Advanced air-cooling HVAC systems for Oklahoma climate",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-24-company-fix"
+    ]
+  },
+  {
+    "id": "link-project-24-company-eme",
+    "project_id": "project-24",
+    "company_id": "company-eme",
+    "company_ticker": "EME",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Electrical Construction",
+    "detail": "Electrical infrastructure installation for 6-building phased campus",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-24-company-eme"
+    ]
+  },
+  {
+    "id": "link-project-24-company-glw",
+    "project_id": "project-24",
+    "company_id": "company-glw",
+    "company_ticker": "GLW",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Fiber Connectivity",
+    "detail": "Fiber-optic cabling and connectivity for campus interconnect and backhaul",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-24-company-glw"
+    ]
+  },
+  {
+    "id": "link-project-25-company-googl",
+    "project_id": "project-25",
+    "company_id": "company-googl",
+    "company_ticker": "GOOGL",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Developer & Operator",
+    "detail": "$7B expansion. Operating since 2009, $13.8B total invested in IA",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-25-company-googl"
+    ]
+  },
+  {
+    "id": "link-project-25-company-avgo",
+    "project_id": "project-25",
+    "company_id": "company-avgo",
+    "company_ticker": "AVGO",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Custom AI Chip Co-Developer (TPU)",
+    "detail": "Co-designs every Google TPU generation with proprietary SerDes IP. Trillium/Ironwood silicon deployed at scale",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-25-company-avgo"
+    ]
+  },
+  {
+    "id": "link-project-25-company-vrt",
+    "project_id": "project-25",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling & Power Infrastructure",
+    "detail": "Thermal management for expanding GW-scale campus with AI-dedicated capacity",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-25-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-25-company-etn",
+    "project_id": "project-25",
+    "company_id": "company-etn",
+    "company_ticker": "ETN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Management",
+    "detail": "UPS and power distribution for phased expansion",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-25-company-etn"
+    ]
+  },
+  {
+    "id": "link-project-25-company-fix",
+    "project_id": "project-25",
+    "company_id": "company-fix",
+    "company_ticker": "FIX",
+    "relationship_type": "project_company_relationship",
+    "display_role": "HVAC & Mechanical Contractor",
+    "detail": "Mechanical systems and cooling for multi-building expansion",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-25-company-fix"
+    ]
+  },
+  {
+    "id": "link-project-25-company-cien",
+    "project_id": "project-25",
+    "company_id": "company-cien",
+    "company_ticker": "CIEN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Optical Networking & DCI",
+    "detail": "Data center interconnect optics linking Iowa campus to Google's global network",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-25-company-cien"
+    ]
+  },
+  {
+    "id": "link-project-25-company-glw",
+    "project_id": "project-25",
+    "company_id": "company-glw",
+    "company_ticker": "GLW",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Fiber Optic Cable",
+    "detail": "Fiber infrastructure for campus interconnect and long-haul connectivity",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-25-company-glw"
+    ]
+  },
+  {
+    "id": "link-project-26-company-googl",
+    "project_id": "project-26",
+    "company_id": "company-googl",
+    "company_ticker": "GOOGL",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Developer & Operator",
+    "detail": "Part of $40B TX investment through 2027. Co-located with Intersect solar+BESS plant",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-26-company-googl"
+    ]
+  },
+  {
+    "id": "link-project-26-company-avgo",
+    "project_id": "project-26",
+    "company_id": "company-avgo",
+    "company_ticker": "AVGO",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Custom AI Chip Co-Developer (TPU)",
+    "detail": "Broadcom co-develops Google Ironwood (TPU v7) reaching GA early 2026. Greenfield campus is among first large-scale Ironwood deployments",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-26-company-avgo"
+    ]
+  },
+  {
+    "id": "link-project-26-company-vrt",
+    "project_id": "project-26",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling Infrastructure",
+    "detail": "Advanced air-cooling thermal systems for West Texas climate",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-26-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-26-company-etn",
+    "project_id": "project-26",
+    "company_id": "company-etn",
+    "company_ticker": "ETN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Distribution",
+    "detail": "Switchgear connecting solar/BESS and grid power to DC loads",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-26-company-etn"
+    ]
+  },
+  {
+    "id": "link-project-26-company-pwr",
+    "project_id": "project-26",
+    "company_id": "company-pwr",
+    "company_ticker": "PWR",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Electrical & Grid Infrastructure",
+    "detail": "Transmission lines and substation construction for remote TX site",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-26-company-pwr"
+    ]
+  },
+  {
+    "id": "link-project-26-company-nee",
+    "project_id": "project-26",
+    "company_id": "company-nee",
+    "company_ticker": "NEE",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Renewable Energy PPAs",
+    "detail": "Clean energy supply via long-term PPAs, part of Google's 6.2 GW TX renewable commitments",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-26-company-nee"
+    ]
+  },
+  {
+    "id": "link-project-26-company-tsla",
+    "project_id": "project-26",
+    "company_id": "company-tsla",
+    "company_ticker": "TSLA",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Battery Storage (Megapack)",
+    "detail": "Google–Intersect 15.3 GWh Megapack supply contract through 2030. On-site BESS for renewable firming and DC backup",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-26-company-tsla"
+    ]
+  },
+  {
+    "id": "link-project-26-company-cat",
+    "project_id": "project-26",
+    "company_id": "company-cat",
+    "company_ticker": "CAT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Backup Power Generators",
+    "detail": "Diesel and gas gensets for backup power at solar-paired campus",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-26-company-cat"
+    ]
+  },
+  {
+    "id": "link-project-27-company-meta",
+    "project_id": "project-27",
+    "company_id": "company-meta",
+    "company_ticker": "META",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Developer & Operator",
+    "detail": "Broke ground Feb 2026. 1,500-acre LEAP district campus, 13 buildings, 4M sqft. Closed-loop liquid cooling",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-27-company-meta"
+    ]
+  },
+  {
+    "id": "link-project-27-company-nvda",
+    "project_id": "project-27",
+    "company_id": "company-nvda",
+    "company_ticker": "NVDA",
+    "relationship_type": "project_company_relationship",
+    "display_role": "GPU Supplier",
+    "detail": "Next-gen AI accelerators for Meta's training infrastructure",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-27-company-nvda"
+    ]
+  },
+  {
+    "id": "link-project-27-company-vrt",
+    "project_id": "project-27",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power & Cooling Infrastructure",
+    "detail": "CDUs and thermal management for gigawatt-scale campus",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-27-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-27-company-etn",
+    "project_id": "project-27",
+    "company_id": "company-etn",
+    "company_ticker": "ETN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Distribution",
+    "detail": "UPS, switchgear, and busbar for phased 1 GW build-out",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-27-company-etn"
+    ]
+  },
+  {
+    "id": "link-project-27-company-pwr",
+    "project_id": "project-27",
+    "company_id": "company-pwr",
+    "company_ticker": "PWR",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Electrical Construction",
+    "detail": "Transmission lines and substation work for $120M utility infrastructure",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-27-company-pwr"
+    ]
+  },
+  {
+    "id": "link-project-27-company-glw",
+    "project_id": "project-27",
+    "company_id": "company-glw",
+    "company_ticker": "GLW",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Fiber Optic Connectivity",
+    "detail": "Part of $6B Meta fiber-optic supply deal through 2030",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-27-company-glw"
+    ]
+  },
+  {
+    "id": "link-project-28-company-meta",
+    "project_id": "project-28",
+    "company_id": "company-meta",
+    "company_ticker": "META",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Developer & Operator",
+    "detail": "Off I-65 near Hyundai plant. 1.3M sqft across two buildings, nearly doubled from initial $800M",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-28-company-meta"
+    ]
+  },
+  {
+    "id": "link-project-28-company-nvda",
+    "project_id": "project-28",
+    "company_id": "company-nvda",
+    "company_ticker": "NVDA",
+    "relationship_type": "project_company_relationship",
+    "display_role": "GPU Supplier",
+    "detail": "AI-optimized GPU deployment for latest Meta DC design",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-28-company-nvda"
+    ]
+  },
+  {
+    "id": "link-project-28-company-vrt",
+    "project_id": "project-28",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling Infrastructure",
+    "detail": "Thermal management for LEED Gold certified facility",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-28-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-28-company-fix",
+    "project_id": "project-28",
+    "company_id": "company-fix",
+    "company_ticker": "FIX",
+    "relationship_type": "project_company_relationship",
+    "display_role": "HVAC & Mechanical Contractor",
+    "detail": "Mechanical systems for 715K+ sqft AI-optimized data center",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-28-company-fix"
+    ]
+  },
+  {
+    "id": "link-project-28-company-glw",
+    "project_id": "project-28",
+    "company_id": "company-glw",
+    "company_ticker": "GLW",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Fiber Optic Connectivity",
+    "detail": "Fiber infrastructure under multi-billion Meta supply agreement",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-28-company-glw"
+    ]
+  },
+  {
+    "id": "link-project-29-company-orcl",
+    "project_id": "project-29",
+    "company_id": "company-orcl",
+    "company_ticker": "ORCL",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cloud Infrastructure & Developer",
+    "detail": "Co-developer with Vantage. Part of 4.5 GW Stargate expansion for OpenAI",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-29-company-orcl"
+    ]
+  },
+  {
+    "id": "link-project-29-company-nvda",
+    "project_id": "project-29",
+    "company_id": "company-nvda",
+    "company_ticker": "NVDA",
+    "relationship_type": "project_company_relationship",
+    "display_role": "GPU Supplier",
+    "detail": "GB200 NVL72 platform deployment across 10 data center buildings",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-29-company-nvda"
+    ]
+  },
+  {
+    "id": "link-project-29-company-vrt",
+    "project_id": "project-29",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power & Cooling Infrastructure",
+    "detail": "Liquid cooling CDUs for 3.7M sqft, 700-acre campus",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-29-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-29-company-etn",
+    "project_id": "project-29",
+    "company_id": "company-etn",
+    "company_ticker": "ETN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Distribution",
+    "detail": "Switchgear and UPS systems for 1.4 GW phased energization",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-29-company-etn"
+    ]
+  },
+  {
+    "id": "link-project-29-company-pwr",
+    "project_id": "project-29",
+    "company_id": "company-pwr",
+    "company_ticker": "PWR",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Electrical Construction & Grid",
+    "detail": "Transmission infrastructure connecting Shackelford County campus to ERCOT grid",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-29-company-pwr"
+    ]
+  },
+  {
+    "id": "link-project-29-company-eme",
+    "project_id": "project-29",
+    "company_id": "company-eme",
+    "company_ticker": "EME",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Electrical & Mechanical Construction",
+    "detail": "Large-scale DC electrical/mechanical build for 10-building campus",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-29-company-eme"
+    ]
+  },
+  {
+    "id": "link-project-30-company-orcl",
+    "project_id": "project-30",
+    "company_id": "company-orcl",
+    "company_ticker": "ORCL",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cloud Infrastructure & Developer",
+    "detail": "Co-developer with Related Digital. Three 550K sqft buildings on 250 acres in Saline Township",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-30-company-orcl"
+    ]
+  },
+  {
+    "id": "link-project-30-company-nvda",
+    "project_id": "project-30",
+    "company_id": "company-nvda",
+    "company_ticker": "NVDA",
+    "relationship_type": "project_company_relationship",
+    "display_role": "GPU Supplier",
+    "detail": "Next-gen AI accelerators for OpenAI Stargate workloads",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-30-company-nvda"
+    ]
+  },
+  {
+    "id": "link-project-30-company-vrt",
+    "project_id": "project-30",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling Infrastructure",
+    "detail": "Closed-loop cooling systems limiting water use to office-building levels",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-30-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-30-company-abb",
+    "project_id": "project-30",
+    "company_id": "company-abb",
+    "company_ticker": "ABB",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Distribution & UPS",
+    "detail": "Medium-voltage switchgear and UPS for 1.4 GW DTE Energy supply",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-30-company-abb"
+    ]
+  },
+  {
+    "id": "link-project-30-company-eme",
+    "project_id": "project-30",
+    "company_id": "company-eme",
+    "company_ticker": "EME",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Electrical & Mechanical Construction",
+    "detail": "Union construction workforce for 2,500+ construction jobs",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-30-company-eme"
+    ]
+  },
+  {
+    "id": "link-project-30-company-anet",
+    "project_id": "project-30",
+    "company_id": "company-anet",
+    "company_ticker": "ANET",
+    "relationship_type": "project_company_relationship",
+    "display_role": "DC Networking",
+    "detail": "High-bandwidth 400G/800G Ethernet switching for AI cluster interconnect",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-30-company-anet"
+    ]
+  },
+  {
+    "id": "link-project-31-company-orcl",
+    "project_id": "project-31",
+    "company_id": "company-orcl",
+    "company_ticker": "ORCL",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cloud Infrastructure Partner",
+    "detail": "Oracle cloud integration as part of broader Stargate JV with OpenAI and SoftBank",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-31-company-orcl"
+    ]
+  },
+  {
+    "id": "link-project-31-company-nvda",
+    "project_id": "project-31",
+    "company_id": "company-nvda",
+    "company_ticker": "NVDA",
+    "relationship_type": "project_company_relationship",
+    "display_role": "GPU Supplier",
+    "detail": "AI accelerators for Stargate servers manufactured on-site by Foxconn",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-31-company-nvda"
+    ]
+  },
+  {
+    "id": "link-project-31-company-vrt",
+    "project_id": "project-31",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power & Cooling Infrastructure",
+    "detail": "Thermal management for 6.2M sqft converted facility",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-31-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-31-company-abb",
+    "project_id": "project-31",
+    "company_id": "company-abb",
+    "company_ticker": "ABB",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Distribution",
+    "detail": "Switchgear and power quality systems for phased GW-scale energization",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-31-company-abb"
+    ]
+  },
+  {
+    "id": "link-project-31-company-pwr",
+    "project_id": "project-31",
+    "company_id": "company-pwr",
+    "company_ticker": "PWR",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Grid Infrastructure",
+    "detail": "Transmission and substation upgrades to support 1.5 GW scaling",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-31-company-pwr"
+    ]
+  },
+  {
+    "id": "link-project-31-company-cat",
+    "project_id": "project-31",
+    "company_id": "company-cat",
+    "company_ticker": "CAT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Backup Power Generation",
+    "detail": "Diesel and gas gensets for multi-GW campus backup power",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-31-company-cat"
+    ]
+  },
+  {
+    "id": "link-project-31-company-smr",
+    "project_id": "project-31",
+    "company_id": "company-smr",
+    "company_ticker": "SMR",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Small Modular Reactor (Future)",
+    "detail": "NuScale-Standard Power partnership for DC-dedicated SMR sites in OH. Only NRC-certified SMR design",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-31-company-smr"
+    ]
+  },
+  {
+    "id": "link-project-32-company-crwv",
+    "project_id": "project-32",
+    "company_id": "company-crwv",
+    "company_ticker": "CRWV",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Developer & Operator",
+    "detail": "Converted former Merck R&D building at NEST campus. $322M acquisition + $555M construction loan",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-32-company-crwv"
+    ]
+  },
+  {
+    "id": "link-project-32-company-nvda",
+    "project_id": "project-32",
+    "company_id": "company-nvda",
+    "company_ticker": "NVDA",
+    "relationship_type": "project_company_relationship",
+    "display_role": "GPU Supplier",
+    "detail": "High-density GPU deployment for CoreWeave's GPU cloud platform",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-32-company-nvda"
+    ]
+  },
+  {
+    "id": "link-project-32-company-vrt",
+    "project_id": "project-32",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling Infrastructure",
+    "detail": "Liquid cooling CDUs for GPU-dense 392K sqft facility",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-32-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-32-company-etn",
+    "project_id": "project-32",
+    "company_id": "company-etn",
+    "company_ticker": "ETN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Distribution",
+    "detail": "Critical power systems for 250 MW converted pharmaceutical campus",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-32-company-etn"
+    ]
+  },
+  {
+    "id": "link-project-32-company-anet",
+    "project_id": "project-32",
+    "company_id": "company-anet",
+    "company_ticker": "ANET",
+    "relationship_type": "project_company_relationship",
+    "display_role": "DC Networking",
+    "detail": "800G Ethernet fabric for GPU cloud interconnect",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-32-company-anet"
+    ]
+  },
+  {
+    "id": "link-project-32-company-cohr",
+    "project_id": "project-32",
+    "company_id": "company-cohr",
+    "company_ticker": "COHR",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Optical Transceivers (800G)",
+    "detail": "800G pluggable transceivers behind Arista switches. One transceiver per switch port for GPU-dense fabric",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-32-company-cohr"
+    ]
+  },
+  {
+    "id": "link-project-32-company-lite",
+    "project_id": "project-32",
+    "company_id": "company-lite",
+    "company_ticker": "LITE",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Laser Chips (800G/1.6T)",
+    "detail": "EML laser chips powering 800G transceivers used in CoreWeave GPU cluster interconnect",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-32-company-lite"
+    ]
+  },
+  {
+    "id": "link-project-32-company-cls",
+    "project_id": "project-32",
+    "company_id": "company-cls",
+    "company_ticker": "CLS",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Network Switches & Rack CDUs",
+    "detail": "White-box 200G+ Ethernet switches (41% market share) and rack-level CDUs for GPU-dense facility",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-32-company-cls"
+    ]
+  },
+  {
+    "id": "link-project-33-company-crwv",
+    "project_id": "project-33",
+    "company_id": "company-crwv",
+    "company_ticker": "CRWV",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Operator & Tenant",
+    "detail": "16,000+ GPUs deployed by Jan 2026. 260 MW total contracted across 12-year leases worth $4.7B",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-33-company-crwv"
+    ]
+  },
+  {
+    "id": "link-project-33-company-nvda",
+    "project_id": "project-33",
+    "company_id": "company-nvda",
+    "company_ticker": "NVDA",
+    "relationship_type": "project_company_relationship",
+    "display_role": "GPU Supplier",
+    "detail": "Thousands of GPUs deployed for OpenAI compute workloads",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-33-company-nvda"
+    ]
+  },
+  {
+    "id": "link-project-33-company-vrt",
+    "project_id": "project-33",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling Infrastructure",
+    "detail": "Liquid cooling for converted bitcoin mining facility",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-33-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-33-company-etn",
+    "project_id": "project-33",
+    "company_id": "company-etn",
+    "company_ticker": "ETN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Management",
+    "detail": "Power distribution and protection for phased MW expansion",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-33-company-etn"
+    ]
+  },
+  {
+    "id": "link-project-33-company-abb",
+    "project_id": "project-33",
+    "company_id": "company-abb",
+    "company_ticker": "ABB",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Distribution",
+    "detail": "Medium-voltage switchgear for site power conversion",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-33-company-abb"
+    ]
+  },
+  {
+    "id": "link-project-33-company-anet",
+    "project_id": "project-33",
+    "company_id": "company-anet",
+    "company_ticker": "ANET",
+    "relationship_type": "project_company_relationship",
+    "display_role": "DC Networking",
+    "detail": "High-speed Ethernet switching for GPU cluster fabric",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-33-company-anet"
+    ]
+  },
+  {
+    "id": "link-project-33-company-cohr",
+    "project_id": "project-33",
+    "company_id": "company-cohr",
+    "company_ticker": "COHR",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Optical Transceivers (800G)",
+    "detail": "800G pluggable modules for 16,000+ GPU facility. DC&Comms revenue $1.2B/quarter (+34% YoY)",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-33-company-cohr"
+    ]
+  },
+  {
+    "id": "link-project-33-company-lite",
+    "project_id": "project-33",
+    "company_id": "company-lite",
+    "company_ticker": "LITE",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Laser Chips (800G)",
+    "detail": "EML laser chips powering 800G transceivers for CoreWeave/Core Scientific GPU cloud",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-33-company-lite"
+    ]
+  },
+  {
+    "id": "link-project-33-company-cls",
+    "project_id": "project-33",
+    "company_id": "company-cls",
+    "company_ticker": "CLS",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Network Switches",
+    "detail": "White-box Ethernet switches for 16,000+ GPU cluster fabric. 41% market share in 200G+ switches",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-33-company-cls"
+    ]
+  },
+  {
+    "id": "link-project-34-company-apld",
+    "project_id": "project-34",
+    "company_id": "company-apld",
+    "company_ticker": "APLD",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Developer & Operator",
+    "detail": "Purpose-built AI factory. Three buildings, 400 MW. Proprietary waterless closed-loop cooling system",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-34-company-apld"
+    ]
+  },
+  {
+    "id": "link-project-34-company-crwv",
+    "project_id": "project-34",
+    "company_id": "company-crwv",
+    "company_ticker": "CRWV",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Anchor Tenant",
+    "detail": "400 MW fully contracted under ~15-year leases. $11B total anticipated revenue",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-34-company-crwv"
+    ]
+  },
+  {
+    "id": "link-project-34-company-nvda",
+    "project_id": "project-34",
+    "company_id": "company-nvda",
+    "company_ticker": "NVDA",
+    "relationship_type": "project_company_relationship",
+    "display_role": "GPU Supplier",
+    "detail": "High-density GPU clusters for CoreWeave cloud compute",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-34-company-nvda"
+    ]
+  },
+  {
+    "id": "link-project-34-company-vrt",
+    "project_id": "project-34",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling Infrastructure",
+    "detail": "Liquid cooling CDUs leveraging North Dakota's cool climate for near-zero water consumption",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-34-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-34-company-abb",
+    "project_id": "project-34",
+    "company_id": "company-abb",
+    "company_ticker": "ABB",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Distribution & UPS",
+    "detail": "HiPerGuard medium-voltage UPS and advanced MV switchgear",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-34-company-abb"
+    ]
+  },
+  {
+    "id": "link-project-34-company-cat",
+    "project_id": "project-34",
+    "company_id": "company-cat",
+    "company_ticker": "CAT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Backup Power Generation",
+    "detail": "Standby diesel generators for three-building, 400 MW campus",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-34-company-cat"
+    ]
+  },
+  {
+    "id": "link-project-34-company-owl",
+    "project_id": "project-34",
+    "company_id": "company-owl",
+    "company_ticker": "OWL",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Infrastructure Financing",
+    "detail": "Macquarie/Blue Owl financing structure for AI factory buildout",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-34-company-owl"
+    ]
+  },
+  {
+    "id": "link-project-35-company-vrt",
+    "project_id": "project-35",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power & Cooling Infrastructure",
+    "detail": "Thermal management for eight 40MW/250K sqft data center buildings",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-35-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-35-company-etn",
+    "project_id": "project-35",
+    "company_id": "company-etn",
+    "company_ticker": "ETN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Distribution",
+    "detail": "Switchgear, UPS, and power management across 500 MW phased build",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-35-company-etn"
+    ]
+  },
+  {
+    "id": "link-project-35-company-pwr",
+    "project_id": "project-35",
+    "company_id": "company-pwr",
+    "company_ticker": "PWR",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Electrical Construction",
+    "detail": "Substation and transmission line construction for I-20/59 Industrial Park",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-35-company-pwr"
+    ]
+  },
+  {
+    "id": "link-project-35-company-fix",
+    "project_id": "project-35",
+    "company_id": "company-fix",
+    "company_ticker": "FIX",
+    "relationship_type": "project_company_relationship",
+    "display_role": "HVAC & Mechanical Contractor",
+    "detail": "Mechanical cooling systems for 2M+ sqft campus over 8-year build-out",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-35-company-fix"
+    ]
+  },
+  {
+    "id": "link-project-35-company-cat",
+    "project_id": "project-35",
+    "company_id": "company-cat",
+    "company_ticker": "CAT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Backup Power Generation",
+    "detail": "Diesel gensets for mission-critical backup across eight-building campus",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-35-company-cat"
+    ]
+  },
+  {
+    "id": "link-project-35-company-cmi",
+    "project_id": "project-35",
+    "company_id": "company-cmi",
+    "company_ticker": "CMI",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Natural Gas Generators",
+    "detail": "Prime and backup power generation for Mississippi Power 500 MW supply",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-35-company-cmi"
+    ]
+  },
+  {
+    "id": "link-project-35-company-flex",
+    "project_id": "project-35",
+    "company_id": "company-flex",
+    "company_ticker": "FLEX",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Modular DC Components",
+    "detail": "Anord Mardix critical power distribution and rack CDUs for eight-building 500 MW campus",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-35-company-flex"
+    ]
+  },
+  {
+    "id": "link-project-36-company-vrt",
+    "project_id": "project-36",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling Infrastructure",
+    "detail": "Thermal management for 700K+ sqft two-phase hyperscale campus",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-36-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-36-company-etn",
+    "project_id": "project-36",
+    "company_id": "company-etn",
+    "company_ticker": "ETN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Distribution",
+    "detail": "Critical power systems for 144 MW Phase 1 and 288 MW Phase 2",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-36-company-etn"
+    ]
+  },
+  {
+    "id": "link-project-36-company-eme",
+    "project_id": "project-36",
+    "company_id": "company-eme",
+    "company_ticker": "EME",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Electrical Construction",
+    "detail": "Electrical and mechanical build for $1.2B infrastructure investment",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-36-company-eme"
+    ]
+  },
+  {
+    "id": "link-project-36-company-ceg",
+    "project_id": "project-36",
+    "company_id": "company-ceg",
+    "company_ticker": "CEG",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Generation (Calpine)",
+    "detail": "Calpine subsidiary providing 190 MW from adjacent Thad Hill Energy Center gas plant",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-36-company-ceg"
+    ]
+  },
+  {
+    "id": "link-project-36-company-gev",
+    "project_id": "project-36",
+    "company_id": "company-gev",
+    "company_ticker": "GEV",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Gas Turbine Solutions",
+    "detail": "Behind-the-meter gas generation support for ERCOT grid-connected campus",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-36-company-gev"
+    ]
+  },
+  {
+    "id": "link-project-37-company-googl",
+    "project_id": "project-37",
+    "company_id": "company-googl",
+    "company_ticker": "GOOGL",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Developer & Operator",
+    "detail": "$9B expansion across Loudoun, Prince William, and new Chesterfield County campus",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-37-company-googl"
+    ]
+  },
+  {
+    "id": "link-project-37-company-avgo",
+    "project_id": "project-37",
+    "company_id": "company-avgo",
+    "company_ticker": "AVGO",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Custom AI Chip Co-Developer (TPU)",
+    "detail": "Co-designs Google TPU silicon with proprietary SerDes IP. Northern Virginia hosts Google's densest cloud footprint",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-37-company-avgo"
+    ]
+  },
+  {
+    "id": "link-project-37-company-nvda",
+    "project_id": "project-37",
+    "company_id": "company-nvda",
+    "company_ticker": "NVDA",
+    "relationship_type": "project_company_relationship",
+    "display_role": "GPU Supplier",
+    "detail": "GPU clusters for Google Cloud AI infrastructure",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-37-company-nvda"
+    ]
+  },
+  {
+    "id": "link-project-37-company-vrt",
+    "project_id": "project-37",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling Infrastructure",
+    "detail": "Thermal management for multi-campus Northern Virginia expansion",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-37-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-37-company-anet",
+    "project_id": "project-37",
+    "company_id": "company-anet",
+    "company_ticker": "ANET",
+    "relationship_type": "project_company_relationship",
+    "display_role": "DC Networking",
+    "detail": "400G/800G Ethernet switches for Google Cloud AI cluster interconnect",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-37-company-anet"
+    ]
+  },
+  {
+    "id": "link-project-37-company-mrvl",
+    "project_id": "project-37",
+    "company_id": "company-mrvl",
+    "company_ticker": "MRVL",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Custom AI Chips & Interconnect",
+    "detail": "Custom silicon and data center interconnect for Google's TPU ecosystem",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-37-company-mrvl"
+    ]
+  },
+  {
+    "id": "link-project-37-company-lumn",
+    "project_id": "project-37",
+    "company_id": "company-lumn",
+    "company_ticker": "LUMN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Fiber Connectivity",
+    "detail": "Private Connectivity Fabric linking Virginia DC campuses to Google's network",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-37-company-lumn"
+    ]
+  },
+  {
+    "id": "link-project-38-company-apld",
+    "project_id": "project-38",
+    "company_id": "company-apld",
+    "company_ticker": "APLD",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Developer & Operator",
+    "detail": "Groundbreaking Sep 2025. 200 MW initial IT load, expandable to 1 GW. $5B 15-year hyperscaler lease",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-38-company-apld"
+    ]
+  },
+  {
+    "id": "link-project-38-company-vrt",
+    "project_id": "project-38",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling Infrastructure",
+    "detail": "Proprietary waterless closed-loop cooling system for North Dakota campus",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-38-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-38-company-abb",
+    "project_id": "project-38",
+    "company_id": "company-abb",
+    "company_ticker": "ABB",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Distribution & UPS",
+    "detail": "HiPerGuard medium-voltage UPS infrastructure for phased GW-scale build",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-38-company-abb"
+    ]
+  },
+  {
+    "id": "link-project-38-company-cat",
+    "project_id": "project-38",
+    "company_id": "company-cat",
+    "company_ticker": "CAT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Backup Power Generation",
+    "detail": "Standby diesel generators for mission-critical hyperscale campus",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-38-company-cat"
+    ]
+  },
+  {
+    "id": "link-project-38-company-owl",
+    "project_id": "project-38",
+    "company_id": "company-owl",
+    "company_ticker": "OWL",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Infrastructure Financing",
+    "detail": "Macquarie/Blue Owl financing structure for Applied Digital AI factory portfolio",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-38-company-owl"
+    ]
+  },
+  {
+    "id": "link-project-39-company-apld",
+    "project_id": "project-39",
+    "company_id": "company-apld",
+    "company_ticker": "APLD",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Developer & Operator",
+    "detail": "Broke ground Jan 2026. 300 MW critical IT load across two 150 MW buildings on 500+ acres. Undisclosed hyperscaler tenant",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-39-company-apld"
+    ]
+  },
+  {
+    "id": "link-project-39-company-vrt",
+    "project_id": "project-39",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling Infrastructure",
+    "detail": "Thermal management for two-building AI factory campus",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-39-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-39-company-etn",
+    "project_id": "project-39",
+    "company_id": "company-etn",
+    "company_ticker": "ETN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Distribution",
+    "detail": "UPS and switchgear for phased 430 MW capacity",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-39-company-etn"
+    ]
+  },
+  {
+    "id": "link-project-39-company-strl",
+    "project_id": "project-39",
+    "company_id": "company-strl",
+    "company_ticker": "STRL",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Site Development",
+    "detail": "Civil construction and site preparation for 500+ acre greenfield campus",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-39-company-strl"
+    ]
+  },
+  {
+    "id": "link-project-40-company-eqix",
+    "project_id": "project-40",
+    "company_id": "company-eqix",
+    "company_ticker": "EQIX",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Developer & Operator",
+    "detail": "First US xScale campus. 262 acres, 4 buildings x 60 MW. Part of $15B GIC/CPP JV",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-40-company-eqix"
+    ]
+  },
+  {
+    "id": "link-project-40-company-vrt",
+    "project_id": "project-40",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling Infrastructure",
+    "detail": "Thermal management for four-building 240 MW hyperscale campus",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-40-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-40-company-etn",
+    "project_id": "project-40",
+    "company_id": "company-etn",
+    "company_ticker": "ETN",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power Distribution",
+    "detail": "Switchgear and UPS for phased 60 MW building energization",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-40-company-etn"
+    ]
+  },
+  {
+    "id": "link-project-40-company-be",
+    "project_id": "project-40",
+    "company_id": "company-be",
+    "company_ticker": "BE",
+    "relationship_type": "project_company_relationship",
+    "display_role": "On-Site Fuel Cell Power",
+    "detail": "Bloom Energy fuel cell deployments for behind-the-meter DC generation at Equinix facilities",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-40-company-be"
+    ]
+  },
+  {
+    "id": "link-project-40-company-oklo",
+    "project_id": "project-40",
+    "company_id": "company-oklo",
+    "company_ticker": "OKLO",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Nuclear Power Partnership",
+    "detail": "500 MW nuclear PPA partnership with Equinix for carbon-free behind-the-meter power",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-40-company-oklo"
+    ]
+  },
+  {
+    "id": "link-project-41-company-dlr",
+    "project_id": "project-41",
+    "company_id": "company-dlr",
+    "company_ticker": "DLR",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Developer & Operator",
+    "detail": "424-acre campus, up to 14 buildings (96-144 MW each). $236M land acquisition. First building delivered 2023, 15-year buildout",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-41-company-dlr"
+    ]
+  },
+  {
+    "id": "link-project-41-company-vrt",
+    "project_id": "project-41",
+    "company_id": "company-vrt",
+    "company_ticker": "VRT",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Cooling Infrastructure",
+    "detail": "Thermal management for Northern Virginia mega-campus phased build",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-41-company-vrt"
+    ]
+  },
+  {
+    "id": "link-project-41-company-sbgsy",
+    "project_id": "project-41",
+    "company_id": "company-sbgsy",
+    "company_ticker": "SBGSY",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Electrical Infrastructure",
+    "detail": "Power distribution and building management for multi-building campus",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-41-company-sbgsy"
+    ]
+  },
+  {
+    "id": "link-project-41-company-hubb",
+    "project_id": "project-41",
+    "company_id": "company-hubb",
+    "company_ticker": "HUBB",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Electrical Distribution",
+    "detail": "Switchgear, transformers, and busbar distribution for phased GW-scale build",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-41-company-hubb"
+    ]
+  },
+  {
+    "id": "link-project-41-company-powl",
+    "project_id": "project-41",
+    "company_id": "company-powl",
+    "company_ticker": "POWL",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Switchgear & Power Control",
+    "detail": "Custom medium-voltage switchgear for on-site substations serving 1 GW campus",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-41-company-powl"
+    ]
+  },
+  {
+    "id": "link-project-41-company-pry",
+    "project_id": "project-41",
+    "company_id": "company-pry",
+    "company_ticker": "PRY",
+    "relationship_type": "project_company_relationship",
+    "display_role": "Power & Fiber Cables",
+    "detail": "Power cables and fiber-optic infrastructure for 14-building mega-campus",
+    "confidence": "medium",
+    "review_status": "needs_review",
+    "primary_evidence_ids": [
+      "evidence-project-41-company-pry"
+    ]
+  }
+]
