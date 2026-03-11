@@ -3,8 +3,11 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "data:bootstrap": "node scripts/bootstrap-canonical-data.mjs",
+    "data:publish": "node scripts/publish-canonical-data.mjs",
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run data:publish && vite build",
     "preview": "vite preview"
   },
   "dependencies": {

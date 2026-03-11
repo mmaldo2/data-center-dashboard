@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import { STATES_GEO } from "./states-geo-data";
-import { COMPANIES, PROJECTS } from "./dc-data";
+import { COMPANIES, DASHBOARD_METADATA, PROJECTS } from "./data/derived/dashboard-data";
 
 // ═══════════════════════════════════════════════════════════════════════
 //  ALBERS USA EQUAL-AREA CONIC PROJECTION
@@ -39,6 +39,8 @@ const STATE_PATHS = STATES_GEO.map(st => ({ abbr: st.abbr, name: st.name, d: geo
 const parseMW = (s) => { const m = s.match(/([\d.]+)\s*(GW|MW)/i); if (!m) return 500; return parseFloat(m[1]) * (m[2].toUpperCase() === 'GW' ? 1000 : 1); };
 const capacityRadius = (mw) => 5 + (Math.sqrt(mw) - Math.sqrt(150)) / (Math.sqrt(5000) - Math.sqrt(150)) * 11;
 const statCol = s => s==="Operational"?"#10b981":s==="Under Construction"?"#f59e0b":s==="Announced"?"#6366f1":s==="Planned"?"#94a3b8":"#64748b";
+const confidenceCol = c => c==="high"?"#10b981":c==="medium"?"#f59e0b":"#94a3b8";
+const reviewCol = s => s==="verified"?"#10b981":s==="in_review"?"#f59e0b":"#f43f5e";
 const F = "'JetBrains Mono','Fira Code',monospace";
 const D = "'Syne','Space Grotesk',sans-serif";
 
@@ -48,6 +50,7 @@ const fmtPct = v => typeof v === "number" ? `${v}%` : v;
 const fmtGrowth = v => typeof v === "number" ? `${v>=0?"+":""}${v}%` : v;
 const fmtPE = v => typeof v === "number" ? `${v}x` : "N/M";
 const fmtEPS = v => typeof v === "number" ? `$${v}` : v;
+const fmtDate = v => new Date(v).toLocaleDateString("en-US", { month:"short", day:"numeric", year:"numeric" });
 
 // Style helpers — static, no dependency on props/state
 const S = {
@@ -78,6 +81,16 @@ export default function FusedDashboard() {
     return map;
   }, []);
 
+  const companyResearch = useMemo(() => {
+    const map = {};
+    PROJECTS.forEach(p => p.companies.forEach(c => {
+      if (!map[c.ticker]) map[c.ticker] = { evidenceCount:0, reviewStatusCounts:{} };
+      map[c.ticker].evidenceCount += c.evidenceCount || 0;
+      map[c.ticker].reviewStatusCounts[c.reviewStatus] = (map[c.ticker].reviewStatusCounts[c.reviewStatus] || 0) + 1;
+    }));
+    return map;
+  }, []);
+
   // Pre-sorted tier lists — recomputed only when companyProjects changes
   const directCompanies = useMemo(() => Object.entries(COMPANIES).filter(([,co])=>co.tier==="direct").sort((a,b)=>(companyProjects[b[0]]||[]).length-(companyProjects[a[0]]||[]).length), [companyProjects]);
   const upstreamCompanies = useMemo(() => Object.entries(COMPANIES).filter(([,co])=>co.tier==="upstream").sort((a,b)=>(typeof b[1].mcap==="number"?b[1].mcap:0)-(typeof a[1].mcap==="number"?a[1].mcap:0)), []);
@@ -91,7 +104,7 @@ export default function FusedDashboard() {
         <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",flexWrap:"wrap",gap:10}}>
           <div>
             <h1 style={{fontFamily:D,fontSize:22,fontWeight:800,margin:0,background:"linear-gradient(135deg,#e2e8f0,#818cf8,#c084fc)",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent"}}>AI Data Center Investment Map</h1>
-            <p style={{color:"#475569",fontSize:10,margin:"3px 0 0",letterSpacing:1.5,textTransform:"uppercase"}}>Click a project marker to view linked public companies & financials</p>
+            <p style={{color:"#475569",fontSize:10,margin:"3px 0 0",letterSpacing:1.5,textTransform:"uppercase"}}>Canonical research layer · {DASHBOARD_METADATA.projectCount} projects · {DASHBOARD_METADATA.companyCount} companies · {DASHBOARD_METADATA.evidenceCount} evidence records</p>
           </div>
           <div style={{display:"flex",gap:4,flexWrap:"wrap"}}>
             {["all","Operational","Under Construction","Announced","Planned"].map(s=>(
@@ -114,10 +127,10 @@ export default function FusedDashboard() {
             ))}
             {/* PROJECT MARKERS — Graduated symbols with capacity labels */}
             {filtered.map(p=>{
-              const {x,y} = albersUsa(p.lng, p.lat);
+              const {x,y} = albersUsa(p.displayLng ?? p.lng, p.displayLat ?? p.lat);
               const c = statCol(p.status);
               const isSel = sel===p.id;
-              const mw = parseMW(p.capacity);
+              const mw = p.capacityMw ?? parseMW(p.capacity);
               const baseR = capacityRadius(mw);
               const r = isSel ? baseR + 4 : baseR;
               return (
@@ -184,6 +197,20 @@ export default function FusedDashboard() {
                 </div>
               </div>
 
+              <div style={{...S.card,borderColor:"#243244"}}>
+                <div style={{fontSize:10,color:"#64748b",textTransform:"uppercase",letterSpacing:1,fontWeight:700,marginBottom:8}}>
+                  Research Coverage
+                </div>
+                <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"6px 12px",marginBottom:8}}>
+                  {[["Linked Companies",project.researchCoverage?.linkedCompanyCount || 0],["Evidence Records",project.researchCoverage?.evidenceCount || 0],["Needs Review",project.researchCoverage?.reviewStatusCounts?.needs_review || 0],["Published",fmtDate(DASHBOARD_METADATA.publishedAt)]].map(([k,v])=>(
+                    <div key={k}><div style={{fontSize:9,color:"#475569",textTransform:"uppercase"}}>{k}</div><div style={{fontSize:12,fontWeight:600,color:"#e2e8f0"}}>{v}</div></div>
+                  ))}
+                </div>
+                <div style={{fontSize:10,color:"#94a3b8",lineHeight:1.5}}>
+                  Provenance is now tracked in the canonical research layer. Migrated relationship evidence is preserved from legacy dashboard notes and flagged for analyst review.
+                </div>
+              </div>
+
               {/* LINKED COMPANIES */}
               <div style={{fontSize:10,color:"#64748b",textTransform:"uppercase",letterSpacing:1,fontWeight:700,padding:"0 2px"}}>
                 Linked Public Companies ({linkedCompanies.length})
@@ -212,6 +239,11 @@ export default function FusedDashboard() {
                       <div style={{fontSize:9,color:"#818cf8",fontWeight:700,textTransform:"uppercase",marginBottom:2}}>{c.role}</div>
                       <div style={{fontSize:10,color:"#94a3b8"}}>{c.detail}</div>
                     </div>
+                    <div style={{display:"flex",gap:6,flexWrap:"wrap",marginTop:8}}>
+                      <span style={S.badge(confidenceCol(c.confidence))}>{c.confidence} confidence</span>
+                      <span style={S.badge(reviewCol(c.reviewStatus))}>{c.reviewStatus.replace("_"," ")}</span>
+                      <span style={S.badge("#38bdf8")}>{c.evidenceCount} evidence</span>
+                    </div>
 
                     {isSel && (
                       <div style={{marginTop:8,animation:"fadeIn .2s ease"}}>
@@ -224,8 +256,11 @@ export default function FusedDashboard() {
                             ))}
                         </div>
                         <div style={{fontSize:10,color:"#94a3b8",lineHeight:1.5}}>{co.summary}</div>
-                        <div style={{marginTop:6,fontSize:9,color:"#475569"}}>
-                          Appears in <strong style={{color:"#a5b4fc"}}>{(companyProjects[co.ticker]||[]).length}</strong> tracked projects
+                        <div style={{marginTop:6,fontSize:9,color:"#475569",lineHeight:1.6}}>
+                          Appears in <strong style={{color:"#a5b4fc"}}>{(companyProjects[co.ticker]||[]).length}</strong> tracked projects with <strong style={{color:"#7dd3fc"}}>{companyResearch[co.ticker]?.evidenceCount || 0}</strong> evidence records.
+                        </div>
+                        <div style={{marginTop:4,fontSize:9,color:"#64748b"}}>
+                          Review status: <span style={{color:reviewCol(c.reviewStatus),fontWeight:700,textTransform:"uppercase"}}>{c.reviewStatus.replace("_"," ")}</span>
                         </div>
                       </div>
                     )}
@@ -245,7 +280,7 @@ export default function FusedDashboard() {
                       <span style={S.badge(statCol(p.status))}>{p.status.split(" ")[0]}</span>
                     </div>
                     <div style={{fontSize:9,color:"#475569",marginTop:3}}>
-                      {p.operator} · {p.capacity} · {p.investment} · {p.companies.length} companies
+                      {p.operator} · {p.capacity} · {p.investment} · {p.companies.length} companies · {p.researchCoverage?.evidenceCount || 0} evidence
                     </div>
                     <div style={{display:"flex",gap:3,marginTop:4,flexWrap:"wrap"}}>
                       {p.companies.map(c=>(
@@ -262,6 +297,14 @@ export default function FusedDashboard() {
         {/* ═══ COMPANY AGGREGATE VIEW ═══ */}
         {companyView && (
           <div style={{borderLeft:"1px solid #1e293b",overflowY:"auto",padding:12,display:"flex",flexDirection:"column",gap:8}}>
+            <div style={{...S.card,borderColor:"#243244"}}>
+              <div style={{fontSize:10,color:"#64748b",textTransform:"uppercase",letterSpacing:1,fontWeight:700,marginBottom:6}}>
+                Canonical Coverage
+              </div>
+              <div style={{fontSize:10,color:"#94a3b8",lineHeight:1.6}}>
+                Search-first terminal views come next, but the current companies surface now reads from the canonical research layer and carries evidence and review metadata forward.
+              </div>
+            </div>
             {/* ── Direct-tier companies ── */}
             <div style={{fontSize:10,color:"#64748b",textTransform:"uppercase",letterSpacing:1,fontWeight:700}}>
               Direct Project Involvement ({directCompanies.length})
@@ -290,6 +333,10 @@ export default function FusedDashboard() {
                   </div>
                   <div style={{display:"flex",gap:6,marginTop:6,fontSize:10,color:"#94a3b8"}}>
                     <span>${co.price} · {typeof co.pe_fwd==="number"?fmtPE(co.pe_fwd)+" fwd":"N/M"} · {fmtB(co.mcap)} mcap</span>
+                  </div>
+                  <div style={{display:"flex",gap:6,flexWrap:"wrap",marginTop:6}}>
+                    <span style={S.badge("#38bdf8")}>{companyResearch[ticker]?.evidenceCount || 0} evidence</span>
+                    <span style={S.badge(reviewCol("needs_review"))}>{companyResearch[ticker]?.reviewStatusCounts?.needs_review || 0} pending review</span>
                   </div>
                   {isSel && (
                     <div style={{marginTop:8}}>
@@ -342,6 +389,10 @@ export default function FusedDashboard() {
                   </div>
                   <div style={{display:"flex",gap:6,marginTop:6,fontSize:10,color:"#64748b"}}>
                     <span>${co.price} · {typeof co.pe_fwd==="number"?fmtPE(co.pe_fwd)+" fwd":"N/M"} · {fmtB(co.mcap)} mcap</span>
+                  </div>
+                  <div style={{display:"flex",gap:6,flexWrap:"wrap",marginTop:6}}>
+                    <span style={S.badge("#38bdf8")}>{companyResearch[ticker]?.evidenceCount || 0} evidence</span>
+                    <span style={S.badge("#64748b")}>No direct project links</span>
                   </div>
                   {isSel && (
                     <div style={{marginTop:8}}>
